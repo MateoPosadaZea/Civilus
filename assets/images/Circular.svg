@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="215.5" height="182" viewBox="0 0 215.5 182">
+  <g id="Grupo_40" data-name="Grupo 40" transform="translate(-2088 -8350)">
+    <g id="Grupo_38" data-name="Grupo 38">
+      <g id="Grupo_36" data-name="Grupo 36">
+        <circle id="Elipse_10" data-name="Elipse 10" cx="91" cy="91" r="91" transform="translate(2088 8350)" fill="#c21220"/>
+        <line id="Línea_40" data-name="Línea 40" x1="32.235" transform="translate(2271.265 8441.986)" fill="none" stroke="#041129" stroke-width="1"/>
+        <path id="Icon_ionic-ios-arrow-back" data-name="Icon ionic-ios-arrow-back" d="M1.584,4.6,5.063,1.12a.657.657,0,1,0-.93-.928L.191,4.13a.656.656,0,0,0-.019.906L4.129,9a.657.657,0,0,0,.93-.928Z" transform="translate(2269.625 8437.401)" fill="#041129"/>
+        <text id="r" transform="translate(2288 8422)" fill="#041129" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="13" font-family="Jura" font-weight="700"><tspan x="0" y="13">r</tspan></text>
+        <line id="Línea_44" data-name="Línea 44" x1="90" transform="translate(2179.5 8441.986)" fill="none" stroke="#041129" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

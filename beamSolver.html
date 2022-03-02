@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+		
+		<link rel="stylesheet" href="./css/style.css" />
+		
+
+		<title>Beam Solver</title>
+	</head>
+	<body>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+		<div class="navigation hidden">
+			<input type="checkbox" class="navigation__checkbox" id="navi-toogle" />
+			<label for="navi-toogle" class="navigation__buttom">
+				<span class="navigation__icon">&nbsp;</span>
+			</label>
+
+			<div class="navigation__background">&nbsp;</div>
+
+			<nav class="navigation__nav">
+				<p class="navigation__text">
+					<span class="navigation__line">&nbsp;</span> INNOVATION IS PART OF OUR
+					DNA
+				</p>
+				
+				<ul class="navigation__list">
+					<li class="navigation__item">
+						<a href="./home.html" class="navigation__link">
+							<span></span>Home</a
+						>
+					</li>
+					<li class="navigation__item">
+						<a href="./about.html" class="navigation__link">
+							<span></span>About us</a
+						>
+					</li>
+					<li class="navigation__item">
+						<a href="./crossSection.html" class="navigation__link">
+							<span></span>Cross Section</a
+						>
+					</li>
+					<li class="navigation__item">
+						<a href="/beamSolver.html" class="navigation__link">
+							<span></span>Beam Solver</a
+						>
+					</li>
+					<li class="navigation__item">
+						<a href="./contact.html" class="navigation__link">
+							<span></span>Contact Us</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+		<header>
+			<nav class="home__nav">
+				<div class="algo">
+					<div class="video hidden">
+						<video class="bg-video__content" autoplay muted width="50rem">
+							<source
+								src="./assets/video/CivilusAnimated.mp4"
+								type="video/mp4"
+							/>
+							Tu navegador no es compatible
+						</video>
+					</div>
+					<a href="./home.html" class="video--photo">
+						<div class="home__img"></div>
+					</a>
+					
+				</div>
+
+				<ul class="home__list">
+					<li class="home__item">
+						<a href="./home.html" class="home__link">Home</a>
+					</li>
+					<li class="home__item">
+						<a href="./about.html" class="home__link">About us</a>
+					</li>
+					<li class="home__item">
+						<a href="./beamSolver.html" class="home__link">Beam Solver</a>
+					</li>
+					<li class="home__item">
+						<a href="./crossSection.html" class="home__link">Cross Section</a>
+					</li>
+					<li class="home__item">
+						<a href="./contact.html" class="home__link home__link--margin">Contact us</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<h2 class="cross__tittle">Beam Solver Properties</h2>
+		<div class="modal hidden">
+			<div class="modal__background">
+				<button class="close-modal">&times;</button>
+				<h1 class='modal__title-error'>ERROR!</h1>
+			</div>
+			
+			<p class="modal__error">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit
+			</p>
+		</div>
+		<div class="overlay hidden"></div>
+
+					<div class="beam__father">
+						<!-- ! INICIO -->
+						<div class="beam__box">
+							<h5 id="stupidrefA" style="display: none">NONE</h5>
+							<h5 id="stupidrefB" style="display: none">NONE</h5>
+							<h4 style="margin-bottom: 15px" id="Prueba" class="beam__data">
+							Beam Data
+							</h4>
+							<div class="input-group section__units" id="Linput">
+								<span
+								class="input-group-addon section__label"
+								id="nameL"
+								style="width: 80px"
+									>L (m)</span
+								>
+								<input
+								type="number"
+								id="Lbeam"
+								placeholder="0"
+								class="form-control section__input"
+								style="width: 100px"
+								onkeypress="return isNumberKey(event)"
+								min="0"
+								/>
+							</div>
+							<div
+							class="dropdown"
+							style="
+								margin-top: 20px;
+								margin-bottom: 15px;
+								display: inline-flex;
+							"
+							>
+								<button
+									class="btn btn-default dropdown-toggle btn__select select"
+									type="button"
+									id="support1"
+									data-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="true"
+								>
+									Support A <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+									<li>
+										<button
+											class="btn btn-default btn__select select"
+											type="button"
+											id="roller"
+											style="border: none"
+											onclick="changeImageRA();"
+										>
+											Roller support
+										</button>
+									</li>
+									<li>
+										<button
+											class="btn btn-default btn__select select"
+											type="button"
+											id="pin"
+											style="border: none"
+											onclick="changeImagePA();"
+										>
+											Pin support
+										</button>
+									</li>
+									<li>
+										<button
+											class="btn btn-default btn__select select"
+											type="button"
+											id="fixed"
+											style="border: none"
+											onclick="changeImageFA();"
+										>
+											Fixed support
+										</button>
+									</li>
+								</ul>
+								<img
+									id="supportAimg"
+									src="./assets/images/nonesupport.jpg"
+									alt=" "
+									width="50"
+									height="35"
+									style="padding-left: 20px"
+								/>
+							</div>
+							<div class="input-group section__units" id="Asuport">
+								<span
+									class="input-group-addon section__label"
+									id="XcoordA"
+									style="width: 80px"
+									>x<sub>A</sub> (m)</span
+								>
+								<input
+									type="number"
+									id="Axcoord"
+									placeholder="0"
+									class="form-control section__input"
+									style="width: 100px"
+									onkeypress="return isNumberKey(event)"
+									min="0"
+								/>
+							</div>
+							<div
+								class="dropdown"
+								style="
+									margin-top: 20px;
+									margin-bottom: 15px;
+									display: inline-flex;
+								"
+							>
+								<button
+									class="btn btn-default dropdown-toggle btn__select select"
+									type="button"
+									id="support2"
+									data-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="true"
+								>
+									Support B <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+									<li>
+										<button
+											class="btn btn-default btn__select select"
+											type="button"
+											id="rollerB"
+											style="border: none"
+											onclick="changeImageRB();"
+										>
+											Roller support
+										</button>
+									</li>
+									<li>
+										<button
+											class="btn btn-default btn__select select"
+											type="button"
+											id="pinB"
+											style="border: none"
+											onclick="changeImagePB();"
+										>
+											Pin support
+										</button>
+									</li>
+									<li>
+										<button
+											class="btn btn-default btn__select select"
+											type="button"
+											id="fixedB"
+											style="border: none"
+											onclick="changeImageFB();"
+										>
+											Fixed support
+										</button>
+									</li>
+								</ul>
+								<img
+									id="supportBimg"
+									src="./assets/images/nonesupport.jpg"
+									alt=" "
+									width="50"
+									height="35"
+									style="padding-left: 20px"
+								/>
+							</div>
+							<div class="input-group section__units" id="Bsupport">
+								<span
+									class="input-group-addon section__label"
+									id="XcoordB"
+									style="width: 80px"
+									>x<sub>B</sub> (m)</span
+								>
+								<input
+									type="number"
+									id="Bxcoord"
+									placeholder="0"
+									class="form-control section__input"
+									style="width: 100px"
+									onkeypress="return isNumberKey(event)"
+									min="0"
+								/>
+							</div>
+
+							<div style="padding-top: 30px; padding-bottom: 30px" class="myFlex">
+								<button
+									class="btn btn-danger btn--calc btn__myWidth"
+									type="button"
+									id="draw"
+									onclick="drawbeam();"
+								>
+									Draw
+								</button>
+								<button
+									class="btn btn-default btn__delete"
+									type="button"
+									id="delete"
+									style="margin-left: 22px"
+									onclick="deleteData();"
+									disabled="true"
+								>
+									Delete
+								</button>
+							</div>
+						</div>
+						<div class="beam__flex">
+							<div class="col-lg-7">
+								<h4 class="section__subtitle">Beam Diagram</h4>
+								<canvas
+									id="diagram"
+									height="350"
+									width="650"
+									class="myBeamDiagram"
+									style="border: 1px solid #000000"
+								></canvas>
+								<div class="col-lg-4">
+									<div
+										class="dropdown"
+										style="margin-top: 20px; margin-bottom: 15px"
+									>
+										<button
+											class="btn btn-danger btn--calc btn__myWidth"
+											type="button"
+											id="test"
+											style="margin-right: 22px"
+											onclick="drawFreeBody();"
+											disabled="true"
+										>
+											Solve
+										</button>
+										<button
+											class="btn btn-default dropdown-toggle btn__select select"
+											type="button"
+											id="addLoad"
+											data-toggle="dropdown"
+											aria-haspopup="true"
+											aria-expanded="true"
+											disabled="true"
+										>
+											Add Load <span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu myMenu" aria-labelledby="dropdownMenu1">
+											<li>
+												<button
+													class="btn btn-default btn__select select"
+													type="button"
+													id="addLP"
+													style="border: none"
+													onclick="addLPyes();"
+												>
+													Point Load
+												</button>
+											</li>
+											<li>
+												<button
+													class="btn btn-default btn__select select"
+													type="button"
+													id="addLM"
+													style="border: none"
+													onclick="addLMyes();"
+												>
+													Point Moment
+												</button>
+											</li>
+											<li>
+												<button
+													class="btn btn-default btn__select select"
+													type="button"
+													id="addLw"
+													style="border: none"
+													onclick="addLwyes();"
+												>
+													Distributed Load
+												</button>
+											</li>
+										</ul>
+									</div>
+									<div id="inputLP" style="display: none">
+										<h4 style="margin-bottom: 15px; margin-top: 15px" class="beam__data">
+											Point Load
+											<button
+												type="button"
+												class="btn btn-default"
+												style="margin-left: 70px; border: none; height: 25px"
+												onclick="addLhide();"
+											>
+												<sup>x</sup>
+											</button>
+										</h4>
+										<div
+											class="input-group section__units"
+											id="inputPload"
+											style="margin-bottom: 15px"
+										>
+											<span
+												class="input-group-addon section__label"
+												id="PointL"
+												style="width: 100px"
+												>P (kN)</span
+											>
+											<input
+												type="number"
+												id="pload"
+												class="form-control section__input"
+												style="width: 100px"
+												onkeypress="return isNumberKey2(event)"
+											/>
+										</div>
+										<div
+											class="input-group section__units"
+											id="inputTetha"
+											style="margin-bottom: 15px"
+										>
+											<span
+												class="input-group-addon section__label"
+												id="TethaT"
+												style="width: 100px"
+												>θ°
+											</span>
+											<input
+												type="number"
+												id="tetha"
+												class="form-control section__input"
+												disabled="true"
+												style="width: 100px; background-color: #d8d8d8"
+												onkeypress="return isNumberKey(event)"
+												min="0"
+												max="180"
+												value="90"
+											/>
+										</div>
+										<div
+											class="input-group section__units"
+											id="inputPxcoord"
+											style="margin-bottom: 15px"
+										>
+											<span
+												class="input-group-addon section__label"
+												id="XcoordP"
+												style="width: 100px"
+												>x (m)</span
+											>
+											<input
+												type="number"
+												id="Pxcoord"
+												class="form-control section__input"
+												style="width: 100px"
+												onkeypress="return isNumberKey(event)"
+												min="0"
+											/>
+										</div>
+										<a class="btn  btn--calc btn__myWidth" onclick="drawload()">
+											Add
+										</a>
+									</div>
+	
+									<div id="inputLM" style="display: none">
+										<h4 style="margin-bottom: 15px; margin-top: 15px" class="beam__data">
+											Point Moment
+											<button
+												type="button"
+												class="btn btn-default"
+												style="margin-left: 41px; border: none; height: 25px"
+												onclick="addLhide();"
+											>
+												<sup>x</sup>
+											</button>
+										</h4>
+										<div
+											class="input-group section__units"
+											id="inputMload"
+											style="margin-bottom: 15px"
+										>
+											<span
+												class="input-group-addon section__label"
+												id="Moment"
+												style="width: 100px"
+												>M (kN-m)</span
+											>
+											<input
+												type="number"
+												id="mload"
+												class="form-control section__input"
+												style="width: 95px"
+												onkeypress="return isNumberKey2(event)"
+											/>
+										</div>
+										<div
+											class="input-group section__units"
+											id="inputMxcoord"
+											style="margin-bottom: 15px"
+										>
+											<span
+												class="input-group-addon section__label"
+												id="XcoordM"
+												style="width: 100px"
+												>x (m)
+											</span>
+											<input
+												type="number"
+												id="Mxcoord"
+												class="form-control section__input"
+												style="width: 95px"
+												onkeypress="return isNumberKey(event)"
+												min="0"
+											/>
+										</div>
+										<a class="btn  btn--calc btn__myWidt" id="addM" onclick="drawmoment()">
+											Add
+										</a>
+									</div>
+									<div id="inputLw" style="display: none">
+										<h4 style="margin-bottom: 15px; margin-top: 15px" class="beam__data">
+											Distributed Load
+											<button
+												type="button"
+												class="btn btn-default"
+												style="margin-left: 22px; border: none; height: 26px"
+												onclick="addLhide();"
+											>
+												<sup>x</sup>
+											</button>
+										</h4>
+										<div
+											class="input-group section__units"
+											id="Dload1"
+											style="margin-bottom: 15px"
+										>
+											<span
+												class="input-group-addon section__label"
+												id="Distributed1"
+												style="width: 108px"
+												>w<sub>1</sub> (kN/m)</span
+											>
+											<input
+												type="number"
+												id="wload1"
+												class="form-control section__input"
+												style="width: 94px"
+												onkeypress="return isNumberKey2(event)"
+											/>
+										</div>
+										<div
+											class="input-group section__units"
+											id="inputDload1"
+											style="margin-bottom: 15px"
+										>
+											<span
+												class="input-group-addon section__label"
+												id="XcoordW1"
+												style="width: 108px"
+												>x<sub>1</sub> (m)</span
+											>
+											<input
+												type="number"
+												id="Wxcoord1"
+												class="form-control section__input"
+												style="width: 94px"
+												onkeypress="return isNumberKey(event)"
+											/>
+										</div>
+										<div
+											class="input-group section__units"
+											id="Dload2"
+											style="margin-bottom: 15px"
+										>
+											<span
+												class="input-group-addon section__label"
+												id="Distributed2"
+												style="width: 108px"
+												>w<sub>2</sub> (kN/m)</span
+											>
+											<input
+												type="number"
+												id="wload2"
+												class="form-control section__input"
+												style="width: 94px"
+												onkeypress="return isNumberKey2(event)"
+											/>
+										</div>
+										<div
+											class="input-group section__units"
+											id="inputDload2"
+											style="margin-bottom: 15px"
+										>
+											<span
+												class="input-group-addon section__label"
+												id="XcoordW2"
+												style="width: 108px"
+												>x<sub>2</sub> (m)
+											</span>
+											<input
+												type="number"
+												id="Wxcoord2"
+												class="form-control section__input"
+												style="width: 94px"
+												onkeypress="return isNumberKey(event)"
+												min="0"
+											/>
+										</div>
+										<a
+											class="btn  btn--calc btn__myWidt"
+											id="addW"
+											onclick="drawdistributed()"
+										>
+											Add
+										</a>
+									</div>
+								</div>
+								<button
+									class="btn btn-default btn__select select"
+									type="button"
+									id="removeLoads"
+									onclick="deleteLoads();"
+									disabled="true"
+									style="margin-top: 20px"
+								>
+									Remove Loads
+								</button>
+							</div>
+							<div class="col-lg-3" style="display: none" id="LoadInfo">
+								<h4 class="beam__data loads__margin">Point Loads</h4>
+								<table
+									class="table"
+									id="loadTable"
+									style="border-bottom: 1pt solid #ddd; text-align: justify"
+								>
+									<tbody></tbody>
+								</table>
+							</div>
+							<div >
+								<div >
+									<h4 style="margin-top: 10px; margin-bottom: 20px" id="Prueba2" class="section__subtitle">
+										Free Body Diagram
+									</h4>
+									<canvas
+										id="FreeBody"
+										height="350"
+										width="650"
+										style="border: 1px solid #000000; margin-bottom: 30px"
+										class="myBeamDiagram"
+									></canvas>
+								</div>
+								<div class="col-lg-2"></div>
+							</div>
+							<div class="row">
+								<div class="col-lg-2"></div>
+								<div id="ShearContainer" class="col-lg-7">
+									<h4 class="section__subtitle">Shear Diagram</h4>
+									<canvas id="Shear" height="350"
+									width="650"style="border: 1px solid #000000; margin-bottom: 30px" class= "myBeamDiagram"></canvas>
+								</div>
+								<div class="col-lg-3"></div>
+							</div>
+							<div class="row">
+								<div id="MomentContainer" class="col-lg-7">
+									<h4 class="section__subtitle">Moment Diagram</h4>
+									<canvas id="MomentD" height="350"
+									width="650" style="border: 1px solid #000000; margin-bottom: 30px" class="myBeamDiagram"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+		</div>
+
+		<!-- * FORM -->
+		<div class="form">
+			<form action="#" class="form__container">
+				<h2 class="form__tittle">Get in Touch</h2>
+				<div class="form__box">
+					<input
+						type="radio"
+						name="r"
+						id="01"
+						value="1"
+						checked
+						class="form__radio"
+					/>
+					<label for="01" class="form__label"
+						>Request our service for a project</label
+					>
+				</div>
+				<div class="form__box">
+					<input type="radio" name="r" id="02" value="2" class="form__radio" />
+					<label for="02" class="form__label"
+						>Working with us as a vendor</label
+					>
+				</div>
+				<div class="form__box">
+					<input type="radio" name="r" id="03" value="3" class="form__radio" />
+					<label for="03" class="form__label">Join the team Civilus</label>
+				</div>
+				<div>
+					<label for="#" class="form__label-big">Name*</label>
+					<br />
+					<div class="form__flex">
+						<input type="text" placeholder="Name" class="form__input" id="nombre" required/>
+						<input
+							type="text"
+							placeholder="Name of your company"
+							class="form__input"
+							
+						/>
+					</div>
+				</div>
+				<div>
+					<label for="#" class="form__label-big">Info*</label>
+					<br />
+					<div class="form__flex">
+						<input
+							type="email"
+							placeholder="Email"
+							class="form__input"
+							id="email"
+							required
+						/>
+						<input type="number" placeholder="Phone" class="form__input" />
+					</div>
+				</div>
+
+				<div class="send__box">
+					<label for="#" class="form__label-big" aria-placeholder="Your Message"
+						>Your Message*</label
+					>
+					<br />
+					<textarea
+						name="message"
+						id="message"
+						class="form__input form__input--area"
+						placeholder="Write your message here"
+						required
+					></textarea>
+					<a href="#" class="btn btn--send" type="submit" id="enviar">
+						<p class="btn__visible">
+							<i class="far fa-paper-plane"></i>Send Message
+						</p>
+
+						<p class="btn__invisible">
+							<i class="far fa-paper-plane"></i>Send Message
+						</p>
+					</a>
+				</div>
+			</form>
+		</div>
+
+		<!-- * FOOTER -->
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__box footer__box--1">
+					<img
+						src="./assets/images/CivilusSVGWhite.svg"
+						alt="Civilus Logotype"
+						width="220rem"
+					/>
+
+					<div class="about__me-icons">
+						<a
+							aria-label="Instagram"
+							href="https://www.facebook.com/hector.jpc"
+							target="_blank"
+							class="social-media-link"
+							rel="noreferrer"
+						>
+							<i class="fab fa-facebook-f"></i>
+						</a>
+
+						<a
+							aria-label="Instagram"
+							href="#"
+							target="_blank"
+							class="social-media-link"
+							rel="noreferrer"
+						>
+							<i class="fab fa-twitter"></i>
+						</a>
+
+						<a
+							aria-label="Instagram"
+							href="#"
+							target="_blank"
+							class="social-media-link"
+							rel="noreferrer"
+						>
+							<i class="fab fa-linkedin-in"></i>
+						</a>
+					</div>
+				</div>
+				<div class="footer__box footer__box--2">
+					<h2 class="footer__tittle">Services</h2>
+					<a class="footer__elements" href="./crossSection.html"
+						>Cross Section</a
+					>
+					<a class="footer__elements" href="./beamSolver.html">Beam Solver</a>
+				</div>
+
+				<div class="footer__box footer__box--3">
+					<h2 class="footer__tittle">Our Company</h2>
+					<a class="footer__elements" href="./about.html">About Us</a>
+					<a class="footer__elements" href="./contact.html">Let's talk</a>
+				</div>
+
+				<div class="footer__flex-icons">
+					<a
+						aria-label="Instagram"
+						href="https://www.facebook.com/hector.jpc"
+						target="_blank"
+						class="social-media-link"
+						rel="noreferrer"
+					>
+						<i class="fab fa-facebook-f"></i>
+					</a>
+
+					<a
+						aria-label="Instagram"
+						href="#"
+						target="_blank"
+						class="social-media-link"
+						rel="noreferrer"
+					>
+						<i class="fab fa-twitter"></i>
+					</a>
+
+					<a
+						aria-label="Instagram"
+						href="#"
+						target="_blank"
+						class="social-media-link"
+						rel="noreferrer"
+					>
+						<i class="fab fa-linkedin-in"></i>
+					</a>
+				</div>
+			</div>
+
+			<div class="footer__flex">
+				<p class="footer__rights">&#169;2021 Civilus. All rights Reserved.</p>
+				<p class="footer__components footer__components--1">Privacy Policy</p>
+				<p class="footer__components footer__components--2">Terms of Service</p>
+			</div>
+		</footer>
+
+		<script>
+			var ctx = document.getElementById('diagram').getContext('2d');
+			ctx.beginPath();
+			ctx.strokeStyle = 'black';
+			ctx.moveTo(20, 260);
+			ctx.lineTo(20, 340);
+			ctx.moveTo(20, 260);
+			ctx.lineTo(16, 269);
+			ctx.moveTo(5, 325);
+			ctx.lineTo(85, 325);
+			ctx.moveTo(20, 260);
+			ctx.lineTo(24, 269);
+			ctx.moveTo(5, 325);
+			ctx.lineTo(14, 321);
+			ctx.moveTo(5, 325);
+			ctx.lineTo(14, 329);
+			ctx.moveTo(20, 340);
+			ctx.lineTo(16, 331);
+			ctx.moveTo(20, 340);
+			ctx.lineTo(24, 331);
+			ctx.moveTo(85, 325);
+			ctx.lineTo(76, 321);
+			ctx.moveTo(85, 325);
+			ctx.lineTo(76, 329);
+			ctx.font = '12px Arial';
+			ctx.fillText('x', 75, 315);
+			ctx.font = '12px Arial';
+			ctx.fillText('z', 30, 270);
+			ctx.stroke();
+		</script>
+
+		<script
+			src="https://kit.fontawesome.com/8607e6591e.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="./js/libs/jquery.min.js"></script>
+		<script src="./js/libs/math.js"></script>
+		<script src="./js/beam.js"></script>
+		<script type="text/javascript" src="./js/libs/bootstrap.min.js"></script>
+
+		<!-- ! ALERT API -->
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+		<!-- ! EMAIL -->
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+		></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init('user_DcmX6yivpGACJApz9pbAq');
+			})();
+		</script>
+		<script src="./js/email.js"></script>
+	</body>
+</html>

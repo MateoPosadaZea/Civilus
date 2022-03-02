@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+
+		<title>Cross Section</title>
+	</head>
+	<body>
+		<div class="navigation hidden">
+			<input type="checkbox" class="navigation__checkbox" id="navi-toogle" />
+			<label for="navi-toogle" class="navigation__buttom">
+				<span class="navigation__icon">&nbsp;</span>
+			</label>
+
+			<div class="navigation__background">&nbsp;</div>
+
+			<nav class="navigation__nav">
+				<p class="navigation__text">
+					<span class="navigation__line">&nbsp;</span> INNOVATION IS PART OF OUR
+					DNA
+				</p>
+
+				<ul class="navigation__list">
+					<li class="navigation__item">
+						<a href="./home.html" class="navigation__link">
+							<span></span>Home</a
+						>
+					</li>
+					<li class="navigation__item">
+						<a href="./about.html" class="navigation__link">
+							<span></span>About us</a
+						>
+					</li>
+					<li class="navigation__item">
+						<a href="./crossSection.html" class="navigation__link">
+							<span></span>Cross Section</a
+						>
+					</li>
+					<li class="navigation__item">
+						<a href="./beamSolver.html" class="navigation__link">
+							<span></span>Beam Solver</a
+						>
+					</li>
+					<li class="navigation__item">
+						<a href="./contact.html" class="navigation__link">
+							<span></span>Contact Us</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<header>
+			<nav class="home__nav">
+				<div class="algo">
+					<div class="video hidden">
+						<video class="bg-video__content" autoplay muted width="50rem">
+							<source
+								src="./assets/video/CivilusAnimated.mp4"
+								type="video/mp4"
+							/>
+							Tu navegador no es compatible
+						</video>
+					</div>
+
+					<a href="./home.html" class="video--photo">
+						<div class="home__img"></div>
+					</a>
+				</div>
+
+				<ul class="home__list">
+					<li class="home__item">
+						<a href="./home.html" class="home__link">Home</a>
+					</li>
+					<li class="home__item">
+						<a href="./about.html" class="home__link">About us</a>
+					</li>
+					<li class="home__item">
+						<a href="./beamSolver.html" class="home__link">Beam Solver</a>
+					</li>
+					<li class="home__item">
+						<a href="./crossSection.html" class="home__link">Cross Section</a>
+					</li>
+					<li class="home__item">
+						<a href="./contact.html" class="home__link home__link--margin"
+							>Contact us</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section>
+			<h2 class="cross__tittle">Cross Section Properties</h2>
+			<div class="modal hidden">
+				<div class="modal__background">
+					<button class="close-modal">&times;</button>
+					<h1 class="modal__title-error">ERROR!</h1>
+				</div>
+
+				<p class="modal__error">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit
+				</p>
+			</div>
+			<div class="overlay hidden"></div>
+			<div class="cross__box">
+				<div class="select-box" tabindex="1">
+					<select name="" id="" class="select">
+						<option value="" disabled class="btn__select select">
+							Section
+						</option>
+						<option
+							class="btn__select select"
+							value="Rectangular"
+							onclick="changeImager();clearinputs();drawaxes();"
+						>
+							Rectangular
+						</option>
+						<option
+							class="btn__select select"
+							value="Circular"
+							onclick="changeImagec();clearinputs();drawaxes();"
+						>
+							Circular
+						</option>
+						<option
+							class="btn__select select"
+							value="RectangularH"
+							onclick="changeImagerh();clearinputs();drawaxes();"
+						>
+							Rectangular Hollow
+						</option>
+						<option
+							class="btn__select select"
+							value="CircularH"
+							onclick="changeImagech();clearinputs();drawaxes();"
+						>
+							Circular Hollow
+						</option>
+						<option
+							class="btn__select select"
+							value="I-Section"
+							onclick="changeImagei();clearinputs();drawaxes();"
+						>
+							I - Section
+						</option>
+						<option
+							class="btn__select select"
+							value="T-Section"
+							onclick="changeImaget();clearinputs();drawaxes();"
+						>
+							T - Section
+						</option>
+						<option
+							class="btn__select select"
+							value="Angle"
+							onclick="changeImagea();clearinputs();drawaxes();"
+						>
+							Angle
+						</option>
+						<option
+							class="btn__select select"
+							value="Channel"
+							onclick="changeImagechn();clearinputs();drawaxes();"
+						>
+							Channel
+						</option>
+					</select>
+				</div>
+				<div class="section">
+					<div class="section__inputs">
+						<h2 class="section__title">Rectangular</h2>
+						<img
+							src="./assets/images/Rectangular.svg"
+							alt=""
+							width="200rem"
+							class="section__img"
+						/>
+
+						<!-- * B -->
+						<div class="section__units-1 section__units--1">
+							<label for="" class="section__label"
+								>B <span class="section__span">(m)</span></label
+							>
+							<input
+								type="number"
+								class="section__input"
+								placeholder="0"
+								id="base"
+							/>
+						</div>
+						<!-- * H -->
+						<div class="section__units-1 section__units--2">
+							<label for="" class="section__label"
+								>H <span class="section__span">(m)</span></label
+							>
+							<input
+								type="number"
+								class="section__input"
+								placeholder="0"
+								id="height"
+							/>
+						</div>
+
+						<!-- * R -->
+						<div class="section__units-1 section__units--3 display">
+							<label for="" class="section__label"
+								>R <span class="section__span">(m)</span></label
+							>
+							<input
+								type="number"
+								class="section__input"
+								placeholder="0"
+								id="radius"
+							/>
+						</div>
+
+						<!-- * T -->
+						<div class="section__units-1 section__units--4 display">
+							<label for="" class="section__label"
+								>T <span class="section__span">(m)</span></label
+							>
+							<input
+								type="number"
+								class="section__input"
+								placeholder="0"
+								id="thick"
+							/>
+						</div>
+
+						<!-- * TW -->
+						<div class="section__units-1 section__units--5 display">
+							<label for="" class="section__label"
+								>TW <span class="section__span">(m)</span></label
+							>
+							<input
+								type="number"
+								class="section__input"
+								placeholder="0"
+								id="thickw"
+							/>
+						</div>
+
+						<!-- * TF -->
+						<div class="section__units-1 section__units--6 display">
+							<label for="" class="section__label"
+								>TF <span class="section__span">(m)</span></label
+							>
+							<input
+								type="number"
+								class="section__input"
+								placeholder="0"
+								id="thickf"
+							/>
+						</div>
+
+						<!-- * TF1 -->
+						<div class="section__units-1 section__units--7 display">
+							<label for="" class="section__label"
+								>TF1 <span class="section__span">(m)</span></label
+							>
+							<input
+								type="number"
+								class="section__input"
+								placeholder="0"
+								id="thickf1"
+							/>
+						</div>
+
+						<!-- * TF2 -->
+						<div class="section__units-1 section__units--8 display">
+							<label for="" class="section__label"
+								>TF2 <span class="section__span">(m)</span></label
+							>
+							<input
+								type="number"
+								class="section__input"
+								placeholder="0"
+								id="thickf2"
+							/>
+						</div>
+
+						<!-- * BF -->
+						<div class="section__units-1 section__units--9 display">
+							<label for="" class="section__label"
+								>BF <span class="section__span">(m)</span></label
+							>
+							<input
+								type="number"
+								class="section__input"
+								placeholder="0"
+								id="basef"
+							/>
+						</div>
+
+						<!-- * BF1 -->
+						<div class="section__units-1 section__units--10 display">
+							<label for="" class="section__label"
+								>BF1 <span class="section__span">(m)</span></label
+							>
+							<input
+								type="number"
+								class="section__input"
+								placeholder="0"
+								id="basef1"
+							/>
+						</div>
+
+						<!-- * BF2 -->
+						<div class="section__units-1 section__units--11 display">
+							<label for="" class="section__label"
+								>BF2 <span class="section__span">(m)</span></label
+							>
+							<input
+								type="number"
+								class="section__input"
+								placeholder="0"
+								id="basef2"
+							/>
+						</div>
+
+						<div class="section__calc">
+							<a class="btn btn--calc" onclick="calculate();">Calculate</a>
+							<select name="" class="selectUnits">
+								<option value="Units" disabled>Units</option>
+								<option value="(m)">m</option>
+								<option value="(cm)">cm</option>
+								<option value="(mm)">mm</option>
+								<option value="(ft)">ft</option>
+								<option value="(in)">in</option>
+							</select>
+							<label for="" class="section__unit">meters (m)</label>
+						</div>
+					</div>
+					<div class="section__diagram">
+						<h2 class="section__subtitle">Section Diagram</h2>
+						<canvas
+							id="diagram"
+							height="300"
+							width="300"
+							class="myCanva"
+							style="
+								border: 3px solid #041129;
+								background: #f6f6f6;
+								padding: 5rem;
+							"
+						></canvas>
+					</div>
+				</div>
+			</div>
+			<div class="results">
+				<h2 class="results__title">See your results</h2>
+				<h2 class="results__arrow">&darr;</h2>
+				<div class="results__box">
+					<!-- * ROW 1 -->
+					<div class="results__row">
+						<h2 class="results__subtitle">A(m<sup>2</sup>)</h2>
+						<p>Area of section</p>
+						<p class="Ao">0.0</p>
+					</div>
+
+					<!-- * ROW 2 -->
+					<div class="results__row">
+						<h2 class="results__subtitle">Y(m)</h2>
+						<p>Y - Coordinate of the centroid</p>
+						<p class="yo">0.0</p>
+					</div>
+
+					<!-- * ROW 3 -->
+					<div class="results__row">
+						<h2 class="results__subtitle">Z(m<sup>2</sup>)</h2>
+						<p>Z - Coordinate of the centroid</p>
+						<p class="zo">0.0</p>
+					</div>
+
+					<!-- * ROW 4 -->
+					<div class="results__row">
+						<h2 class="results__subtitle">LY(m<sup>4</sup>)</h2>
+						<p>Moment of inertia about y axis</p>
+						<p class="Iyo">0.0</p>
+					</div>
+
+					<!-- * ROW 5 -->
+					<div class="results__row">
+						<h2 class="results__subtitle">LZ(m<sup>4</sup>)</h2>
+						<p>Moment of inertia about z axis</p>
+						<p class="Izo">0.0</p>
+					</div>
+
+					<!-- * ROW 6 -->
+					<div class="results__row">
+						<h2 class="results__subtitle">QY(m<sup>2</sup>)</h2>
+						<p>Shear area in y direction</p>
+						<p class="Qyo">0.0</p>
+					</div>
+
+					<!-- * ROW 7 -->
+					<div class="results__row">
+						<h2 class="results__subtitle">QZ(m<sup>2</sup>)</h2>
+						<p>Shear area in z direction</p>
+						<p class="Qzo">0.0</p>
+					</div>
+
+					<!-- * ROW 8 -->
+					<div class="results__row">
+						<h2 class="results__subtitle">SY(m<sup>3</sup>)</h2>
+						<p>Elastic section modulus about y axi</p>
+						<p class="Syo">0.0</p>
+					</div>
+
+					<!-- * ROW 9 -->
+					<div class="results__row">
+						<h2 class="results__subtitle">SZ(m<sup>3</sup>)</h2>
+						<p>Elastic section modulus about z axi</p>
+						<p class="Szo">0.0</p>
+					</div>
+
+					<!-- * ROW 10 -->
+					<div class="results__row">
+						<h2 class="results__subtitle">ZY(m<sup>3</sup>)</h2>
+						<p>Plastic section modulus about y axis</p>
+						<p class="Zzo">0.0</p>
+					</div>
+
+					<!-- * ROW 11 -->
+					<div class="results__row">
+						<h2 class="results__subtitle">ZZ(m<sup>3</sup>)</h2>
+						<p>Plastic section modulus about z axis</p>
+						<p class="Zz">0.0</p>
+					</div>
+					<!-- * ROW 12 -->
+					<div class="results__row">
+						<h2 class="results__subtitle Iypo">J(m<sup>4</sup>)</h2>
+						<p>Torsional constant</p>
+						<p class="Jo">0.0</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- * FORM -->
+		<div class="form">
+			<form action="#" class="form__container">
+				<h2 class="form__tittle">Get in Touch</h2>
+				<div class="form__box">
+					<input
+						type="radio"
+						name="r"
+						id="01"
+						value="1"
+						checked
+						class="form__radio"
+					/>
+					<label for="01" class="form__label"
+						>Request our service for a project</label
+					>
+				</div>
+				<div class="form__box">
+					<input type="radio" name="r" id="02" value="2" class="form__radio" />
+					<label for="02" class="form__label"
+						>Working with us as a vendor</label
+					>
+				</div>
+				<div class="form__box">
+					<input type="radio" name="r" id="03" value="3" class="form__radio" />
+					<label for="03" class="form__label">Join the team Civilus</label>
+				</div>
+				<div>
+					<label for="#" class="form__label-big">Name*</label>
+					<br />
+					<div class="form__flex">
+						<input
+							type="text"
+							placeholder="Name"
+							class="form__input"
+							id="nombre"
+							required
+						/>
+						<input
+							type="text"
+							placeholder="Name of your company"
+							class="form__input"
+						/>
+					</div>
+				</div>
+				<div>
+					<label for="#" class="form__label-big">Info*</label>
+					<br />
+					<div class="form__flex">
+						<input
+							type="email"
+							placeholder="Email"
+							class="form__input"
+							id="email"
+							required
+						/>
+						<input type="number" placeholder="Phone" class="form__input" />
+					</div>
+				</div>
+
+				<div class="send__box">
+					<label for="#" class="form__label-big" aria-placeholder="Your Message"
+						>Your Message*</label
+					>
+					<br />
+					<textarea
+						name="message"
+						id="message"
+						class="form__input form__input--area"
+						placeholder="Write your message here"
+						required
+					></textarea>
+					<a href="#" class="btn btn--send" type="submit" id="enviar">
+						<p class="btn__visible">
+							<i class="far fa-paper-plane"></i>Send Message
+						</p>
+
+						<p class="btn__invisible">
+							<i class="far fa-paper-plane"></i>Send Message
+						</p>
+					</a>
+				</div>
+			</form>
+		</div>
+
+		<!-- * FOOTER -->
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__box footer__box--1">
+					<img
+						src="./assets/images/CivilusSVGWhite.svg"
+						alt="Civilus Logotype"
+						width="220rem"
+					/>
+
+					<div class="about__me-icons">
+						<a
+							aria-label="Instagram"
+							href="https://www.facebook.com/hector.jpc"
+							target="_blank"
+							class="social-media-link"
+							rel="noreferrer"
+						>
+							<i class="fab fa-facebook-f"></i>
+						</a>
+
+						<a
+							aria-label="Instagram"
+							href="#"
+							target="_blank"
+							class="social-media-link"
+							rel="noreferrer"
+						>
+							<i class="fab fa-twitter"></i>
+						</a>
+
+						<a
+							aria-label="Instagram"
+							href="#"
+							target="_blank"
+							class="social-media-link"
+							rel="noreferrer"
+						>
+							<i class="fab fa-linkedin-in"></i>
+						</a>
+					</div>
+				</div>
+				<div class="footer__box footer__box--2">
+					<h2 class="footer__tittle">Services</h2>
+					<a class="footer__elements" href="./crossSection.html"
+						>Cross Section</a
+					>
+					<a class="footer__elements" href="./beamSolver.html">Beam Solver</a>
+				</div>
+
+				<div class="footer__box footer__box--3">
+					<h2 class="footer__tittle">Our Company</h2>
+					<a class="footer__elements" href="./about.html">About Us</a>
+					<a class="footer__elements" href="./contact.html">Let's talk</a>
+				</div>
+
+				<div class="footer__flex-icons">
+					<a
+						aria-label="Instagram"
+						href="https://www.facebook.com/hector.jpc"
+						target="_blank"
+						class="social-media-link"
+						rel="noreferrer"
+					>
+						<i class="fab fa-facebook-f"></i>
+					</a>
+
+					<a
+						aria-label="Instagram"
+						href="#"
+						target="_blank"
+						class="social-media-link"
+						rel="noreferrer"
+					>
+						<i class="fab fa-twitter"></i>
+					</a>
+
+					<a
+						aria-label="Instagram"
+						href="#"
+						target="_blank"
+						class="social-media-link"
+						rel="noreferrer"
+					>
+						<i class="fab fa-linkedin-in"></i>
+					</a>
+				</div>
+			</div>
+
+			<div class="footer__flex">
+				<p class="footer__rights">&#169;2021 Civilus. All rights Reserved.</p>
+				<p class="footer__components footer__components--1">Privacy Policy</p>
+				<p class="footer__components footer__components--2">Terms of Service</p>
+			</div>
+		</footer>
+
+		<script
+			src="https://kit.fontawesome.com/8607e6591e.js"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="./js/script.js"></script>
+		<script>
+			var ctx = document.getElementById('diagram').getContext('2d');
+			ctx.beginPath();
+			ctx.moveTo(20, 20);
+			ctx.lineTo(20, 290); // 290
+			ctx.moveTo(20, 20);
+			ctx.lineTo(16, 29);
+			ctx.moveTo(5, 270); // 270
+			ctx.lineTo(280, 270); // 280 270
+			ctx.moveTo(20, 20);
+			ctx.lineTo(24, 29);
+			ctx.moveTo(5, 270); // 270
+			ctx.lineTo(14, 266); // 266
+			ctx.moveTo(5, 270); // 270
+			ctx.lineTo(14, 274); // 274
+			ctx.moveTo(20, 290); // 290
+			ctx.lineTo(16, 281); // 281
+			ctx.moveTo(20, 290); // 290
+			ctx.lineTo(24, 281); // 281
+			ctx.moveTo(280, 270); // 280 270
+			ctx.lineTo(271, 266); // 271 366
+			ctx.moveTo(280, 270); // 380 370
+			ctx.lineTo(271, 274); // 271 273
+			ctx.font = '20px Arial';
+			ctx.fillText('y', 270, 258); // 270 258
+			ctx.font = '20px Arial';
+			ctx.fillText('z', 30, 30);
+			ctx.stroke();
+
+			function isNumberKey(evt) {
+				var charCode = evt.which ? evt.which : event.keyCode;
+				if (charCode > 31 && charCode != 46 && (charCode < 48 || charCode > 57))
+					return false;
+				return true;
+			}
+
+			function drawaxes() {
+				var erase = document.getElementById('diagram').getContext('2d');
+				erase.clearRect(0, 0, diagram.width, diagram.height);
+				var ctx = document.getElementById('diagram').getContext('2d');
+				ctx.beginPath();
+				ctx.strokeStyle = '#041129';
+				ctx.moveTo(20, 20);
+				ctx.lineTo(20, 290);
+				ctx.moveTo(20, 20);
+				ctx.lineTo(16, 29);
+				ctx.moveTo(5, 270);
+				ctx.lineTo(280, 270);
+				ctx.moveTo(20, 20);
+				ctx.lineTo(24, 29);
+				ctx.moveTo(5, 270);
+				ctx.lineTo(14, 266);
+				ctx.moveTo(5, 270);
+				ctx.lineTo(14, 274);
+				ctx.moveTo(20, 290);
+				ctx.lineTo(16, 281);
+				ctx.moveTo(20, 290);
+				ctx.lineTo(24, 281);
+				ctx.moveTo(280, 270);
+				ctx.lineTo(271, 266);
+				ctx.moveTo(280, 270);
+				ctx.lineTo(271, 274);
+				ctx.fillStyle = 'black';
+				ctx.font = '12px Arial';
+				ctx.fillText('y', 270, 258);
+				ctx.font = '12px Arial';
+				ctx.fillText('z', 30, 30);
+				ctx.stroke();
+			}
+		</script>
+
+		<!-- ! ALERT API -->
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+		<!-- ! EMAIL -->
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+		></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init('user_DcmX6yivpGACJApz9pbAq');
+			})();
+		</script>
+		<script src="./js/email.js"></script>
+	</body>
+</html>

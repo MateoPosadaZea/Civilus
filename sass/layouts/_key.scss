@@ -1,0 +1,79 @@
+.key {
+	background-color: var(--color-azul-oscuro);
+	padding-bottom: 15rem;
+
+	@include respond(tabletaV) {
+		padding: 0 4rem 15rem 4rem;
+	}
+
+	&__container {
+		max-width: 110rem;
+		margin: 0 auto;
+		padding-top: 10rem;
+	}
+
+	&__tittle {
+		color: #fff;
+		font-size: 6rem;
+		padding-bottom: 10rem;
+		font-family: var(--titulos-orbitron);
+
+		@include respond(tabletaV) {
+			font-size: 4.5rem;
+		}
+
+		&--color {
+			color: var(--color-verde) !important;
+		}
+	}
+
+	&__grid {
+		border-top: 1px solid #fff;
+		display: flex;
+		color: #fff;
+		padding: 8rem 0;
+		gap: 15rem;
+
+		@include respond(tabletaV) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__grid:last-child {
+		border-bottom: 1px solid #fff;
+	}
+
+	&__row {
+		display: flex;
+		max-width: 60rem;
+		gap: 3rem;
+
+		@include respond(tabletaV) {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			justify-content: center;
+		}
+	}
+	&__img {
+		filter: brightness(0) invert(1);
+		width: 8rem;
+		align-self: flex-start;
+		margin-top: 1rem;
+
+		@include respond(tabletaV) {
+			margin: 0 auto;
+		}
+	}
+
+	&__subtittle {
+		font-size: 3.5rem;
+		margin-bottom: 2rem;
+		font-family: var(--titulos-orbitron);
+	}
+
+	&__text {
+		font-size: 2.3rem;
+		font-family: var(--parrafos-jura);
+	}
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="206.441" height="182" viewBox="0 0 206.441 182">
+  <g id="Grupo_43" data-name="Grupo 43" transform="translate(-2063.559 -8954)">
+    <g id="Elipse_10" data-name="Elipse 10" transform="translate(2088 8954)" fill="none" stroke="#c21220" stroke-width="14">
+      <circle cx="91" cy="91" r="91" stroke="none"/>
+      <circle cx="91" cy="91" r="84" fill="none"/>
+    </g>
+    <line id="Línea_40" data-name="Línea 40" x1="15.207" y2="14.785" transform="translate(2248.293 8971.5)" fill="none" stroke="#041129" stroke-width="1"/>
+    <path id="Icon_ionic-ios-arrow-back" data-name="Icon ionic-ios-arrow-back" d="M1.584,4.6,5.063,1.12a.657.657,0,1,0-.93-.928L.191,4.13a.656.656,0,0,0-.019.906L4.129,9a.657.657,0,0,0,.93-.928Z" transform="matrix(0.755, -0.656, 0.656, 0.755, 2244.048, 8983.901)" fill="#041129"/>
+    <text id="r" transform="matrix(0.755, -0.656, 0.656, 0.755, 2244.811, 8964.223)" fill="#041129" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="13" font-family="Jura" font-weight="700"><tspan x="0" y="13">r</tspan></text>
+    <line id="Línea_44" data-name="Línea 44" x1="90" transform="matrix(0.755, -0.656, 0.656, 0.755, 2179.037, 9046.489)" fill="none" stroke="#041129" stroke-width="1"/>
+    <path id="Icon_ionic-ios-arrow-back-2" data-name="Icon ionic-ios-arrow-back" d="M1.584,4.595,5.063,1.12a.657.657,0,1,0-.93-.928L.191,4.13a.656.656,0,0,0-.019.906L4.129,9a.657.657,0,0,0,.93-.928Z" transform="translate(2088 9050.738) rotate(180)" fill="#041129"/>
+    <text id="t" transform="translate(2072 9026)" fill="#041129" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="13" font-family="Jura" font-weight="700"><tspan x="0" y="13">t</tspan></text>
+    <line id="Línea_45" data-name="Línea 45" x1="22.941" transform="translate(2103.559 9045.962)" fill="none" stroke="#041129" stroke-width="1"/>
+    <path id="Icon_ionic-ios-arrow-back-3" data-name="Icon ionic-ios-arrow-back" d="M1.584,4.595,5.063,1.12a.657.657,0,1,0-.93-.928L.191,4.13a.656.656,0,0,0-.019.906L4.129,9a.657.657,0,0,0,.93-.928Z" transform="translate(2102.5 9041.546)" fill="#041129"/>
+    <line id="Línea_46" data-name="Línea 46" x1="22.941" transform="translate(2063.559 9045.962)" fill="none" stroke="#041129" stroke-width="1"/>
+  </g>
+</svg>

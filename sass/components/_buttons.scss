@@ -1,0 +1,176 @@
+.btn {
+	text-decoration: none;
+	border-radius: 2px;
+	display: inline-block;
+	text-align: center;
+	font-family: var(--titulos-orbitron);
+	cursor: pointer;
+
+	&__visible {
+		display: inline-block;
+		padding: 0.5rem 0rem;
+		height: 100%;
+		width: 100%;
+		transition: all 0.2s;
+		// background-color: #fff;
+	}
+
+	&__invisible {
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		top: -100%;
+		height: 100%;
+		width: 100%;
+		padding: 2.5rem 0;
+		transition: all 0.2s;
+	}
+
+	// &:hover {
+	// 	background-color: var(--color-rojo);
+	// }
+	&:hover &__visible {
+		transform: translateY(5rem);
+	}
+
+	&:hover &__invisible {
+		top: -0.3rem;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&--send {
+		background-color: var(--color-azul-oscuro);
+		color: #fff;
+		padding: 1.5rem 2rem;
+		max-width: 27rem;
+		font-size: 1.5rem;
+		margin-top: 3rem;
+		position: relative;
+		overflow: hidden;
+		// max-width: 30rem;
+		// height: 6.5rem;
+
+		@include respond(movil) {
+			max-width: 100%;
+		}
+	}
+
+	&--calc {
+		background-color: var(--color-rojo) !important;
+		color: #fff !important;
+		padding: 1.5rem 2rem !important;
+		font-family: var(--titulos-orbitron) !important;
+		font-size: 1.5rem !important;
+		border-radius: 3px !important;
+		box-shadow: inset 0 0 0 0 var(--color-rojo) !important;
+		transition: ease-out 0.2s;
+		outline: none;
+		border: none;
+
+		&:hover {
+			box-shadow: inset 18rem 0 0 0 var(--color-azul-oscuro) !important;
+		}
+	}
+
+	&__delete {
+		background-color: var(--color-azul-oscuro) !important;
+		color: #fff !important;
+		padding: 1.5rem 2rem !important;
+		font-family: var(--titulos-orbitron) !important;
+		font-size: 1.5rem !important;
+		border-radius: 3px !important;
+		width: 16rem;
+		box-shadow: inset 0 0 0 0 var(--color-azul-oscuro) !important;
+		transition: ease-out 0.2s;
+		outline: none;
+		border: none;
+
+		&:hover {
+			box-shadow: inset 18rem 0 0 0 var(--color-rojo) !important;
+		}
+	}
+
+	&__myWidth {
+		width: 16rem;
+	}
+
+	&__hover {
+		box-shadow: inset 0 0 0 0 var(--color-rojo);
+		transition: ease-out 0.2s;
+
+		&:hover {
+			box-shadow: inset 30rem 0 0 0 var(--color-azul-oscuro);
+		}
+	}
+
+	&__home {
+		background-color: var(--color-rojo);
+		color: #fff;
+		padding: 2rem;
+		font-size: 2rem;
+		margin-top: 2rem;
+		width: 30rem;
+		border-radius: 2px;
+
+		@include respond(tabletaV) {
+			margin-left: 35%;
+		}
+
+		@include respond(movil) {
+			width: 100%;
+			margin-top: 4rem;
+			margin-left: 0;
+		}
+
+		&--width {
+			width: 90%;
+			position: absolute;
+			bottom: 5%;
+			background-color: var(--color-azul-oscuro);
+			box-shadow: inset 0 0 0 0 var(--color-azul-oscuro);
+			transition: ease-out 0.2s;
+
+			&:hover {
+				box-shadow: inset 40rem 0 0 0 var(--color-rojo);
+			}
+
+			@include respond(tabletaV) {
+				bottom: 0%;
+				left: -32%;
+			}
+
+			@include respond(movil) {
+				bottom: 0%;
+				left: 5%;
+			}
+		}
+
+		&--width-2 {
+			margin-top: 7rem;
+		}
+		&--width-1 {
+			margin-top: 4rem;
+		}
+
+		&--margin {
+			margin-top: 5.3rem;
+		}
+	}
+}
+
+.about__calculate {
+	border: 2px solid var(--color-rojo);
+	padding: 1.5rem 0;
+	width: 100%;
+	color: var(--color-rojo);
+	font-size: 3rem;
+	margin-top: 3rem;
+	margin-bottom: 15rem;
+}
+
+.fa-paper-plane {
+	margin-right: 1rem;
+}

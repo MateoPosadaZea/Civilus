@@ -1,0 +1,31 @@
+.donations {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&__box {
+		margin: 0 auto;
+		max-width: 110rem;
+		padding: 14rem 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__tittle {
+		text-align: center;
+		font-size: 4rem;
+		font-family: var(--titulos-orbitron);
+		margin-bottom: 2rem;
+		@include respond(movil) {
+			padding: 5rem 5rem 0 5rem;
+		}
+	}
+
+	&__btn {
+		text-align: center;
+		margin-left: 0 auto;
+		max-width: 40rem;
+		background-color: --color-rojo;
+	}
+}

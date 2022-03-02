@@ -1,0 +1,47 @@
+@mixin respond($breakpoint) {
+	@if $breakpoint == miniMovil {
+		@media (max-width: 25em) {
+			// 400px/16 = 25
+			@content;
+		}
+	}
+	@if $breakpoint == movil {
+		@media (max-width: 37.5em) {
+			// 600px/16 = 37.5em
+			@content;
+		}
+	}
+
+	@if $breakpoint == movilBig {
+		@media (max-width: 45em) {
+			// 720px/16 = 45
+			@content;
+		}
+	}
+
+	@if $breakpoint == tabletaMini {
+		@media (max-width: 50em) {
+			// 800px/16 = 50
+			@content;
+		}
+	}
+	@if $breakpoint == tabletaV {
+		@media (max-width: 56.25em) {
+			// 900px/16 = 56.25
+			@content;
+		}
+	}
+	@if $breakpoint == tabletaH {
+		@media (max-width: 75em) {
+			//1200px / 16 = 75em
+
+			@content;
+		}
+	}
+	@if $breakpoint == big-desktop {
+		@media (min-width: 112.5em) {
+			// 1800px / 16 = 112.5em
+			@content;
+		}
+	}
+}
