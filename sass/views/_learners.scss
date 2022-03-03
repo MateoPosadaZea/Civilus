@@ -1,0 +1,42 @@
+.learners {
+	background-color: var(--color-azul-claro);
+
+	&__box {
+		margin: 0 auto;
+		max-width: 110rem;
+		padding: 13rem 0;
+	}
+
+	&__list {
+		display: flex;
+		list-style: none;
+		justify-content: center;
+		align-items: center;
+		gap: 17rem;
+		// margin: 0 5rem;
+		@include respond(tabletaV) {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		color: #fff;
+		font-size: 3rem;
+		font-family: var(--titulos-orbitron);
+	}
+
+	&__span {
+		margin-left: 1.5rem;
+		color: white !important;
+		font-size: 4.5rem;
+
+		&--margin {
+			margin-left: 5rem;
+		}
+
+		&--1 {
+			color: white !important;
+			font-size: 4.5rem;
+		}
+	}
+}

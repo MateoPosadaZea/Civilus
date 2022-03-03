@@ -1,0 +1,28 @@
+.cross {
+	&__tittle {
+		color: #fff;
+		background-color: var(--color-rojo);
+		display: inline-block;
+		font-family: var(--titulos-orbitron);
+		font-weight: 500;
+		padding: 1rem 3rem;
+		font-size: 2rem;
+		margin-top: 3rem;
+	}
+
+	&__box {
+		max-width: 110rem;
+		margin: 0 auto;
+		position: relative;
+		z-index: 4;
+	}
+}
+
+.myCanva {
+	@include respond(movilBig) {
+		width: 50rem;
+	}
+	@include respond(miniMovil) {
+		width: 40rem;
+	}
+}
