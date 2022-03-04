@@ -1,8 +1,7 @@
 .results {
-	max-width: 110rem;
+	max-width: 70rem;
 	margin: 0 auto;
 	padding-top: 5rem;
-
 	// @include respond(tabletaH) {
 	// 	background-color: red;
 	// }
@@ -29,22 +28,26 @@
 		font-size: 4rem;
 		text-align: center;
 		font-family: var(--titulos-orbitron);
-		margin: 3rem 0 7rem 0;
+		margin: 1rem 0 2rem 0;
 	}
 
 	&__box {
 		display: flex;
 		flex-direction: column;
-		// gap: 5rem;
+		padding-bottom: 5rem;
 	}
 
 	&__row {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 3rem 1rem;
+		padding: 1.5rem 1rem;
 		border-bottom: 1px solid #000;
 		font-family: var(--titulos-orbitron);
 		font-size: 1.5rem;
+	}
+
+	&__subtitle {
+		font-size: 1.8rem;
 	}
 }
