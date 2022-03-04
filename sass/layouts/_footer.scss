@@ -1,0 +1,152 @@
+.footer {
+	background-color: var(--color-azul-oscuro);
+	&__container {
+		max-width: 110rem;
+		margin: 0 auto;
+		padding: 10rem 0;
+		display: flex;
+		gap: 8rem;
+		@include respond(tabletaV) {
+			justify-content: space-between;
+			margin: 0;
+		}
+
+		@include respond(tabletaMini) {
+			justify-content: space-evenly;
+			gap: 3rem;
+		}
+
+		@include respond(movil) {
+			max-width: 100%;
+			flex-direction: column;
+		}
+	}
+
+	&__box--1 img {
+		margin-bottom: 2rem;
+	}
+
+	&__box {
+		max-width: 35rem;
+		// @include respond(tabletaV) {
+		// 	background-color: red;
+		// 	margin: 0 auto;
+		// }
+
+		@include respond(tabletaV) {
+			margin: 0 auto;
+		}
+
+		@include respond(movil) {
+			width: 100%;
+			text-align: start;
+		}
+
+		&--1 {
+			margin-right: auto;
+			@include respond(tabletaMini) {
+				padding-left: 3rem;
+			}
+
+			@include respond(movil) {
+				display: none;
+			}
+		}
+
+		&--2 {
+			padding-left: 20rem;
+			@include respond(tabletaMini) {
+				padding-left: 0;
+			}
+
+			@include respond(movil) {
+				margin-top: 3rem;
+				order: 2;
+			}
+		}
+
+		&--3 {
+			@include respond(tabletaMini) {
+				padding-right: 3rem;
+			}
+		}
+	}
+
+	&__text {
+		margin-top: 2rem;
+		font-family: var(--parrafos-jura);
+		font-size: 1.3rem;
+		margin-bottom: 5rem;
+		color: #fff;
+	}
+
+	&__tittle {
+		font-family: var(--titulos-orbitron);
+		margin-bottom: 3rem;
+		font-size: 2.2rem;
+		color: #fff;
+	}
+
+	&__elements {
+		font-family: var(--parrafos-jura);
+		font-size: 1.5rem;
+		margin-top: 2rem;
+		cursor: pointer;
+		display: block;
+		color: #fff;
+	}
+
+	&__flex {
+		display: flex;
+		align-items: center;
+		background-color: #fff;
+		color: #fff;
+		font-family: var(--titulos-orbitron);
+		padding: 4rem 0;
+		font-size: 1.5rem;
+		justify-content: space-around;
+		color: var(--color-azul-oscuro);
+		@include respond(tabletaV) {
+			flex-direction: column;
+		}
+	}
+
+	&__rights {
+		margin-left: 10rem;
+		@include respond(tabletaV) {
+			margin-left: 0;
+			text-align: center;
+		}
+	}
+
+	&__components {
+		cursor: pointer;
+	}
+
+	&__components--1 {
+		margin-left: 30rem;
+		@include respond(tabletaV) {
+			display: none;
+		}
+	}
+
+	&__components--2 {
+		margin-right: 15rem;
+		@include respond(tabletaV) {
+			display: none;
+		}
+	}
+
+	&__flex-icons {
+		display: none;
+
+		@include respond(movil) {
+			display: flex;
+			align-items: center;
+			justify-content: start;
+			margin-top: 3rem;
+			margin-left: 8rem;
+			order: 3;
+		}
+	}
+}

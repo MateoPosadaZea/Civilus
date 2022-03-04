@@ -1161,8 +1161,6 @@ function buildTableM(Minsert, xMinsert) {
 }
 
 function buildTableP(Pinsert, xPinsert) {
-	console.log('entra');
-
 	document.getElementById('LoadInfo').style.display = 'block';
 	var table = document.getElementById('loadTable');
 	var row = table.insertRow(0);
@@ -1172,15 +1170,25 @@ function buildTableP(Pinsert, xPinsert) {
 	var cell4 = row.insertCell(3);
 	cell1.innerHTML = 'P<sub>' + Parray.length + '</sub> (kN)';
 	cell1.style.fontWeight = 'bold';
+	cell1.style.display = 'inline-block';
+	cell1.style.marginRight = '20px';
+	cell1.style.paddingTop = '20px';
+
 	cell2.innerHTML = Pinsert.toFixed(1);
+	cell2.style.paddingTop = '20px';
+
 	cell3.innerHTML = 'x (m)';
+	cell3.style.display = 'inline-block';
+	cell3.style.marginRight = '20px';
+	cell3.style.marginLeft = '20px';
 	cell3.style.fontWeight = 'bold';
+	cell3.style.paddingTop = '20px';
+
 	cell4.innerHTML = xPinsert.toFixed(1);
+	cell4.style.paddingTop = '20px';
 }
 
 function buildTableW1(w1insert, x1insert) {
-	console.log('entra 2');
-
 	document.getElementById('LoadInfo').style.display = 'block';
 	var table = document.getElementById('loadTable');
 	var row = table.insertRow(0);
@@ -1191,15 +1199,23 @@ function buildTableW1(w1insert, x1insert) {
 	row.style.border = 'none';
 	cell1.innerHTML = 'w<sub>' + w1array.length + '</sub> (kN/m)';
 	cell1.style.fontWeight = 'bold';
+	cell1.style.display = 'inline-block';
+	cell1.style.paddingTop = '20px';
+
+	cell1.style.marginRight = '20px';
 	cell2.innerHTML = w1insert.toFixed(1);
+	cell2.style.paddingTop = '20px';
+	cell3.style.display = 'inline-block';
+	cell3.style.marginRight = '20px';
+	cell3.style.marginLeft = '20px';
+	cell3.style.paddingTop = '20px';
 	cell3.innerHTML = 'x<sub>1</sub> (m)';
 	cell3.style.fontWeight = 'bold';
 	cell4.innerHTML = x1insert.toFixed(1);
+	cell4.style.paddingTop = '20px';
 }
 
 function buildTableW2(w2insert, x2insert) {
-	console.log('entra 3');
-
 	document.getElementById('LoadInfo').style.display = 'block';
 	var table = document.getElementById('loadTable');
 	var row = table.insertRow(0);
@@ -1208,10 +1224,19 @@ function buildTableW2(w2insert, x2insert) {
 	var cell3 = row.insertCell(2);
 	var cell4 = row.insertCell(3);
 	cell1.innerHTML = '';
+	cell3.style.display = 'inline-block';
+
 	cell2.innerHTML = w2insert.toFixed(1);
+	cell2.style.paddingTop = '20px';
+
 	cell3.innerHTML = 'x<sub>2</sub> (m)';
+	cell3.style.paddingTop = '20px';
+
+	cell3.style.display = 'inline-block';
+	cell3.style.marginLeft = '20px';
 	cell3.style.fontWeight = 'bold';
 	cell4.innerHTML = x2insert.toFixed(1);
+	cell4.style.paddingTop = '20px';
 	cell1.style.border = 'none';
 	cell2.style.border = 'none';
 	cell3.style.border = 'none';

@@ -1,22 +1,11 @@
 .about {
-	&__hero {
-		// background-image: url(../../assets/images/sol-tZw3fcjUIpM-unsplash.jpg);
-		// height: 65rem;
-		// background-position: bottom;
-		// background-size: cover;
-		// filter: brightness(50%);
-		position: relative;
-	}
-
 	&__container {
-		background-color: #fff;
+		background-color: white;
 		height: 43rem;
 		max-width: 95rem;
-		position: absolute;
-		bottom: -3rem;
-		left: 17%;
+		margin: 15rem auto;
 		border-radius: 0.4rem;
-		padding: 0rem 5rem;
+		padding: 0 5rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;

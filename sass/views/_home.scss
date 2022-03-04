@@ -9,8 +9,6 @@
 }
 .home {
 	height: 100vh;
-	// overflow-x: hidden;
-
 	@include respond(tabletaV) {
 		height: 80vh;
 	}
@@ -204,7 +202,7 @@
 
 	&__graph-container {
 		max-width: 110rem;
-		margin: 15rem auto;
+		margin: 0 auto;
 		display: flex;
 		align-items: center;
 		gap: 5rem;

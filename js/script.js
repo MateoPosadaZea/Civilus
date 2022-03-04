@@ -23,16 +23,16 @@ const modal = document.querySelector('.modal');
 const modal__error = document.querySelector('.modal__error');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
-
+const results__angle = document.querySelectorAll('.results__angle');
 // * ========= FUNCTIONS ========= //
 function drawcdg(yc, zc) {
 	var ctx1 = document.getElementById('diagram').getContext('2d');
 	ctx1.beginPath();
 	ctx1.arc(yc + 22, zc + 58, 4, 0, 2 * Math.PI);
-	ctx1.fillStyle = '#c21220';
+	ctx1.fillStyle = '#041129';
 	ctx1.fill();
 	ctx1.lineWidth = 1;
-	ctx1.strokeStyle = '#c21220';
+	ctx1.strokeStyle = '#041129';
 	ctx1.stroke();
 	ctx1.moveTo(yc + 22, zc + 58);
 	ctx1.lineTo(yc + 22, zc + 58 - 100);
@@ -46,7 +46,7 @@ function drawcdg(yc, zc) {
 	ctx1.lineTo(yc + 22 + 100 - 9, zc + 58 - 4);
 	ctx1.moveTo(yc + 22 + 100, zc + 58);
 	ctx1.lineTo(yc + 22 + 100 - 9, zc + 58 + 4);
-	ctx1.fillStyle = '#c21220';
+	ctx1.fillStyle = '#041129';
 	ctx1.font = '12px Arial';
 	ctx1.fillText('z', yc + 22 + 10, zc + 58 - 100 + 10);
 	ctx1.font = '12px Arial';
@@ -83,13 +83,6 @@ function drawcdgangle(yc, zc, v, u) {
 	ctx1.stroke();
 }
 
-function clearInputs() {
-	const input = document.querySelectorAll('input');
-	for (let i = 0; i < input.length; i++) {
-		input[i].value = '';
-	}
-}
-
 const openModal = function (error) {
 	modal__error.textContent = error;
 	modal.classList.remove('hidden');
@@ -121,7 +114,6 @@ const error =
 	'All data have to be correctly typed to proceed to calculus. Please check input values.';
 function calculate() {
 	var erase = document.getElementById('diagram').getContext('2d');
-	console.log(erase);
 	erase.clearRect(0, 0, diagram.width, diagram.height);
 
 	var A = 0;
@@ -167,7 +159,7 @@ function calculate() {
 				zc = 210 * (z / h); // 210
 				var ctx1 = document.getElementById('diagram').getContext('2d');
 				ctx1.beginPath();
-				ctx1.fillStyle = 'red';
+				ctx1.fillStyle = '#C21320';
 				ctx1.fillRect(22, 58, x2, 210); // 210
 				drawcdg(yc, zc);
 				var a = h / 2;
@@ -186,7 +178,7 @@ function calculate() {
 				zc = 210 * (z / b); //210
 				var ctx1 = document.getElementById('diagram').getContext('2d');
 				ctx1.beginPath();
-				ctx1.fillStyle = 'red';
+				ctx1.fillStyle = '#c21320';
 				ctx1.fillRect(22, y1, 210, y2); // 210
 				drawcdg(yc, zc - 58 + y1);
 				var a = b / 2;
@@ -226,10 +218,10 @@ function calculate() {
 			var ctx1 = document.getElementById('diagram').getContext('2d');
 			ctx1.beginPath();
 			ctx1.arc(101, 188, 80, 0, 2 * Math.PI);
-			ctx1.fillStyle = '#041129';
+			ctx1.fillStyle = '#c21320';
 			ctx1.fill();
 			ctx1.lineWidth = 1;
-			ctx1.strokeStyle = '#041129';
+			ctx1.strokeStyle = '#c21320';
 			ctx1.stroke();
 			drawcdg(101 - 22, 188 - 58);
 
@@ -294,9 +286,9 @@ function calculate() {
 				zc = 210 * (z / h);
 				var ctx1 = document.getElementById('diagram').getContext('2d');
 				ctx1.beginPath();
-				ctx1.fillStyle = 'red';
+				ctx1.fillStyle = '#c21320';
 				ctx1.fillRect(22, 58, x2, 210);
-				ctx1.fillStyle = 'red';
+				ctx1.fillStyle = '#fff';
 				ctx1.fillRect(tx1, ty1, tx2, ty2);
 				drawcdg(yc, zc);
 			} else {
@@ -310,9 +302,9 @@ function calculate() {
 				zc = 210 * (z / b);
 				var ctx1 = document.getElementById('diagram').getContext('2d');
 				ctx1.beginPath();
-				ctx1.fillStyle = 'red';
+				ctx1.fillStyle = '#c21320';
 				ctx1.fillRect(22, y1, 210, y2);
-				ctx1.fillStyle = 'red';
+				ctx1.fillStyle = 'white';
 				ctx1.fillRect(tx1, ty1, tx2, ty2);
 				drawcdg(yc, zc - 58 + y1);
 			}
@@ -354,14 +346,14 @@ function calculate() {
 			var ctx1 = document.getElementById('diagram').getContext('2d');
 			ctx1.beginPath();
 			ctx1.arc(101, 188, 80, 0, 2 * Math.PI);
-			ctx1.fillStyle = '#041129';
+			ctx1.fillStyle = '#c21320';
 			ctx1.fill();
 			ctx1.lineWidth = 1;
 			ctx1.strokeStyle = '#ffff';
 			ctx1.stroke();
 			ctx1.beginPath();
 			ctx1.arc(101, 188, tr, 0, 2 * Math.PI);
-			ctx1.fillStyle = '#041129';
+			ctx1.fillStyle = '#ffff';
 			ctx1.fill();
 			ctx1.lineWidth = 1;
 			ctx1.strokeStyle = '#fff';
@@ -458,7 +450,7 @@ function calculate() {
 				zc = 210 * (y / bf2);
 				var ctx1 = document.getElementById('diagram').getContext('2d');
 				ctx1.beginPath();
-				ctx1.fillStyle = '#041129';
+				ctx1.fillStyle = '#c21320';
 				ctx1.fillRect(22, 268 - qh, qbf2, qtf2);
 				ctx1.fillRect(22 + 0.5 * (qbf2 - qbf1), 268 - qtf1, qbf1, qtf1);
 				ctx1.fillRect(
@@ -479,7 +471,7 @@ function calculate() {
 				zc = 210 * (y / bf1);
 				var ctx1 = document.getElementById('diagram').getContext('2d');
 				ctx1.beginPath();
-				ctx1.fillStyle = '#041129';
+				ctx1.fillStyle = '#c21320';
 				ctx1.fillRect(22 + 0.5 * (qbf1 - qbf2), 268 - qh, qbf2, qtf2);
 				ctx1.fillRect(22, 268 - qtf1, qbf1, qtf1);
 				ctx1.fillRect(
@@ -500,7 +492,7 @@ function calculate() {
 				zc = 210 * (y / h);
 				var ctx1 = document.getElementById('diagram').getContext('2d');
 				ctx1.beginPath();
-				ctx1.fillStyle = '#041129';
+				ctx1.fillStyle = '#c21320';
 				ctx1.fillRect(22 + 0.5 * (qbf1 - qbf2), 268 - qh, qbf2, qtf2);
 				ctx1.fillRect(22, 268 - qtf1, qbf1, qtf1);
 				ctx1.fillRect(
@@ -521,7 +513,7 @@ function calculate() {
 				zc = 210 * (y / h);
 				var ctx1 = document.getElementById('diagram').getContext('2d');
 				ctx1.beginPath();
-				ctx1.fillStyle = '#041129';
+				ctx1.fillStyle = '#c21320';
 				ctx1.fillRect(22, 268 - qh, qbf2, qtf2);
 				ctx1.fillRect(22 + 0.5 * (qbf2 - qbf1), 268 - qtf1, qbf1, qtf1);
 				ctx1.fillRect(
@@ -632,7 +624,7 @@ function calculate() {
 				zc = 210 * (y / bf);
 				var ctx1 = document.getElementById('diagram').getContext('2d');
 				ctx1.beginPath();
-				ctx1.fillStyle = '#041129';
+				ctx1.fillStyle = '#c21320';
 				ctx1.fillRect(22, 268 - qh, qbf, qtf);
 				ctx1.fillRect(22 + 0.5 * (qbf - qtw), 268 - qh + qtf, qtw, qh - qtf);
 				drawcdg(qbf / 2, 268 - zc - 58);
@@ -645,7 +637,7 @@ function calculate() {
 				zc = 210 * (y / h);
 				var ctx1 = document.getElementById('diagram').getContext('2d');
 				ctx1.beginPath();
-				ctx1.fillStyle = '#041129';
+				ctx1.fillStyle = '#c21320';
 				ctx1.fillRect(22, 268 - qh, qbf, qtf);
 				ctx1.fillRect(22 + 0.5 * (qbf - qtw), 268 - qh + qtf, qtw, qh - qtf);
 				drawcdg(qbf / 2, 268 - zc - 58);
@@ -732,7 +724,7 @@ function calculate() {
 				zc = 210 * (y / b);
 				var ctx1 = document.getElementById('diagram').getContext('2d');
 				ctx1.beginPath();
-				ctx1.fillStyle = '#041129';
+				ctx1.fillStyle = '#c21320';
 				ctx1.fillRect(22, 268 - qh, qt, qh);
 				ctx1.fillRect(22, 268 - qt, qb, qt);
 			} else {
@@ -743,7 +735,7 @@ function calculate() {
 				zc = 210 * (y / h);
 				var ctx1 = document.getElementById('diagram').getContext('2d');
 				ctx1.beginPath();
-				ctx1.fillStyle = '#041129';
+				ctx1.fillStyle = '#c21320';
 				ctx1.fillRect(22, 268 - qh, qt, qh);
 				ctx1.fillRect(22, 268 - qt, qb, qt);
 			}
@@ -857,7 +849,7 @@ function calculate() {
 				zc = 210 * (y / b);
 				var ctx1 = document.getElementById('diagram').getContext('2d');
 				ctx1.beginPath();
-				ctx1.fillStyle = '#FF0000';
+				ctx1.fillStyle = '#c21320';
 				ctx1.fillRect(22, 268 - qh, qb, qtf);
 				ctx1.fillRect(22, 268 - qh, qtw, qh);
 				ctx1.fillRect(22, 268 - qtf, qb, qtf);
@@ -871,7 +863,7 @@ function calculate() {
 				zc = 210 * (y / h);
 				var ctx1 = document.getElementById('diagram').getContext('2d');
 				ctx1.beginPath();
-				ctx1.fillStyle = '#FF0000';
+				ctx1.fillStyle = '#c21320';
 				ctx1.fillRect(22, 268 - qh, qb, qtf);
 				ctx1.fillRect(22, 268 - qh, qtw, qh);
 				ctx1.fillRect(22, 268 - qtf, qb, qtf);
@@ -947,8 +939,10 @@ function calculate() {
 		document.querySelector('.Zzo').textContent = Zyo;
 		document.querySelector('.Jo').textContent = Jo;
 		document.querySelector('.Zz').textContent = Zzo;
+		document.querySelector('.Iyp').textContent = Iypo;
+		document.querySelector('.Izp').textContent = Izpo;
+		document.querySelector('.Teta').textContent = Tao.toFixed(2);
 	}
-	clearInputs();
 }
 
 // * ========= MAIN ========= //
@@ -956,15 +950,20 @@ const seccion = () => {
 	if (select.value === rectangular) {
 		section__img.src = './assets/images/Rectangular.svg';
 		section__title.textContent = 'Rectangular';
+		results__angle.forEach((angle) => {
+			angle.classList.add('hidden');
+		});
 		if (
 			document
 				.querySelector('.section__units--1')
 				.classList.contains('display') ||
 			document.querySelector('.section__units--2').classList.contains('display')
 		) {
+			console.log('sisas');
 			//  * REMOVE
 			document.querySelector('.section__units--1').classList.remove('display');
 			document.querySelector('.section__units--2').classList.remove('display');
+
 			// * ADD
 			document.querySelector('.section__units--3').classList.add('display');
 			document.querySelector('.section__units--4').classList.add('display');
@@ -976,10 +975,13 @@ const seccion = () => {
 			document.querySelector('.section__units--10').classList.add('display');
 			document.querySelector('.section__units--11').classList.add('display');
 		}
+		document.querySelector('.section__units--4').classList.add('display');
 	} else if (select.value === circular) {
 		section__img.src = './assets/images/circular.svg';
 		section__title.textContent = 'Circular';
-
+		results__angle.forEach((angle) => {
+			angle.classList.add('hidden');
+		});
 		if (
 			document.querySelector('.section__units--3').classList.contains('display')
 		) {
@@ -1000,7 +1002,9 @@ const seccion = () => {
 	} else if (select.value === rectangularH) {
 		section__img.src = './assets/images/RectangularHollow.svg';
 		section__title.textContent = 'Rectangular Hollow';
-
+		results__angle.forEach((angle) => {
+			angle.classList.add('hidden');
+		});
 		if (
 			document
 				.querySelector('.section__units--1')
@@ -1027,6 +1031,9 @@ const seccion = () => {
 	} else if (select.value === circularH) {
 		section__img.src = './assets/images/CircularHollow.svg';
 		section__title.textContent = 'Circular Hollow';
+		results__angle.forEach((angle) => {
+			angle.classList.add('hidden');
+		});
 		if (
 			document
 				.querySelector('.section__units--3')
@@ -1050,6 +1057,9 @@ const seccion = () => {
 	} else if (select.value === channel) {
 		section__img.src = './assets/images/Channel.svg';
 		section__title.textContent = 'Channel';
+		results__angle.forEach((angle) => {
+			angle.classList.add('hidden');
+		});
 
 		if (
 			document
@@ -1079,6 +1089,9 @@ const seccion = () => {
 	} else if (select.value === iSection) {
 		section__img.src = './assets/images/ISection.svg';
 		section__title.textContent = 'I - Section';
+		results__angle.forEach((angle) => {
+			angle.classList.add('hidden');
+		});
 
 		if (
 			document
@@ -1117,6 +1130,9 @@ const seccion = () => {
 	} else if (select.value === tSection) {
 		section__img.src = './assets/images/TSection.svg';
 		section__title.textContent = 'T - Section';
+		results__angle.forEach((angle) => {
+			angle.classList.add('hidden');
+		});
 
 		if (
 			document
@@ -1146,6 +1162,9 @@ const seccion = () => {
 	} else if (select.value === angle) {
 		section__img.src = './assets/images/Angle.svg';
 		section__title.textContent = 'Angle';
+		results__angle.forEach((angle) => {
+			angle.classList.remove('hidden');
+		});
 
 		if (
 			document

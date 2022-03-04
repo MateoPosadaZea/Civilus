@@ -10,18 +10,17 @@
 	@include respond(movilBig) {
 		flex-direction: column;
 		gap: 5rem;
-		// padding: 0 10rem;
 	}
 	&__title {
-		margin: 7rem 0 3rem 0;
-		font-size: 3rem;
+		margin: 4rem 0 3rem 0;
+		font-size: 2rem;
 		font-family: var(--titulos-orbitron);
 		color: var(--color-azul-oscuro);
 	}
 
 	&__units {
 		border: 3px solid var(--color-azul-oscuro) !important;
-		width: 35rem !important;
+		width: 20rem;
 		display: flex !important;
 		align-items: center !important;
 		margin-bottom: 3rem !important;
@@ -43,36 +42,48 @@
 
 	&__units-1 {
 		border: 3px solid var(--color-azul-oscuro);
-		width: 35rem;
+		width: 20rem;
 		display: flex;
 		align-items: center;
 		margin-bottom: 3rem;
 		font-family: var(--titulos-orbitron);
 		margin-top: 3rem;
+		background-color: red;
 	}
 
 	&__input {
 		border: none;
-		flex: 1;
-		padding: 1.5rem 2rem 1.5rem 2rem;
+		padding: 1rem 1rem 1rem 2rem;
 		font-size: 1.5rem;
 		outline: none;
+		width: 100% !important;
 	}
 
 	&__label {
-		flex-basis: 40% !important;
-		padding: 1.5rem 0 1.5rem 2rem !important;
+		width: 13rem !important;
+		padding: 1rem 0 1.5rem 1rem !important;
 		font-size: 1.5rem !important;
 		font-weight: 700;
 		font-family: var(--titulos-orbitron);
 		border-right: 3px solid var(--color-azul-oscuro) !important;
+		display: inline-block;
+	}
+
+	&__label-beam {
+		width: 13rem !important;
+		padding: 1rem 1rem 1rem 1rem !important;
+		font-size: 1.5rem !important;
+		font-weight: 700;
+		font-family: var(--titulos-orbitron);
+		border-right: 3px solid var(--color-azul-oscuro) !important;
+		display: inline-block;
 	}
 
 	&__calc {
 		display: flex;
 		gap: 2.5rem;
 		font-weight: 500;
-		padding-top: 3rem;
+		align-items: center;
 	}
 
 	&__unit {
@@ -84,7 +95,7 @@
 	&__subtitle {
 		font-size: 3rem !important;
 		font-family: var(--titulos-orbitron) !important;
-		margin: 7rem 0 3rem 0 !important;
+		margin: 0 0 3rem 0 !important;
 	}
 
 	&__diagram {
@@ -97,4 +108,12 @@
 
 .display {
 	display: none;
+}
+
+.selectUnits {
+	height: 4rem !important;
+	padding: 0 1rem !important;
+}
+.hidden {
+	display: none !important;
 }

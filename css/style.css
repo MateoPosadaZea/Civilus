@@ -110,7 +110,7 @@ a {
 .btn--calc {
   background-color: var(--color-rojo) !important;
   color: #fff !important;
-  padding: 1.5rem 2rem !important;
+  padding: 1rem 1rem !important;
   font-family: var(--titulos-orbitron) !important;
   font-size: 1.5rem !important;
   border-radius: 3px !important;
@@ -131,7 +131,7 @@ a {
   font-family: var(--titulos-orbitron) !important;
   font-size: 1.5rem !important;
   border-radius: 3px !important;
-  width: 16rem;
+  width: 10rem;
   box-shadow: inset 0 0 0 0 var(--color-azul-oscuro) !important;
   transition: ease-out 0.2s;
   outline: none;
@@ -143,7 +143,7 @@ a {
 }
 
 .btn__myWidth {
-  width: 16rem;
+  width: 10rem;
 }
 
 .btn__hover {
@@ -767,15 +767,15 @@ select,
 }
 
 .section__title {
-  margin: 7rem 0 3rem 0;
-  font-size: 3rem;
+  margin: 4rem 0 3rem 0;
+  font-size: 2rem;
   font-family: var(--titulos-orbitron);
   color: var(--color-azul-oscuro);
 }
 
 .section__units {
   border: 3px solid var(--color-azul-oscuro) !important;
-  width: 35rem !important;
+  width: 20rem;
   display: flex !important;
   align-items: center !important;
   margin-bottom: 3rem !important;
@@ -801,36 +801,48 @@ select,
 
 .section__units-1 {
   border: 3px solid var(--color-azul-oscuro);
-  width: 35rem;
+  width: 20rem;
   display: flex;
   align-items: center;
   margin-bottom: 3rem;
   font-family: var(--titulos-orbitron);
   margin-top: 3rem;
+  background-color: red;
 }
 
 .section__input {
   border: none;
-  flex: 1;
-  padding: 1.5rem 2rem 1.5rem 2rem;
+  padding: 1rem 1rem 1rem 2rem;
   font-size: 1.5rem;
   outline: none;
+  width: 100% !important;
 }
 
 .section__label {
-  flex-basis: 40% !important;
-  padding: 1.5rem 0 1.5rem 2rem !important;
+  width: 13rem !important;
+  padding: 1rem 0 1.5rem 1rem !important;
   font-size: 1.5rem !important;
   font-weight: 700;
   font-family: var(--titulos-orbitron);
   border-right: 3px solid var(--color-azul-oscuro) !important;
+  display: inline-block;
+}
+
+.section__label-beam {
+  width: 13rem !important;
+  padding: 1rem 1rem 1rem 1rem !important;
+  font-size: 1.5rem !important;
+  font-weight: 700;
+  font-family: var(--titulos-orbitron);
+  border-right: 3px solid var(--color-azul-oscuro) !important;
+  display: inline-block;
 }
 
 .section__calc {
   display: flex;
   gap: 2.5rem;
   font-weight: 500;
-  padding-top: 3rem;
+  align-items: center;
 }
 
 .section__unit {
@@ -842,7 +854,7 @@ select,
 .section__subtitle {
   font-size: 3rem !important;
   font-family: var(--titulos-orbitron) !important;
-  margin: 7rem 0 3rem 0 !important;
+  margin: 0 0 3rem 0 !important;
 }
 
 .section__diagram {
@@ -857,6 +869,15 @@ select,
 
 .display {
   display: none;
+}
+
+.selectUnits {
+  height: 4rem !important;
+  padding: 0 1rem !important;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .modal {
@@ -1353,19 +1374,13 @@ select,
   transform: rotate(-45deg);
 }
 
-.about__hero {
-  position: relative;
-}
-
 .about__container {
-  background-color: #fff;
+  background-color: white;
   height: 43rem;
   max-width: 95rem;
-  position: absolute;
-  bottom: -3rem;
-  left: 17%;
+  margin: 15rem auto;
   border-radius: 0.4rem;
-  padding: 0rem 5rem;
+  padding: 0 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1720,6 +1735,7 @@ select,
   align-self: flex-end;
   justify-self: flex-start;
   font-family: var(--parrafos-jura);
+  font-weight: 700;
   flex: 1;
 }
 
@@ -1824,7 +1840,7 @@ select,
 
 .home__graph-container {
   max-width: 110rem;
-  margin: 15rem auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   gap: 5rem;
@@ -2470,6 +2486,8 @@ fieldset[disabled] .btn-default.active {
 
 .btn__select {
   background-color: transparent !important;
+  padding: 0 1rem !important;
+  height: 4.5rem !important;
 }
 
 .beam__father {
@@ -2590,4 +2608,15 @@ span {
 
 .myFlex {
   display: flex;
+}
+
+tr {
+  border-bottom: #041129 solid 2px;
+  padding: 1rem !important;
+  margin-bottom: 2rem !important;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }

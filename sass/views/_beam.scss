@@ -548,6 +548,8 @@ fieldset[disabled] .btn-default.active {
 
 .btn__select {
 	background-color: transparent !important;
+	padding: 0 1rem !important;
+	height: 4.5rem !important;
 }
 
 .beam__father {
@@ -656,4 +658,14 @@ span {
 
 .myFlex {
 	display: flex;
+}
+tr {
+	border-bottom: #041129 solid 2px;
+	padding: 1rem !important;
+	margin-bottom: 2rem !important;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }

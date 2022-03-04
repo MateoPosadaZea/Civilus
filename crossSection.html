@@ -182,14 +182,14 @@
 						<img
 							src="./assets/images/Rectangular.svg"
 							alt=""
-							width="200rem"
+							width="150rem"
 							class="section__img"
 						/>
 
 						<!-- * B -->
 						<div class="section__units-1 section__units--1">
 							<label for="" class="section__label"
-								>B <span class="section__span">(m)</span></label
+								>b <span class="section__span">(m)</span></label
 							>
 							<input
 								type="number"
@@ -201,7 +201,7 @@
 						<!-- * H -->
 						<div class="section__units-1 section__units--2">
 							<label for="" class="section__label"
-								>H <span class="section__span">(m)</span></label
+								>h <span class="section__span">(m)</span></label
 							>
 							<input
 								type="number"
@@ -214,7 +214,7 @@
 						<!-- * R -->
 						<div class="section__units-1 section__units--3 display">
 							<label for="" class="section__label"
-								>R <span class="section__span">(m)</span></label
+								>r <span class="section__span">(m)</span></label
 							>
 							<input
 								type="number"
@@ -227,7 +227,7 @@
 						<!-- * T -->
 						<div class="section__units-1 section__units--4 display">
 							<label for="" class="section__label"
-								>T <span class="section__span">(m)</span></label
+								>t <span class="section__span">(m)</span></label
 							>
 							<input
 								type="number"
@@ -240,7 +240,7 @@
 						<!-- * TW -->
 						<div class="section__units-1 section__units--5 display">
 							<label for="" class="section__label"
-								>TW <span class="section__span">(m)</span></label
+								>tw <span class="section__span">(m)</span></label
 							>
 							<input
 								type="number"
@@ -253,7 +253,7 @@
 						<!-- * TF -->
 						<div class="section__units-1 section__units--6 display">
 							<label for="" class="section__label"
-								>TF <span class="section__span">(m)</span></label
+								>tf <span class="section__span">(m)</span></label
 							>
 							<input
 								type="number"
@@ -266,7 +266,7 @@
 						<!-- * TF1 -->
 						<div class="section__units-1 section__units--7 display">
 							<label for="" class="section__label"
-								>TF1 <span class="section__span">(m)</span></label
+								>tf1 <span class="section__span">(m)</span></label
 							>
 							<input
 								type="number"
@@ -279,7 +279,7 @@
 						<!-- * TF2 -->
 						<div class="section__units-1 section__units--8 display">
 							<label for="" class="section__label"
-								>TF2 <span class="section__span">(m)</span></label
+								>tf2 <span class="section__span">(m)</span></label
 							>
 							<input
 								type="number"
@@ -292,7 +292,7 @@
 						<!-- * BF -->
 						<div class="section__units-1 section__units--9 display">
 							<label for="" class="section__label"
-								>BF <span class="section__span">(m)</span></label
+								>bf <span class="section__span">(m)</span></label
 							>
 							<input
 								type="number"
@@ -305,7 +305,7 @@
 						<!-- * BF1 -->
 						<div class="section__units-1 section__units--10 display">
 							<label for="" class="section__label"
-								>BF1 <span class="section__span">(m)</span></label
+								>bf1 <span class="section__span">(m)</span></label
 							>
 							<input
 								type="number"
@@ -318,7 +318,7 @@
 						<!-- * BF2 -->
 						<div class="section__units-1 section__units--11 display">
 							<label for="" class="section__label"
-								>BF2 <span class="section__span">(m)</span></label
+								>bf2 <span class="section__span">(m)</span></label
 							>
 							<input
 								type="number"
@@ -371,73 +371,91 @@
 					<!-- * ROW 2 -->
 					<div class="results__row">
 						<h2 class="results__subtitle">Y(m)</h2>
-						<p>Y - Coordinate of the centroid</p>
+						<p>y - Coordinate of the centroid</p>
 						<p class="yo">0.0</p>
 					</div>
 
 					<!-- * ROW 3 -->
 					<div class="results__row">
 						<h2 class="results__subtitle">Z(m<sup>2</sup>)</h2>
-						<p>Z - Coordinate of the centroid</p>
+						<p>z - Coordinate of the centroid</p>
 						<p class="zo">0.0</p>
 					</div>
 
 					<!-- * ROW 4 -->
 					<div class="results__row">
-						<h2 class="results__subtitle">LY(m<sup>4</sup>)</h2>
+						<h2 class="results__subtitle">Iy(m<sup>4</sup>)</h2>
 						<p>Moment of inertia about y axis</p>
 						<p class="Iyo">0.0</p>
 					</div>
 
 					<!-- * ROW 5 -->
 					<div class="results__row">
-						<h2 class="results__subtitle">LZ(m<sup>4</sup>)</h2>
+						<h2 class="results__subtitle">Iz(m<sup>4</sup>)</h2>
 						<p>Moment of inertia about z axis</p>
 						<p class="Izo">0.0</p>
 					</div>
-
 					<!-- * ROW 6 -->
-					<div class="results__row">
-						<h2 class="results__subtitle">QY(m<sup>2</sup>)</h2>
-						<p>Shear area in y direction</p>
-						<p class="Qyo">0.0</p>
+					<div class="results__row results__angle hidden">
+						<h2 class="results__subtitle">θ°</h2>
+						<p>Principal axis angle of rotation</p>
+						<p class="Teta">0.0</p>
 					</div>
-
 					<!-- * ROW 7 -->
-					<div class="results__row">
-						<h2 class="results__subtitle">QZ(m<sup>2</sup>)</h2>
-						<p>Shear area in z direction</p>
-						<p class="Qzo">0.0</p>
+					<div class="results__row results__angle hidden">
+						<h2 class="results__subtitle">Iy'(m<sup>4</sup>)</h2>
+						<p>Moment of inertia about y' principal axis</p>
+						<p class="Iyp">0.0</p>
 					</div>
-
 					<!-- * ROW 8 -->
-					<div class="results__row">
-						<h2 class="results__subtitle">SY(m<sup>3</sup>)</h2>
-						<p>Elastic section modulus about y axi</p>
-						<p class="Syo">0.0</p>
+					<div class="results__row results__angle hidden">
+						<h2 class="results__subtitle">Iz'(m<sup>4</sup>)</h2>
+						<p>Moment of inertia about z' principal axis</p>
+						<p class="Izp">0.0</p>
 					</div>
 
 					<!-- * ROW 9 -->
 					<div class="results__row">
-						<h2 class="results__subtitle">SZ(m<sup>3</sup>)</h2>
-						<p>Elastic section modulus about z axi</p>
-						<p class="Szo">0.0</p>
+						<h2 class="results__subtitle">Qy(m<sup>2</sup>)</h2>
+						<p>Shear area in y direction</p>
+						<p class="Qyo">0.0</p>
 					</div>
 
 					<!-- * ROW 10 -->
 					<div class="results__row">
-						<h2 class="results__subtitle">ZY(m<sup>3</sup>)</h2>
-						<p>Plastic section modulus about y axis</p>
-						<p class="Zzo">0.0</p>
+						<h2 class="results__subtitle">Qz(m<sup>2</sup>)</h2>
+						<p>Shear area in z direction</p>
+						<p class="Qzo">0.0</p>
 					</div>
 
 					<!-- * ROW 11 -->
 					<div class="results__row">
-						<h2 class="results__subtitle">ZZ(m<sup>3</sup>)</h2>
+						<h2 class="results__subtitle">Sy(m<sup>3</sup>)</h2>
+						<p>Elastic section modulus about y axi</p>
+						<p class="Syo">0.0</p>
+					</div>
+
+					<!-- * ROW 12 -->
+					<div class="results__row">
+						<h2 class="results__subtitle">Sz(m<sup>3</sup>)</h2>
+						<p>Elastic section modulus about z axi</p>
+						<p class="Szo">0.0</p>
+					</div>
+
+					<!-- * ROW 13 -->
+					<div class="results__row">
+						<h2 class="results__subtitle">Zy(m<sup>3</sup>)</h2>
+						<p>Plastic section modulus about y axis</p>
+						<p class="Zzo">0.0</p>
+					</div>
+
+					<!-- * ROW 14 -->
+					<div class="results__row">
+						<h2 class="results__subtitle">Zz(m<sup>3</sup>)</h2>
 						<p>Plastic section modulus about z axis</p>
 						<p class="Zz">0.0</p>
 					</div>
-					<!-- * ROW 12 -->
+					<!-- * ROW 15 -->
 					<div class="results__row">
 						<h2 class="results__subtitle Iypo">J(m<sup>4</sup>)</h2>
 						<p>Torsional constant</p>
