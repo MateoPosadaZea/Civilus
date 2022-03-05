@@ -669,3 +669,16 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+sup {
+	font-size: 2rem;
+	font-family: var(--titulos-orbitron);
+	background-color: red !important;
+	color: #d8d8d8;
+	cursor: pointer;
+	padding-top: 1rem;
+	display: inline-block;
+
+	&:hover {
+		color: var(--color-azul-oscuro);
+	}
+}

@@ -241,6 +241,23 @@ h6 {
   font-size: 2rem;
 }
 
+.btn__close {
+  background-color: white;
+  font-family: var(--titulos-orbitron);
+  display: inline-block;
+  font-size: 2.5rem;
+  color: #949191a9;
+  cursor: pointer;
+}
+
+.btn__close:hover {
+  color: var(--color-azul-oscuro);
+}
+
+.btn__close:active {
+  transform: scale(0.8);
+}
+
 .social-media-link {
   border: 1.5px solid #fff;
   display: inline-block;
@@ -2671,4 +2688,18 @@ tr {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+sup {
+  font-size: 2rem;
+  font-family: var(--titulos-orbitron);
+  background-color: red !important;
+  color: #d8d8d8;
+  cursor: pointer;
+  padding-top: 1rem;
+  display: inline-block;
+}
+
+sup:hover {
+  color: var(--color-azul-oscuro);
 }
