@@ -2563,44 +2563,22 @@ fieldset[disabled] .btn-default.active {
   gap: 10rem;
   position: relative;
   max-width: 200rem;
-  height: 290vh;
-}
-
-@media (min-width: 112.5em) {
-  .beam__father {
-    height: 305vh;
-  }
 }
 
 @media (max-width: 75em) {
   .beam__father {
     gap: 5rem;
-    height: 225vh;
-  }
-}
-
-@media (max-width: 56.25em) {
-  .beam__father {
-    height: 200vh;
-  }
-}
-
-@media (max-width: 50em) {
-  .beam__father {
-    height: 180vh !important;
   }
 }
 
 @media (max-width: 45em) {
   .beam__father {
-    height: 250vh !important;
     flex-direction: column;
   }
 }
 
 @media (max-width: 37.5em) {
   .beam__father {
-    height: 250vh !important;
     flex-direction: column;
     max-width: 80rem !important;
   }
