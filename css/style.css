@@ -1939,7 +1939,8 @@ select,
 
 @media (max-width: 56.25em) {
   .navigation {
-    display: block;
+    display: block !important;
+    background-color: red;
   }
 }
 

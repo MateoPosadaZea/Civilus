@@ -288,7 +288,8 @@
 
 .navigation {
 	@include respond(tabletaV) {
-		display: block;
+		display: block !important;
+		background-color: red;
 	}
 }
 
