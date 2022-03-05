@@ -1714,7 +1714,6 @@ select,
 @media (max-width: 37.5em) {
   .home__nav {
     justify-content: space-between;
-    width: auto !important;
   }
 }
 
