@@ -1586,7 +1586,7 @@ select,
   list-style: none;
   justify-content: center;
   align-items: center;
-  gap: 17rem;
+  gap: 10rem;
 }
 
 @media (max-width: 56.25em) {
@@ -1614,6 +1614,10 @@ select,
 .learners__span--1 {
   color: white !important;
   font-size: 4.5rem;
+}
+
+.counter-text {
+  margin-left: 1.5rem;
 }
 
 .contact {

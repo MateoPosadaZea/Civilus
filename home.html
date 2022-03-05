@@ -256,41 +256,40 @@
 			</div>
 		</div>
 
-		<div class="learners">
-			<div class="learners__box">
-				<ul class="learners__list">
-					<li class="learners__item">
-						<span class="learners__span" data-target="50">0</span>
-						<span class="learners__span--1">M</span> <br />learners
-					</li>
-					<li class="learners__item">
-						<span class="learners__span" data-target="190">0</span>
-						<span class="learners__span--1">+</span> <br />countries
-					</li>
-					<li class="learners__item">
-						<span class="learners__span" data-target="3.4">0</span>
-						<span class="learners__span--1">B</span> <br />calculus
-					</li>
-					<li class="learners__item">
-						<span class="learners__span learners__span--margin" data-target="8"
-							>0</span
-						>
-						<br />projects
-					</li>
-				</ul>
+		<div id="inview-example" class="counters learners learners__list">
+			<div class="common-box learners__box">
+				<div class="counter-num learners__item">
+					<span class="timer learners__span" data-count="50">50</span>
+					<span class="learners__span learners__item">M</span>
+				</div>
+				<div class="counter-text learners__item">learners</div>
+			</div>
+			<div class="common-box learners__box">
+				<div class="counter-num learners__item">
+					<span class="timer learners__span" data-count="190">190</span>
+					<span class="learners__span--1">+</span>
+				</div>
+				<div class="counter-text learners__item">countries</div>
+			</div>
+			<div class="common-box learners__box">
+				<div class="counter-num learners__item">
+					<span class="timer learners__span" data-count="240">240</span>
+					<span class="learners__span--1">B</span>
+				</div>
+				<div class="counter-text learners__item">calculus</div>
+			</div>
+			<div class="common-box learners__box">
+				<div class="counter-num learners__item">
+					<span
+						class="timer learners__span learners__span--margin"
+						data-count="8"
+						>8</span
+					>
+					<span class="learners__span--1">+</span>
+				</div>
+				<div class="counter-text learners__item">projects</div>
 			</div>
 		</div>
-
-		<!--<div class="donations">
-			<div class="donations__box">
-				<h2 class="donations__tittle">
-					Si quieres pagarnos la rumba de la semana
-				</h2>
-				<a href="#" class="btn btn__home donations__btn"
-					>Deja tus bitcoins aqui &rarr;</a
-				>
-			</div>
-		</div>--!>
 
 		<!-- * FORM -->
 		<div class="form">
@@ -492,5 +491,39 @@
 			})();
 		</script>
 		<script src="./js/email.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="/lib/jquery.waypoints.min.js"></script>
+		<script src="/lib/inview.min.js"></script>
+		<script type="text/javascript">
+			function inviewExample() {
+				var $example = $('#inview-example');
+				var inview;
+
+				if ($example.length) {
+					inview = new Waypoint.Inview({
+						element: $('#inview-example')[0],
+						entered: function (direction) {
+							$('.timer').each(function () {
+								var $this = $(this);
+								var val = $(this).data('count');
+								jQuery({ Counter: 0 }).animate(
+									{ Counter: val },
+									{
+										duration: 1000,
+										easing: 'swing',
+										step: function () {
+											$this.text(Math.ceil(this.Counter));
+										},
+									}
+								);
+							});
+						},
+					});
+				}
+			}
+			$(window).on('load', function () {
+				inviewExample();
+			});
+		</script>
 	</body>
 </html>
