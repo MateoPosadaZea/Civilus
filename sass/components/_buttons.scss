@@ -134,7 +134,11 @@
 			transition: ease-out 0.2s;
 
 			&:hover {
-				box-shadow: inset 40rem 0 0 0 var(--color-rojo);
+				box-shadow: inset 60rem 0 0 0 var(--color-rojo);
+			}
+			&:hover h6 {
+				transform: translateX(10px);
+				transition: ease-out 0.3s;
 			}
 
 			@include respond(tabletaV) {
@@ -173,4 +177,8 @@
 
 .fa-paper-plane {
 	margin-right: 1rem;
+}
+h6 {
+	display: inline-block;
+	font-size: 2rem;
 }

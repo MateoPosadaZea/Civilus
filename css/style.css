@@ -189,7 +189,12 @@ a {
 }
 
 .btn__home--width:hover {
-  box-shadow: inset 40rem 0 0 0 var(--color-rojo);
+  box-shadow: inset 60rem 0 0 0 var(--color-rojo);
+}
+
+.btn__home--width:hover h6 {
+  transform: translateX(10px);
+  transition: ease-out 0.3s;
 }
 
 @media (max-width: 56.25em) {
@@ -230,6 +235,11 @@ a {
 
 .fa-paper-plane {
   margin-right: 1rem;
+}
+
+h6 {
+  display: inline-block;
+  font-size: 2rem;
 }
 
 .social-media-link {
