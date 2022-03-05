@@ -1844,7 +1844,7 @@ select,
 
 .home__graph {
   position: relative;
-  padding-top: 5rem;
+  padding: 5rem 0 10rem 0;
 }
 
 .home__graph-container {
