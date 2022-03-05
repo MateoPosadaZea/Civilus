@@ -87,7 +87,12 @@
 
 	&__item {
 		position: relative;
-		&:not(:last-child) {
+		&.activo {
+			border-bottom: 2px solid #000;
+			height: 3.6rem;
+		}
+
+		&:not(:last-child):not(.activo) {
 			&:before {
 				content: '';
 				position: absolute;

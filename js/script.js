@@ -24,6 +24,7 @@ const modal__error = document.querySelector('.modal__error');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
 const results__angle = document.querySelectorAll('.results__angle');
+
 // * ========= FUNCTIONS ========= //
 function drawcdg(yc, zc) {
 	var ctx1 = document.getElementById('diagram').getContext('2d');

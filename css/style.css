@@ -1713,7 +1713,12 @@ select,
   position: relative;
 }
 
-.home__item:not(:last-child):before {
+.home__item.activo {
+  border-bottom: 2px solid #000;
+  height: 3.6rem;
+}
+
+.home__item:not(:last-child):not(.activo):before {
   content: '';
   position: absolute;
   width: 100%;
@@ -1726,7 +1731,7 @@ select,
   transition: all 0.2s ease-in-out 0s;
 }
 
-.home__item:not(:last-child):hover:before {
+.home__item:not(:last-child):not(.activo):hover:before {
   visibility: visible;
   transform: scaleX(1);
 }
