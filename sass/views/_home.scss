@@ -149,7 +149,7 @@
 
 	&__container {
 		position: absolute;
-		top: 40%;
+		top: 30%;
 		left: 20rem;
 		color: #fff;
 		font-family: var(--titulos-orbitron-regular);
@@ -178,9 +178,7 @@
 	}
 
 	&__order {
-		order: -1;
 		@include respond(tabletaV) {
-			order: 2;
 		}
 	}
 
@@ -207,7 +205,6 @@
 
 	&__graph {
 		position: relative;
-		padding: 13rem 0 10rem 0;
 	}
 
 	&__graph-container {
@@ -231,7 +228,6 @@
 	&__graph-box {
 		border: 2px solid var(--color-azul-oscuro);
 		color: var(--color-azul-oscuro);
-		padding: 2rem;
 		min-height: 74rem;
 		flex-basis: 40%;
 		position: relative;
@@ -254,6 +250,7 @@
 		font-family: var(--titulos-orbitron);
 		font-size: 3.5rem;
 		margin: 2rem 0;
+		padding: 0 2rem;
 
 		&--2 {
 			margin: 14.1rem 0 4rem 0;
@@ -263,6 +260,7 @@
 		font-family: var(--parrafos-jura);
 		font-weight: 500;
 		font-size: 2rem;
+		padding: 0 2rem;
 	}
 
 	&__flex {
@@ -278,6 +276,7 @@
 
 	&__graph-img {
 		height: auto;
+		padding: 2rem 2rem 0 2rem;
 		@include respond(tabletaV) {
 			width: 70%;
 			margin-left: 5rem;
@@ -285,8 +284,8 @@
 	}
 
 	&__graph-img2 {
+		padding: 8rem 2rem 0 2rem;
 		margin-bottom: 5rem;
-		padding-top: 8rem;
 		height: auto;
 	}
 }
@@ -300,4 +299,7 @@
 
 html {
 	scroll-behavior: smooth;
+}
+#graphs {
+	padding: 12rem 0 10rem 0;
 }
