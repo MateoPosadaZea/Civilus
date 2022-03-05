@@ -1,9 +1,11 @@
 .about {
+	position: relative;
+	padding-top: 25rem;
 	&__container {
 		background-color: white;
 		height: 43rem;
 		max-width: 95rem;
-		margin: 15rem auto;
+		margin: 0 auto;
 		border-radius: 0.4rem;
 		padding: 0 5rem;
 		display: flex;

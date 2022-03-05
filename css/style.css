@@ -630,6 +630,7 @@ select,
   height: 65rem;
   background-position: bottom;
   background-size: cover;
+  background-color: red;
   position: relative;
 }
 
@@ -643,11 +644,17 @@ select,
   }
 }
 
+.hero__subText {
+  font-size: 2rem;
+  font-family: var(--parrafos-jura);
+}
+
 .hero__container {
   background-color: #fff;
+  background-color: red;
   height: 43rem;
   max-width: 95rem;
-  position: absolute;
+  position: relative;
   top: 25rem;
   left: 15%;
   border-radius: 0.4rem;
@@ -1026,6 +1033,10 @@ select,
   }
 }
 
+.form-contact {
+  margin-top: 15rem;
+}
+
 .form--padding {
   margin-top: 30rem;
   background-color: var(--color-azul-oscuro);
@@ -1379,11 +1390,16 @@ select,
   transform: rotate(-45deg);
 }
 
+.about {
+  position: relative;
+  padding-top: 25rem;
+}
+
 .about__container {
   background-color: white;
   height: 43rem;
   max-width: 95rem;
-  margin: 15rem auto;
+  margin: 0 auto;
   border-radius: 0.4rem;
   padding: 0 5rem;
   display: flex;
@@ -1564,6 +1580,16 @@ select,
 .learners__span--1 {
   color: white !important;
   font-size: 4.5rem;
+}
+
+.contact {
+  position: relative;
+  background-color: yellow;
+}
+
+.cross {
+  position: relative;
+  padding-top: 10rem;
 }
 
 .cross__tittle {
@@ -1849,7 +1875,7 @@ select,
 
 .home__graph {
   position: relative;
-  padding: 5rem 0 10rem 0;
+  padding: 13rem 0 10rem 0;
 }
 
 .home__graph-container {

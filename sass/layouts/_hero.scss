@@ -4,6 +4,7 @@
 		height: 65rem;
 		background-position: bottom;
 		background-size: cover;
+		background-color: red;
 		// filter: brightness(50%);
 		position: relative;
 
@@ -16,11 +17,17 @@
 		}
 	}
 
+	&__subText {
+		font-size: 2rem;
+		font-family: var(--parrafos-jura);
+	}
+
 	&__container {
 		background-color: #fff;
+		background-color: red;
 		height: 43rem;
 		max-width: 95rem;
-		position: absolute;
+		position: relative;
 		top: 25rem;
 		left: 15%;
 		border-radius: 0.4rem;
