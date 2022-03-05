@@ -143,12 +143,11 @@
 
 			@include respond(tabletaV) {
 				bottom: 0%;
-				left: -32%;
+				right: 0%;
 			}
 
 			@include respond(movil) {
 				bottom: 0%;
-				left: 5%;
 			}
 		}
 
