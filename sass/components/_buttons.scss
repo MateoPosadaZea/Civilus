@@ -181,13 +181,10 @@ h6 {
 	font-family: var(--titulos-orbitron);
 	display: inline-block;
 	font-size: 2.5rem;
-	color: #949191a9;
-	// padding-bottom: 3rem;
+	color: var(--color-azul-oscuro);
+
 	cursor: pointer;
 
-	&:hover {
-		color: var(--color-azul-oscuro);
-	}
 	&:active {
 		transform: scale(0.8);
 	}
