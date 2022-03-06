@@ -44,11 +44,15 @@ const openModal = function (error, flag = 0) {
 	console.log(window.screen.width);
 	if (window.screen.width < 700) {
 		if (flag) {
+			console.log('entra flag');
 			modal.style.top = '45%';
 			modal__error.textContent = error;
 			modal.classList.remove('hidden');
 			overlay.classList.remove('hidden');
 		} else {
+			console.log('no entra flag flag');
+			modal.style.top = '20%';
+
 			modal__error.textContent = error;
 			modal.classList.remove('hidden');
 			overlay.classList.remove('hidden');
