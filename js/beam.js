@@ -803,6 +803,7 @@ function drawdistributed() {
 	var x1 = parseFloat(document.getElementById('Wxcoord1').value);
 	var w2 = parseFloat(document.getElementById('wload2').value);
 	var x2 = parseFloat(document.getElementById('Wxcoord2').value);
+
 	if (
 		document.getElementById('wload1').value == '' ||
 		document.getElementById('Wxcoord1').value == '' ||
@@ -2519,6 +2520,76 @@ function drawShear(XValues, ShearValuesT) {
 		},
 	});
 }
+function drawMoment(XValues, MomentValuesT) {
+	let coordsM = XValues.map((v, i) => ({
+		x: v,
+		y: MomentValuesT[i],
+	}));
+
+	document.getElementById('MomentContainer').innerHTML = '&nbsp;';
+	document.getElementById('MomentContainer').innerHTML =
+		'<h4 class="section__subtitle">Moment Diagram</h4><canvas id="MomentD"></canvas>';
+
+	var ctxM = document.getElementById('MomentD').getContext('2d');
+
+	var Moment = new Chart(ctxM, {
+		// The type of chart we want to create
+		type: 'scatter',
+
+		// The data for our dataset
+		data: {
+			datasets: [
+				{
+					label: 'Moment',
+					lineTension: 0,
+					backgroundColor: '#E8E7E6',
+					borderColor: '#989898',
+					data: coordsM,
+					fill: 'origin', // 0: fill to 'origin'
+					fill: '+2', // 1: fill to dataset 3
+					fill: 1, // 2: fill to dataset 1
+					fill: false, // 3: no fill
+					fill: '-2', // 4: fill to dataset 2
+				},
+			],
+		},
+
+		// Configuration options go here
+		options: {
+			responsive: true,
+			scales: {
+				yAxes: [
+					{
+						scaleLabel: {
+							display: true,
+							labelString: 'M (kN-m)',
+						},
+						ticks: {
+							reverse: true,
+						},
+					},
+				],
+				xAxes: [
+					{
+						scaleLabel: {
+							display: true,
+							labelString: 'x (m)',
+						},
+					},
+				],
+			},
+			legend: {
+				display: false,
+			},
+			elements: {
+				point: {
+					radius: 0,
+					hitRadius: 2,
+				},
+			},
+		},
+	});
+}
 
 function MomentDiagram(PXmatrix, XValues) {
 	if (XValues.length > 400) {
@@ -2667,6 +2738,7 @@ function MomentDiagram(PXmatrix, XValues) {
 						(xw2arri[i - 1] - xw1arri[i - 1])) /
 					2;
 				var cdgW = 0;
+				let cdwW;
 				if (wTi == 0) {
 					cdwW = 0;
 				} else {
@@ -2734,75 +2806,4 @@ function MomentDiagram(PXmatrix, XValues) {
 	}
 
 	drawMoment(XValues, MomentValuesT);
-}
-
-function drawMoment(XValues, MomentValuesT) {
-	let coordsM = XValues.map((v, i) => ({
-		x: v,
-		y: MomentValuesT[i],
-	}));
-
-	// document.getElementById('MomentContainer').innerHTML = '&nbsp;';
-	document.getElementById('MomentContainer').innerHTML =
-		'<h4 class="section__subtitle">Moment Diagram</h4><canvas id="MomentD"></canvas>';
-
-	var ctxM = document.getElementById('MomentD').getContext('2d');
-
-	var Moment = new Chart(ctxM, {
-		// The type of chart we want to create
-		type: 'scatter',
-
-		// The data for our dataset
-		data: {
-			datasets: [
-				{
-					label: 'Moment',
-					lineTension: 0,
-					backgroundColor: '#E8E7E6',
-					borderColor: '#989898',
-					data: coordsM,
-					fill: 'origin', // 0: fill to 'origin'
-					fill: '+2', // 1: fill to dataset 3
-					fill: 1, // 2: fill to dataset 1
-					fill: false, // 3: no fill
-					fill: '-2', // 4: fill to dataset 2
-				},
-			],
-		},
-
-		// Configuration options go here
-		options: {
-			responsive: true,
-			scales: {
-				yAxes: [
-					{
-						scaleLabel: {
-							display: true,
-							labelString: 'M (kN-m)',
-						},
-						ticks: {
-							reverse: true,
-						},
-					},
-				],
-				xAxes: [
-					{
-						scaleLabel: {
-							display: true,
-							labelString: 'x (m)',
-						},
-					},
-				],
-			},
-			legend: {
-				display: false,
-			},
-			elements: {
-				point: {
-					radius: 0,
-					hitRadius: 2,
-				},
-			},
-		},
-	});
 }
