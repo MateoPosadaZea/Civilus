@@ -162,7 +162,6 @@ a {
   font-size: 2rem;
   margin-top: 2rem;
   width: 30rem;
-  border-radius: 2px;
 }
 
 @media (max-width: 56.25em) {
@@ -1808,7 +1807,7 @@ select,
   list-style: none;
   gap: 6rem;
   margin-right: 8rem;
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   align-items: center;
   align-self: flex-end;
   position: relative;
@@ -1831,8 +1830,8 @@ select,
 }
 
 .home__item.activo {
-  border-bottom: 2px solid #000;
-  height: 3.6rem;
+  border-bottom: 2px solid var(--color-azul-oscuro);
+  height: 3rem;
 }
 
 .home__item:not(:last-child):not(.activo):before {
@@ -1871,7 +1870,6 @@ select,
   border: 2.5px solid var(--color-rojo);
   padding: 0.9rem 1.5rem;
   margin-top: -0.3rem;
-  border-radius: 0.5rem;
 }
 
 @media (max-width: 75em) {
@@ -1998,6 +1996,7 @@ select,
   .home__graph-box {
     margin-top: 10rem;
     min-height: 70rem;
+    min-width: 45rem;
   }
 }
 
@@ -2030,6 +2029,7 @@ select,
 .home__graph-img {
   height: auto;
   padding: 2rem 2rem 0 2rem;
+  margin-left: 4rem;
 }
 
 @media (max-width: 56.25em) {
@@ -2057,7 +2057,7 @@ html {
 }
 
 #graphs {
-  padding: 12rem 0 10rem 0;
+  padding: 2rem 0 20rem 0;
 }
 
 .input-lg {
