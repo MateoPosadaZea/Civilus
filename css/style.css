@@ -2474,6 +2474,7 @@ fieldset[disabled] .btn-default.active {
 
 .dropdown {
   position: relative;
+  display: flex;
 }
 
 .dropdown-toggle:focus {
@@ -2719,4 +2720,10 @@ tr {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+@media (max-width: 45em) {
+  .table-results {
+    padding: 1rem 0 1rem 8rem;
+  }
 }
