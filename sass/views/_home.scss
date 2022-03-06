@@ -218,6 +218,7 @@
 
 		@include respond(movil) {
 			margin: 0 auto;
+			margin-top: 4rem;
 		}
 	}
 
@@ -239,7 +240,7 @@
 		@include respond(movil) {
 			margin-top: 10rem;
 			min-height: 70rem;
-			min-width: 40rem;
+			min-width: 38rem;
 		}
 	}
 
