@@ -701,7 +701,7 @@ function drawload() {
 
 function ReDrawLoads() {
 	var ctx = document.getElementById('diagram').getContext('2d');
-	for (i = 0; i < Parray.length; i++) {
+	for (let i = 0; i < Parray.length; i++) {
 		if (Parray[i] < 0) {
 			var qxp = 440 * (xParray[i] / L1);
 			var tarad = (Tarray[i] * Math.PI) / 180;
