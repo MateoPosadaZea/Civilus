@@ -928,12 +928,6 @@ select,
   z-index: 200;
 }
 
-@media (max-width: 45em) {
-  .modal {
-    top: 45%;
-  }
-}
-
 .modal__title {
   background-color: red;
   font-size: 3rem;

@@ -10,9 +10,6 @@
 	box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
 	z-index: 200;
 
-	@include respond(movilBig) {
-		top: 45%;
-	}
 	&__title {
 		background-color: red;
 		font-size: 3rem;

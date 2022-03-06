@@ -41,13 +41,20 @@ function clearInputs() {
 }
 
 const openModal = function (error, flag = 0) {
-	if (flag) {
-		modal.style.top = '50%';
-		modal__error.textContent = error;
-		modal.classList.remove('hidden');
-
-		overlay.classList.remove('hidden');
+	console.log(window.screen.width);
+	if (window.screen.width < 700) {
+		if (flag) {
+			modal.style.top = '45%';
+			modal__error.textContent = error;
+			modal.classList.remove('hidden');
+			overlay.classList.remove('hidden');
+		} else {
+			modal__error.textContent = error;
+			modal.classList.remove('hidden');
+			overlay.classList.remove('hidden');
+		}
 	} else {
+		modal.style.top = '20%';
 		modal__error.textContent = error;
 		modal.classList.remove('hidden');
 		overlay.classList.remove('hidden');
@@ -546,11 +553,13 @@ function drawmoment() {
 		document.getElementById('mload').value == 0
 	) {
 		openModal(
-			'All data have to be correctly typed to proceed to calculus. Please check input values.'
+			'All data have to be correctly typed to proceed to calculus. Please check input values.',
+			1
 		);
 	} else if (xm > L1) {
 		openModal(
-			'x location of point moment cannot be greater than beam lenght L.'
+			'x location of point moment cannot be greater than beam lenght L.',
+			1
 		);
 	} else if (M < 0) {
 		var qxm = 440 * (xm / L1);
@@ -620,12 +629,16 @@ function drawload() {
 		document.getElementById('tetha').value == ''
 	) {
 		openModal(
-			'All data have to be correctly typed to proceed to calculus. Please check input values.'
+			'All data have to be correctly typed to proceed to calculus. Please check input values.',
+			1
 		);
 	} else if (Math.abs(ta) > 180) {
 		openModal('Load degree angle θ cannnot be greater than 180.', 1);
 	} else if (xp > L1) {
-		openModal('x location of point load cannot be greater than beam lenght L.');
+		openModal(
+			'x location of point load cannot be greater than beam lenght L.',
+			1
+		);
 	} else if (P < 0) {
 		var ctx = document.getElementById('diagram').getContext('2d');
 		var qxp = 440 * (xp / L1);
@@ -796,30 +809,36 @@ function drawdistributed() {
 		document.getElementById('Wxcoord2').value == ''
 	) {
 		openModal(
-			'All data have to be correctly typed to proceed to calculus. Please check input values.'
+			'All data have to be correctly typed to proceed to calculus. Please check input values.',
+			1
 		);
 	} else if (
 		document.getElementById('wload1').value == 0 &&
 		document.getElementById('wload2').value == 0
 	) {
 		openModal(
-			'All data have to be correctly typed to proceed to calculus. Please check input values.'
+			'All data have to be correctly typed to proceed to calculus. Please check input values.',
+			1
 		);
 	} else if (0 > w1 * w2) {
 		openModal(
-			'Start and end magnitudes of distributed load w1 and w2 cannot have opposite directions.'
+			'Start and end magnitudes of distributed load w1 and w2 cannot have opposite directions.',
+			1
 		);
 	} else if (x1 > L1) {
 		openModal(
-			'Start location of distributed load x1 cannot be greater than beam lenght L'
+			'Start location of distributed load x1 cannot be greater than beam lenght L',
+			1
 		);
 	} else if (x2 > L1) {
 		openModal(
-			'End location of distributed load x2 cannot be greater than beam lenght L'
+			'End location of distributed load x2 cannot be greater than beam lenght L',
+			1
 		);
 	} else if (x1 >= x2) {
 		openModal(
-			'Start location of distributed load x1 cannot be greater than or equal to end location x2.'
+			'Start location of distributed load x1 cannot be greater than or equal to end location x2.',
+			1
 		);
 	} else if (w1 <= 0 && w2 <= 0) {
 		var wmax = Math.max(Math.abs(w1), Math.abs(w2));
