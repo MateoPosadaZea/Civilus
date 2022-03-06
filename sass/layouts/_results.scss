@@ -2,9 +2,6 @@
 	max-width: 70rem;
 	margin: 0 auto;
 	padding-top: 5rem;
-	// @include respond(tabletaH) {
-	// 	background-color: red;
-	// }
 
 	@include respond(movilBig) {
 		padding: 0 5rem 0;
@@ -50,4 +47,53 @@
 	&__subtitle {
 		font-size: 1.8rem;
 	}
+
+	&__movil {
+		display: none;
+		@include respond(movil) {
+			display: block;
+		}
+	}
+	&__desktop {
+		@include respond(movil) {
+			display: none;
+		}
+	}
+
+	&__movil-box {
+		display: flex;
+		flex-direction: column;
+		padding: 0 2rem;
+		font-size: 2.2rem;
+	}
+
+	&__movil-row {
+		border: 1px solid var(--color-azul-oscuro);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-family: var(--titulos-orbitron);
+		padding: 2rem;
+		height: 9rem;
+		margin-bottom: 3rem;
+	}
+
+	&__movil-row-2 {
+		border-top: 1px solid var(--color-azul-oscuro);
+		border-bottom: 1px solid var(--color-azul-oscuro);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-family: var(--titulos-orbitron);
+		margin-bottom: 5rem;
+		padding: 2rem;
+	}
+}
+.click {
+	color: var(--color-azul-claro);
+	border: none;
+}
+
+.nada {
+	display: none;
 }

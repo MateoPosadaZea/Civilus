@@ -24,7 +24,18 @@ const modal__error = document.querySelector('.modal__error');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
 const results__angle = document.querySelectorAll('.results__angle');
-
+const results__movil_row = document.querySelectorAll('.results__movil-row');
+const results__movil_row2 = document.querySelectorAll('.results__movil-row-2');
+const arrowUp = document.querySelectorAll('.arrowUp');
+const arrowDown = document.querySelectorAll('.arrowDown');
+results__movil_row.forEach((element, i) => {
+	element.addEventListener('click', () => {
+		element.classList.toggle('click');
+		results__movil_row2[i].classList.toggle('hidden');
+		arrowUp[i].classList.toggle('hidden');
+		arrowDown[i].classList.toggle('hidden');
+	});
+});
 // * ========= FUNCTIONS ========= //
 function drawcdg(yc, zc) {
 	var ctx1 = document.getElementById('diagram').getContext('2d');
@@ -928,21 +939,51 @@ function calculate() {
 		let Iypo = outputnum(Iyp);
 		let Izpo = outputnum(Izp);
 		let Tao = (Ta * 180) / Math.PI;
-		document.querySelector('.Ao').textContent = Ao;
-		document.querySelector('.yo').textContent = yo;
-		document.querySelector('.zo').textContent = zo;
-		document.querySelector('.Iyo').textContent = Iyo;
-		document.querySelector('.Izo').textContent = Izo;
-		document.querySelector('.Qyo').textContent = Qyo;
-		document.querySelector('.Qzo').textContent = Qzo;
-		document.querySelector('.Syo').textContent = Syo;
-		document.querySelector('.Szo').textContent = Szo;
-		document.querySelector('.Zzo').textContent = Zyo;
-		document.querySelector('.Jo').textContent = Jo;
-		document.querySelector('.Zz').textContent = Zzo;
-		document.querySelector('.Iyp').textContent = Iypo;
-		document.querySelector('.Izp').textContent = Izpo;
-		document.querySelector('.Teta').textContent = Tao.toFixed(2);
+		document.querySelectorAll('.Ao').forEach((element) => {
+			element.textContent = Ao;
+		});
+		document.querySelectorAll('.yo').forEach((element) => {
+			element.textContent = yo;
+		});
+		document.querySelectorAll('.zo').forEach((element) => {
+			element.textContent = zo;
+		});
+		document.querySelectorAll('.Iyo').forEach((element) => {
+			element.textContent = Iyo;
+		});
+		document.querySelectorAll('.Izo').forEach((element) => {
+			element.textContent = Izo;
+		});
+		document.querySelectorAll('.Qyo').forEach((element) => {
+			element.textContent = Qyo;
+		});
+		document.querySelectorAll('.Qzo').forEach((element) => {
+			element.textContent = Qzo;
+		});
+		document.querySelectorAll('.Syo').forEach((element) => {
+			element.textContent = Syo;
+		});
+		document.querySelectorAll('.Szo').forEach((element) => {
+			element.textContent = Szo;
+		});
+		document.querySelectorAll('.Zzo').forEach((element) => {
+			element.textContent = Zyo;
+		});
+		document.querySelectorAll('.Jo').forEach((element) => {
+			element.textContent = Jo;
+		});
+		document.querySelectorAll('.Zz').forEach((element) => {
+			element.textContent = Zzo;
+		});
+		document.querySelectorAll('.Iyp').forEach((element) => {
+			element.textContent = Iypo;
+		});
+		document.querySelectorAll('.Izp').forEach((element) => {
+			element.textContent = Izpo;
+		});
+		document.querySelectorAll('.Teta').forEach((element) => {
+			element.textContent = Tao.toFixed(2);
+		});
 	}
 }
 
