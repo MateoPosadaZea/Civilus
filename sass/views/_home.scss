@@ -239,6 +239,11 @@
 			margin-top: 5rem;
 			min-height: 80rem;
 		}
+		&:not(:first-child) {
+			@include respond(movil) {
+				margin-top: 3rem;
+			}
+		}
 
 		@include respond(movil) {
 			margin-top: 3rem;
