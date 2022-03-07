@@ -637,9 +637,9 @@ span {
 		max-width: 45rem !important;
 	}
 
-	// @include respond(tabletaV) {
-	// 	width: 50rem !important;
-	// }
+	@include respond(miniMovil) {
+		max-width: 40rem !important;
+	}
 }
 .container,
 #about_section_1 {

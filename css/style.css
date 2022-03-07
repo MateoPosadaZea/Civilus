@@ -2719,6 +2719,12 @@ span {
   }
 }
 
+@media (max-width: 25em) {
+  .myBeamDiagram {
+    max-width: 40rem !important;
+  }
+}
+
 .container,
 #about_section_1 {
   max-width: 140rem !important;
