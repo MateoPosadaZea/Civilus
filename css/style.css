@@ -2005,7 +2005,7 @@ select,
 }
 
 @media (max-width: 25em) {
-  .home__graph-box {
+  .home__graph-box:not(::last-child) {
     margin-top: 15rem;
     min-height: 70rem;
   }

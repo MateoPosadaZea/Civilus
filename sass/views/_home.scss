@@ -244,9 +244,12 @@
 			margin-top: 3rem;
 			min-height: 70rem;
 		}
-		@include respond(miniMovil) {
-			margin-top: 15rem;
-			min-height: 70rem;
+
+		&:not(::last-child) {
+			@include respond(miniMovil) {
+				margin-top: 15rem;
+				min-height: 70rem;
+			}
 		}
 	}
 
