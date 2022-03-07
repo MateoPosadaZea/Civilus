@@ -245,10 +245,11 @@
 			min-height: 70rem;
 		}
 
-		&:not(::last-child) {
+		&:not(:last-child) {
 			@include respond(miniMovil) {
 				margin-top: 15rem;
 				min-height: 70rem;
+				background-color: red;
 			}
 		}
 	}
