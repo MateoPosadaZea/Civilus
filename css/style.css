@@ -2008,7 +2008,6 @@ select,
   .home__graph-box:not(:last-child) {
     margin-top: 15rem;
     min-height: 70rem;
-    background-color: red;
   }
 }
 
