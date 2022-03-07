@@ -2083,6 +2083,12 @@ html {
   }
 }
 
+video {
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+}
+
 .input-lg {
   height: 46px;
   padding: 10px 16px;
