@@ -1,6 +1,7 @@
 .key {
 	background-color: var(--color-azul-oscuro);
 	padding-bottom: 15rem;
+	position: relative;
 
 	@include respond(tabletaV) {
 		padding: 0 4rem 15rem 4rem;

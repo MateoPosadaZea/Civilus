@@ -162,9 +162,9 @@ function changeImageRA() {
 	document.getElementById('Bxcoord').style.backgroundColor = 'white';
 
 	var img = document.getElementById('supportAimg');
-	img.src = './assets/images/roller.jpg';
+	img.src = './assets/images/roller.svg';
 	var img2 = document.getElementById('supportBimg');
-	img2.src = './assets/images/pin.jpg';
+	img2.src = './assets/images/pin.svg';
 	document.getElementById('stupidrefA').innerHTML = 'rollerA';
 	document.getElementById('stupidrefB').innerHTML = 'pinB';
 }
@@ -176,16 +176,16 @@ function changeImagePA() {
 	document.getElementById('Bxcoord').style.backgroundColor = 'white';
 	var img = document.getElementById('supportAimg');
 
-	img.src = './assets/images/pin.jpg';
+	img.src = './assets/images/pin.svg';
 	var img2 = document.getElementById('supportBimg');
-	img2.src = './assets/images/roller.jpg';
+	img2.src = './assets/images/roller.svg';
 	document.getElementById('stupidrefA').innerHTML = 'pinA';
 	document.getElementById('stupidrefB').innerHTML = 'rollerB';
 }
 
 function changeImageFA() {
 	var img = document.getElementById('supportAimg');
-	img.src = './assets/images/fixed.jpg';
+	img.src = './assets/images/fixed.svg';
 	var img2 = document.getElementById('supportBimg');
 	img2.src = './assets/images//nonesupport.jpg';
 	document.getElementById('Bxcoord').disabled = true;
@@ -206,9 +206,9 @@ function changeImageRB() {
 	document.getElementById('Bxcoord').style.backgroundColor = 'white';
 	var img = document.getElementById('supportBimg');
 
-	img.src = './assets/images/roller.jpg';
+	img.src = './assets/images/roller.svg';
 	var img2 = document.getElementById('supportAimg');
-	img2.src = './assets/images/pin.jpg';
+	img2.src = './assets/images/pin.svg';
 	document.getElementById('stupidrefB').innerHTML = 'rollerB';
 	document.getElementById('stupidrefA').innerHTML = 'pinA';
 }
@@ -220,16 +220,16 @@ function changeImagePB() {
 	document.getElementById('Bxcoord').style.backgroundColor = 'white';
 	var img = document.getElementById('supportBimg');
 
-	img.src = './assets/images/pin.jpg';
+	img.src = './assets/images/pin.svg';
 	var img2 = document.getElementById('supportAimg');
-	img2.src = './assets/images/roller.jpg';
+	img2.src = './assets/images/roller.svg';
 	document.getElementById('stupidrefB').innerHTML = 'pinB';
 	document.getElementById('stupidrefA').innerHTML = 'rollerA';
 }
 
 function changeImageFB() {
 	var img = document.getElementById('supportBimg');
-	img.src = './assets/images/fixedB.jpg';
+	img.src = './assets/images/fixedB.svg';
 	var img2 = document.getElementById('supportAimg');
 	img2.src = './assets/images/nonesupport.jpg';
 	document.getElementById('Axcoord').disabled = true;

@@ -559,6 +559,7 @@ select,
 .key {
   background-color: var(--color-azul-oscuro);
   padding-bottom: 15rem;
+  position: relative;
 }
 
 @media (max-width: 56.25em) {
@@ -1918,6 +1919,7 @@ select,
     left: 0rem;
     top: 20%;
     padding: 0 3rem 0 3rem;
+    width: 100%;
   }
 }
 
@@ -1953,6 +1955,7 @@ select,
 }
 
 .home__graph-container {
+  position: relative;
   max-width: 110rem;
   margin: 0 auto;
   display: flex;
@@ -1972,7 +1975,7 @@ select,
 @media (max-width: 37.5em) {
   .home__graph-container {
     margin: 0 auto;
-    margin-top: 4rem;
+    margin-top: 10rem;
   }
 }
 
@@ -1996,7 +1999,14 @@ select,
 
 @media (max-width: 37.5em) {
   .home__graph-box {
-    margin-top: 2rem;
+    margin-top: 3rem;
+    min-height: 70rem;
+  }
+}
+
+@media (max-width: 25em) {
+  .home__graph-box {
+    margin-top: 7rem;
     min-height: 70rem;
   }
 }

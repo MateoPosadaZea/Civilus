@@ -169,7 +169,7 @@
 			left: 0rem;
 			top: 20%;
 			padding: 0 3rem 0 3rem;
-			// width: 45rem;
+			width: 100%;
 		}
 	}
 
@@ -205,6 +205,8 @@
 	}
 
 	&__graph-container {
+		position: relative;
+
 		max-width: 110rem;
 		margin: 0 auto;
 		display: flex;
@@ -219,7 +221,7 @@
 
 		@include respond(movil) {
 			margin: 0 auto;
-			margin-top: 4rem;
+			margin-top: 10rem;
 		}
 	}
 
@@ -239,7 +241,11 @@
 		}
 
 		@include respond(movil) {
-			margin-top: 2rem;
+			margin-top: 3rem;
+			min-height: 70rem;
+		}
+		@include respond(miniMovil) {
+			margin-top: 7rem;
 			min-height: 70rem;
 		}
 	}
