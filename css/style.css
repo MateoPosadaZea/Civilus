@@ -317,6 +317,12 @@ h6 {
   }
 }
 
+@media (max-width: 25em) {
+  .select-box {
+    padding-left: 3rem;
+  }
+}
+
 select,
 .select {
   height: 5.3rem !important;
