@@ -1,11 +1,8 @@
 .hero {
 	&__hero {
-		// background-image: url(../../assets/images/sol-tZw3fcjUIpM-unsplash.jpg);
 		height: 65rem;
 		background-position: bottom;
 		background-size: cover;
-		background-color: red;
-		// filter: brightness(50%);
 		position: relative;
 
 		&--2 {
@@ -18,20 +15,19 @@
 	}
 
 	&__subText {
-		font-size: 2rem;
+		font-size: 1.8rem;
 		font-family: var(--parrafos-jura);
 	}
 
 	&__container {
 		background-color: #fff;
-		background-color: red;
 		height: 43rem;
-		max-width: 95rem;
+		max-width: 80rem;
 		position: relative;
 		top: 25rem;
 		left: 15%;
 		border-radius: 0.4rem;
-		padding: 0rem 5rem;
+		padding: 0 5rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -65,8 +61,7 @@
 	}
 	&__tittle {
 		color: #cf242d;
-		font-size: 3rem;
-		margin-top: 2rem;
+		font-size: 2.7rem;
 		font-family: var(--titulos-orbitron);
 		@include respond(movil) {
 			font-size: 2.5rem;
@@ -74,11 +69,11 @@
 	}
 
 	&__text {
-		font-size: 3rem;
+		font-size: 2.2rem;
 		font-family: var(--parrafos-jura);
 		text-align: center;
 		@include respond(movil) {
-			font-size: 3rem;
+			font-size: 2.5rem;
 		}
 	}
 
@@ -97,7 +92,7 @@
 		color: #cf242d;
 		font-weight: 900;
 		margin-left: 2rem;
-		font-size: 4rem;
+		font-size: 3rem;
 	}
 
 	&__scroll {

@@ -15,12 +15,12 @@
 
 	&__tittle {
 		color: #fff;
-		font-size: 6rem;
-		padding-bottom: 10rem;
+		font-size: 5rem;
+		padding-bottom: 7rem;
 		font-family: var(--titulos-orbitron);
 
 		@include respond(tabletaV) {
-			font-size: 4.5rem;
+			font-size: 4rem;
 		}
 
 		&--color {
@@ -32,7 +32,7 @@
 		border-top: 1px solid #fff;
 		display: flex;
 		color: #fff;
-		padding: 8rem 0;
+		padding: 5rem 0;
 		gap: 15rem;
 
 		@include respond(tabletaV) {
@@ -50,7 +50,7 @@
 
 	&__row {
 		display: flex;
-		max-width: 60rem;
+		max-width: 45rem;
 		gap: 3rem;
 
 		@include respond(tabletaV) {
@@ -72,13 +72,13 @@
 	}
 
 	&__subtittle {
-		font-size: 3.5rem;
+		font-size: 3rem;
 		margin-bottom: 2rem;
 		font-family: var(--titulos-orbitron);
 	}
 
 	&__text {
-		font-size: 2.3rem;
+		font-size: 1.8rem;
 		font-family: var(--parrafos-jura);
 	}
 }

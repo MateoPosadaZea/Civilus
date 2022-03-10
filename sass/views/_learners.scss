@@ -4,7 +4,7 @@
 	&__box {
 		margin: 0 auto;
 		max-width: 110rem;
-		padding: 13rem 0;
+		padding: 10rem 0;
 	}
 
 	&__list {
@@ -20,14 +20,14 @@
 
 	&__item {
 		color: #fff;
-		font-size: 3rem;
+		font-size: 2rem;
 		font-family: var(--titulos-orbitron);
 	}
 
 	&__span {
 		margin-left: 1.5rem;
 		color: white !important;
-		font-size: 4.5rem;
+		font-size: 3rem;
 
 		&--margin {
 			margin-left: 5rem;
@@ -35,7 +35,7 @@
 
 		&--1 {
 			color: white !important;
-			font-size: 4.5rem;
+			font-size: 3rem;
 		}
 	}
 }

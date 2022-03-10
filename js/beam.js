@@ -1177,9 +1177,9 @@ function buildTableM(Minsert, xMinsert) {
 	const tableResult = document.querySelectorAll('.beam__results-info');
 	tableResult.forEach((element, i) => {
 		let width = document.body.clientWidth;
-		if (width < 1000 && i === 0) {
+		if (width < 1070 && i === 0) {
 			element.style.display = 'block';
-		} else if (width > 1000 && i === 1) {
+		} else if (width > 1070 && i === 1) {
 			element.style.display = 'block';
 		}
 	});
@@ -1218,9 +1218,9 @@ function buildTableP(Pinsert, xPinsert) {
 	const tableResult = document.querySelectorAll('.beam__results-info');
 	tableResult.forEach((element, i) => {
 		let width = document.body.clientWidth;
-		if (width < 1000 && i === 0) {
+		if (width < 1070 && i === 0) {
 			element.style.display = 'block';
-		} else if (width > 1000 && i === 1) {
+		} else if (width > 1070 && i === 1) {
 			element.style.display = 'block';
 		}
 	});
@@ -1259,9 +1259,9 @@ function buildTableW1(w1insert, x1insert) {
 	const tableResult = document.querySelectorAll('.beam__results-info');
 	tableResult.forEach((element, i) => {
 		let width = document.body.clientWidth;
-		if (width < 1000 && i === 0) {
+		if (width < 1070 && i === 0) {
 			element.style.display = 'block';
-		} else if (width > 1000 && i === 1) {
+		} else if (width > 1070 && i === 1) {
 			element.style.display = 'block';
 		}
 	});
@@ -1302,9 +1302,9 @@ function buildTableW2(w2insert, x2insert) {
 	const tableResult = document.querySelectorAll('.beam__results-info');
 	tableResult.forEach((element, i) => {
 		let width = document.body.clientWidth;
-		if (width < 1000 && i === 0) {
+		if (width < 1070 && i === 0) {
 			element.style.display = 'block';
-		} else if (width > 1000 && i === 1) {
+		} else if (width > 1070 && i === 1) {
 			element.style.display = 'block';
 		}
 	});

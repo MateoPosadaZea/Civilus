@@ -577,14 +577,14 @@ select,
 
 .key__tittle {
   color: #fff;
-  font-size: 6rem;
-  padding-bottom: 10rem;
+  font-size: 5rem;
+  padding-bottom: 7rem;
   font-family: var(--titulos-orbitron);
 }
 
 @media (max-width: 56.25em) {
   .key__tittle {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 }
 
@@ -596,7 +596,7 @@ select,
   border-top: 1px solid #fff;
   display: flex;
   color: #fff;
-  padding: 8rem 0;
+  padding: 5rem 0;
   gap: 15rem;
 }
 
@@ -620,7 +620,7 @@ select,
 
 .key__row {
   display: flex;
-  max-width: 60rem;
+  max-width: 45rem;
   gap: 3rem;
 }
 
@@ -647,13 +647,13 @@ select,
 }
 
 .key__subtittle {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
   font-family: var(--titulos-orbitron);
 }
 
 .key__text {
-  font-size: 2.3rem;
+  font-size: 1.8rem;
   font-family: var(--parrafos-jura);
 }
 
@@ -661,7 +661,6 @@ select,
   height: 65rem;
   background-position: bottom;
   background-size: cover;
-  background-color: red;
   position: relative;
 }
 
@@ -676,20 +675,19 @@ select,
 }
 
 .hero__subText {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: var(--parrafos-jura);
 }
 
 .hero__container {
   background-color: #fff;
-  background-color: red;
   height: 43rem;
-  max-width: 95rem;
+  max-width: 80rem;
   position: relative;
   top: 25rem;
   left: 15%;
   border-radius: 0.4rem;
-  padding: 0rem 5rem;
+  padding: 0 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -732,8 +730,7 @@ select,
 
 .hero__tittle {
   color: #cf242d;
-  font-size: 3rem;
-  margin-top: 2rem;
+  font-size: 2.7rem;
   font-family: var(--titulos-orbitron);
 }
 
@@ -744,14 +741,14 @@ select,
 }
 
 .hero__text {
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-family: var(--parrafos-jura);
   text-align: center;
 }
 
 @media (max-width: 37.5em) {
   .hero__text {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -770,7 +767,7 @@ select,
   color: #cf242d;
   font-weight: 900;
   margin-left: 2rem;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .hero__scroll {
@@ -1128,10 +1125,10 @@ select,
 
 .form__container {
   background-color: #fff;
-  max-width: 110rem;
+  max-width: 90rem;
   margin: 0 auto;
-  padding: 6rem 7rem;
-  border: 2px solid var(--color-azul-oscuro);
+  padding: 4rem 5rem;
+  border: 1px solid var(--color-azul-oscuro);
 }
 
 @media (max-width: 75em) {
@@ -1150,7 +1147,7 @@ select,
 
 .form__tittle {
   font-family: var(--titulos-orbitron);
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 5rem;
 }
 
@@ -1172,7 +1169,7 @@ select,
   cursor: pointer;
   font-family: var(--parrafos-jura);
   font-weight: 600;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 .form__radio {
@@ -1245,9 +1242,9 @@ select,
 
 .form__label-big {
   font-family: var(--parrafos-jura);
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   display: inline-block;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .form__flex {
@@ -1266,9 +1263,9 @@ select,
 .form__input {
   display: flex;
   border: 1.9px solid var(--color-azul-oscuro);
-  padding: 1.7rem 1.3rem;
+  padding: 1.3rem 1.3rem;
   flex: 1;
-  margin: 1.5rem 0 0rem 0;
+  margin: 1rem 0 0rem 0;
   font-family: var(--parrafos-jura);
   outline: none;
   background: none;
@@ -1481,8 +1478,8 @@ select,
 
 .about__container {
   background-color: white;
-  height: 43rem;
-  max-width: 95rem;
+  height: 42rem;
+  max-width: 80rem;
   margin: 0 auto;
   border-radius: 0.4rem;
   padding: 0 5rem;
@@ -1495,19 +1492,18 @@ select,
 
 .about__tittle {
   color: #cf242d;
-  font-size: 3rem;
-  margin-top: 2rem;
+  font-size: 2.5rem;
   font-family: var(--titulos-orbitron);
 }
 
 .about__text {
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: var(--parrafos-jura);
 }
 
 .about__sub-text {
   color: #cf242d;
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: var(--titulos-orbitron);
 }
 
@@ -1628,7 +1624,7 @@ select,
 .learners__box {
   margin: 0 auto;
   max-width: 110rem;
-  padding: 13rem 0;
+  padding: 10rem 0;
 }
 
 .learners__list {
@@ -1647,14 +1643,14 @@ select,
 
 .learners__item {
   color: #fff;
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: var(--titulos-orbitron);
 }
 
 .learners__span {
   margin-left: 1.5rem;
   color: white !important;
-  font-size: 4.5rem;
+  font-size: 3rem;
 }
 
 .learners__span--margin {
@@ -1663,7 +1659,7 @@ select,
 
 .learners__span--1 {
   color: white !important;
-  font-size: 4.5rem;
+  font-size: 3rem;
 }
 
 .counter-text {
@@ -2608,7 +2604,7 @@ fieldset[disabled] .btn-default.active {
   position: sticky;
   top: 5rem;
   margin-bottom: 10rem;
-  left: 0;
+  left: 5%;
   max-height: 65rem;
 }
 
@@ -2647,7 +2643,7 @@ fieldset[disabled] .btn-default.active {
 
 .beam__father {
   display: flex;
-  gap: 10rem;
+  gap: 12rem;
   position: relative;
   max-width: 200rem;
 }
@@ -2767,5 +2763,21 @@ table {
 @media (max-width: 45em) {
   .table-results {
     padding: 1rem 0 1rem 8rem;
+  }
+}
+
+.beam__results-info-1 {
+  display: none !important;
+}
+
+@media (max-width: 66.87em) {
+  .beam__results-info-1 {
+    display: block !important;
+  }
+}
+
+@media (max-width: 66.87em) {
+  .beam__results-info-2 {
+    display: none !important;
   }
 }

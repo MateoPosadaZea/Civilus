@@ -31,6 +31,12 @@
 			@content;
 		}
 	}
+	@if $breakpoint == smallDesktop {
+		@media (max-width: 66.87em) {
+			// 1070px/16 = 66.97
+			@content;
+		}
+	}
 	@if $breakpoint == tabletaH {
 		@media (max-width: 75em) {
 			//1200px / 16 = 75em

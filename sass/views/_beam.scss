@@ -520,7 +520,7 @@ fieldset[disabled] .btn-default.active {
 	position: sticky;
 	top: 5rem;
 	margin-bottom: 10rem;
-	left: 0;
+	left: 5%;
 	max-height: 65rem;
 
 	@include respond(tabletaV) {
@@ -552,33 +552,21 @@ fieldset[disabled] .btn-default.active {
 
 .beam__father {
 	display: flex;
-	gap: 10rem;
+	gap: 12rem;
 	position: relative;
 	max-width: 200rem;
 
-	@include respond(big-desktop) {
-		// height: 305vh;
-	}
-
 	@include respond(tabletaH) {
 		gap: 5rem;
-		// height: 225vh;
 	}
 	@include respond(tabletaV) {
-		// height: 200vh;
-	}
-
-	@include respond(tabletaMini) {
-		// height: 180vh !important;
 	}
 
 	@include respond(movilBig) {
-		// height: 250vh !important;
 		flex-direction: column;
 	}
 
 	@include respond(movil) {
-		// height: 250vh !important;
 		flex-direction: column;
 		max-width: 80rem !important;
 	}
@@ -590,7 +578,6 @@ fieldset[disabled] .btn-default.active {
 
 td,
 sub {
-	// background-color: red;
 	font-size: 1.5rem;
 	font-family: var(--titulos-orbitron);
 	color: var(--color-azul-oscuro);
@@ -670,5 +657,18 @@ table {
 .table-results {
 	@include respond(movilBig) {
 		padding: 1rem 0 1rem 8rem;
+	}
+}
+
+.beam__results-info-1 {
+	display: none !important;
+	@include respond(smallDesktop) {
+		display: block !important;
+	}
+}
+
+.beam__results-info-2 {
+	@include respond(smallDesktop) {
+		display: none !important;
 	}
 }
