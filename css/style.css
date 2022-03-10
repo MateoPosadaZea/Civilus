@@ -2605,9 +2605,9 @@ fieldset[disabled] .btn-default.active {
 .beam__box {
   margin-left: 10rem;
   position: sticky;
-  top: 1rem;
+  top: 5rem;
+  margin-bottom: 10rem;
   left: 0;
-  padding-top: 5rem;
   max-height: 65rem;
 }
 
@@ -2633,6 +2633,8 @@ fieldset[disabled] .btn-default.active {
 
 .beam__data {
   font-size: 2.5rem;
+  margin-top: 6rem;
+  position: relative;
   font-family: var(--titulos-orbitron);
 }
 
@@ -2753,7 +2755,6 @@ span {
 tr {
   border-bottom: #041129 solid 2px;
   padding: 1rem !important;
-  padding-bottom: 5rem !important;
   margin-bottom: 2rem !important;
 }
 
