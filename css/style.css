@@ -306,19 +306,14 @@ h6 {
 
 @media (max-width: 45em) {
   .select-box {
-    padding: 5rem 15rem 0;
+    margin: 0 auto;
+    max-width: 50rem;
   }
 }
 
 @media (max-width: 37.5em) {
   .select-box {
     margin-top: 5rem;
-  }
-}
-
-@media (max-width: 25em) {
-  .select-box {
-    padding: 0 4.2rem 0;
   }
 }
 
