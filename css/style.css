@@ -2707,6 +2707,10 @@ span {
   }
 }
 
+.myBeamDiagram {
+  max-width: 55rem !important;
+}
+
 @media (max-width: 75em) {
   .myBeamDiagram {
     max-width: 50rem !important;
@@ -2749,6 +2753,7 @@ span {
 tr {
   border-bottom: #041129 solid 2px;
   padding: 1rem !important;
+  padding-bottom: 5rem !important;
   margin-bottom: 2rem !important;
 }
 

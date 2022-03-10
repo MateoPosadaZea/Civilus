@@ -514,11 +514,6 @@ fieldset[disabled] .btn-default.active {
 	right: auto;
 	left: 0;
 }
-// #Shear,
-// #MomentD {
-// 	width: 65.3rem;
-// 	height: 32.6rem;
-// }
 
 .beam__box {
 	margin-left: 10rem;
@@ -558,7 +553,6 @@ fieldset[disabled] .btn-default.active {
 	gap: 10rem;
 	position: relative;
 	max-width: 200rem;
-	// min-height: 290vh;
 
 	@include respond(big-desktop) {
 		// height: 305vh;
@@ -625,6 +619,7 @@ span {
 }
 
 .myBeamDiagram {
+	max-width: 55rem !important;
 	@include respond(tabletaH) {
 		max-width: 50rem !important;
 	}

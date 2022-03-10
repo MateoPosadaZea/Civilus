@@ -1174,107 +1174,179 @@ function addLhide() {
 }
 
 function buildTableM(Minsert, xMinsert) {
-	document.getElementById('LoadInfo').style.display = 'block';
-	var table = document.getElementById('loadTable');
-	var row = table.insertRow(0);
-	var cell1 = row.insertCell(0);
-	var cell2 = row.insertCell(1);
-	var cell3 = row.insertCell(2);
-	var cell4 = row.insertCell(3);
-	cell1.innerHTML = 'M<sub>' + Marray.length + '</sub> (kN-m)';
-	cell1.style.fontWeight = 'bold';
-	cell2.innerHTML = Minsert.toFixed(1);
-	cell3.innerHTML = 'x (m)';
-	cell3.style.fontWeight = 'bold';
-	cell4.innerHTML = xMinsert.toFixed(1);
+	const tableResult = document.querySelectorAll('.beam__results-info');
+	tableResult.forEach((element, i) => {
+		let width = document.body.clientWidth;
+		if (width < 1000 && i === 0) {
+			element.style.display = 'block';
+		} else if (width > 1000 && i === 1) {
+			element.style.display = 'block';
+		}
+	});
+	const myTable = document.querySelectorAll('.beam__results-table');
+	myTable.forEach((table) => {
+		var row = table.insertRow(0);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		var cell4 = row.insertCell(3);
+		cell1.innerHTML = 'M<sub>' + Marray.length + '</sub> (kN-m)';
+		cell1.style.fontWeight = 'bold';
+		cell1.style.display = 'inline-block';
+		cell1.style.marginRight = '20px';
+		cell1.style.paddingTop = '20px';
+		cell1.style.paddingBottom = '10px';
+		cell2.innerHTML = Minsert.toFixed(1);
+		cell2.style.paddingTop = '20px';
+		cell2.style.paddingBottom = '10px';
+
+		cell3.innerHTML = 'x (m)';
+		cell3.style.display = 'inline-block';
+		cell3.style.marginRight = '20px';
+		cell3.style.marginLeft = '20px';
+		cell3.style.fontWeight = 'bold';
+		cell3.style.paddingTop = '20px';
+		cell3.style.paddingBottom = '10px';
+
+		cell4.innerHTML = xMinsert.toFixed(1);
+		cell4.style.paddingTop = '20px';
+		cell4.style.paddingBottom = '10px';
+	});
 }
 
 function buildTableP(Pinsert, xPinsert) {
-	document.getElementById('LoadInfo').style.display = 'block';
-	var table = document.getElementById('loadTable');
-	var row = table.insertRow(0);
-	var cell1 = row.insertCell(0);
-	var cell2 = row.insertCell(1);
-	var cell3 = row.insertCell(2);
-	var cell4 = row.insertCell(3);
-	cell1.innerHTML = 'P<sub>' + Parray.length + '</sub> (kN)';
-	cell1.style.fontWeight = 'bold';
-	cell1.style.display = 'inline-block';
-	cell1.style.marginRight = '20px';
-	cell1.style.paddingTop = '20px';
+	const tableResult = document.querySelectorAll('.beam__results-info');
+	tableResult.forEach((element, i) => {
+		let width = document.body.clientWidth;
+		if (width < 1000 && i === 0) {
+			element.style.display = 'block';
+		} else if (width > 1000 && i === 1) {
+			element.style.display = 'block';
+		}
+	});
+	const myTable = document.querySelectorAll('.beam__results-table');
+	myTable.forEach((table) => {
+		var row = table.insertRow(0);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		var cell4 = row.insertCell(3);
+		cell1.innerHTML = 'P<sub>' + Parray.length + '</sub> (kN)';
+		cell1.style.fontWeight = 'bold';
+		cell1.style.display = 'inline-block';
+		cell1.style.marginRight = '20px';
+		cell1.style.paddingTop = '20px';
+		cell1.style.paddingBottom = '10px';
 
-	cell2.innerHTML = Pinsert.toFixed(1);
-	cell2.style.paddingTop = '20px';
+		cell2.innerHTML = Pinsert.toFixed(1);
+		cell2.style.paddingTop = '20px';
+		cell2.style.paddingBottom = '10px';
+		cell3.innerHTML = 'x (m)';
+		cell3.style.display = 'inline-block';
+		cell3.style.marginRight = '20px';
+		cell3.style.marginLeft = '20px';
+		cell3.style.fontWeight = 'bold';
+		cell3.style.paddingTop = '20px';
+		cell3.style.paddingBottom = '10px';
 
-	cell3.innerHTML = 'x (m)';
-	cell3.style.display = 'inline-block';
-	cell3.style.marginRight = '20px';
-	cell3.style.marginLeft = '20px';
-	cell3.style.fontWeight = 'bold';
-	cell3.style.paddingTop = '20px';
-
-	cell4.innerHTML = xPinsert.toFixed(1);
-	cell4.style.paddingTop = '20px';
+		cell4.innerHTML = xPinsert.toFixed(1);
+		cell4.style.paddingTop = '20px';
+		cell4.style.paddingBottom = '10px';
+	});
 }
 
 function buildTableW1(w1insert, x1insert) {
-	document.getElementById('LoadInfo').style.display = 'block';
-	var table = document.getElementById('loadTable');
-	var row = table.insertRow(0);
-	var cell1 = row.insertCell(0);
-	var cell2 = row.insertCell(1);
-	var cell3 = row.insertCell(2);
-	var cell4 = row.insertCell(3);
-	row.style.border = 'none';
-	cell1.innerHTML = 'w<sub>' + w1array.length + '</sub> (kN/m)';
-	cell1.style.fontWeight = 'bold';
-	cell1.style.display = 'inline-block';
-	cell1.style.paddingTop = '20px';
+	const tableResult = document.querySelectorAll('.beam__results-info');
+	tableResult.forEach((element, i) => {
+		let width = document.body.clientWidth;
+		if (width < 1000 && i === 0) {
+			element.style.display = 'block';
+		} else if (width > 1000 && i === 1) {
+			element.style.display = 'block';
+		}
+	});
+	const myTable = document.querySelectorAll('.beam__results-table');
+	myTable.forEach((table) => {
+		var row = table.insertRow(0);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		var cell4 = row.insertCell(3);
+		row.style.border = 'none';
+		cell1.innerHTML = 'w<sub>' + w1array.length + '</sub> (kN/m)';
+		cell1.style.fontWeight = 'bold';
+		cell1.style.display = 'inline-block';
+		cell1.style.paddingTop = '20px';
+		cell1.style.paddingBottom = '10px';
 
-	cell1.style.marginRight = '20px';
-	cell2.innerHTML = w1insert.toFixed(1);
-	cell2.style.paddingTop = '20px';
-	cell3.style.display = 'inline-block';
-	cell3.style.marginRight = '20px';
-	cell3.style.marginLeft = '20px';
-	cell3.style.paddingTop = '20px';
-	cell3.innerHTML = 'x<sub>1</sub> (m)';
-	cell3.style.fontWeight = 'bold';
-	cell4.innerHTML = x1insert.toFixed(1);
-	cell4.style.paddingTop = '20px';
+		cell1.style.marginRight = '20px';
+		cell2.innerHTML = w1insert.toFixed(1);
+		cell2.style.paddingTop = '20px';
+		cell2.style.paddingBottom = '10px';
+
+		cell3.style.display = 'inline-block';
+		cell3.style.marginRight = '20px';
+		cell3.style.marginLeft = '20px';
+		cell3.style.paddingTop = '20px';
+		cell3.innerHTML = 'x<sub>1</sub> (m)';
+		cell3.style.fontWeight = 'bold';
+		cell3.style.paddingBottom = '10px';
+
+		cell4.innerHTML = x1insert.toFixed(1);
+		cell4.style.paddingTop = '20px';
+		cell4.style.paddingBottom = '10px';
+	});
 }
 
 function buildTableW2(w2insert, x2insert) {
-	document.getElementById('LoadInfo').style.display = 'block';
-	var table = document.getElementById('loadTable');
-	var row = table.insertRow(0);
-	var cell1 = row.insertCell(0);
-	var cell2 = row.insertCell(1);
-	var cell3 = row.insertCell(2);
-	var cell4 = row.insertCell(3);
-	cell1.innerHTML = '';
-	cell3.style.display = 'inline-block';
+	const tableResult = document.querySelectorAll('.beam__results-info');
+	tableResult.forEach((element, i) => {
+		let width = document.body.clientWidth;
+		if (width < 1000 && i === 0) {
+			element.style.display = 'block';
+		} else if (width > 1000 && i === 1) {
+			element.style.display = 'block';
+		}
+	});
+	const myTable = document.querySelectorAll('.beam__results-table');
+	myTable.forEach((table) => {
+		var row = table.insertRow(0);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		var cell4 = row.insertCell(3);
+		cell1.innerHTML = '';
+		cell3.style.display = 'inline-block';
 
-	cell2.innerHTML = w2insert.toFixed(1);
-	cell2.style.paddingTop = '20px';
+		cell2.innerHTML = w2insert.toFixed(1);
+		cell2.style.paddingTop = '20px';
+		cell2.style.paddingBottom = '10px';
 
-	cell3.innerHTML = 'x<sub>2</sub> (m)';
-	cell3.style.paddingTop = '20px';
+		cell3.innerHTML = 'x<sub>2</sub> (m)';
+		cell3.style.paddingTop = '20px';
+		cell3.style.paddingBottom = '10px';
 
-	cell3.style.display = 'inline-block';
-	cell3.style.marginLeft = '20px';
-	cell3.style.fontWeight = 'bold';
-	cell4.innerHTML = x2insert.toFixed(1);
-	cell4.style.paddingTop = '20px';
-	cell1.style.border = 'none';
-	cell2.style.border = 'none';
-	cell3.style.border = 'none';
-	cell4.style.border = 'none';
+		cell3.style.display = 'inline-block';
+		cell3.style.marginLeft = '20px';
+		cell3.style.fontWeight = 'bold';
+		cell4.innerHTML = x2insert.toFixed(1);
+		cell4.style.paddingTop = '20px';
+		cell4.style.paddingBottom = '10px';
+
+		cell1.style.border = 'none';
+		cell2.style.border = 'none';
+		cell3.style.border = 'none';
+		cell4.style.border = 'none';
+	});
 }
 
 function eraseLoadData() {
 	$('#loadTable tr').remove();
 	document.getElementById('LoadInfo').style.display = 'none';
+	const tableResult = document.querySelectorAll('.beam__results-info');
+	tableResult.forEach((element) => {
+		element.style.display = 'none';
+	});
 	Parray = [];
 	xParray = [];
 	Marray = [];
