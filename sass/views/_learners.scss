@@ -5,6 +5,9 @@
 		margin: 0 auto;
 		max-width: 110rem;
 		padding: 10rem 0;
+		@include respond(tabletaV) {
+			padding: 5rem 0;
+		}
 	}
 
 	&__list {
@@ -15,6 +18,7 @@
 		gap: 10rem;
 		@include respond(tabletaV) {
 			flex-direction: column;
+			gap: 5rem;
 		}
 	}
 

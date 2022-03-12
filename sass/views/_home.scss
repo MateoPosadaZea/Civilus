@@ -206,7 +206,6 @@
 
 	&__graph-container {
 		position: relative;
-
 		max-width: 110rem;
 		margin: 0 auto;
 		display: flex;
@@ -215,13 +214,15 @@
 		justify-content: center;
 		@include respond(tabletaV) {
 			flex-direction: column;
-			max-width: 80rem;
+			max-width: 70rem;
 			padding: 10rem 8rem 0 8rem;
 		}
 
 		@include respond(movil) {
 			margin: 0 auto;
 			margin-top: 10rem;
+			max-width: 60rem;
+			padding: 10rem 5rem 0 5rem;
 		}
 	}
 
@@ -229,7 +230,7 @@
 		border: 2px solid var(--color-azul-oscuro);
 		color: var(--color-azul-oscuro);
 		min-height: 74rem;
-		flex-basis: 40%;
+		flex-basis: 35%;
 		position: relative;
 
 		@include respond(tabletaV) {

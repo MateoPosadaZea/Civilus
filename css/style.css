@@ -1627,6 +1627,12 @@ select,
   padding: 10rem 0;
 }
 
+@media (max-width: 56.25em) {
+  .learners__box {
+    padding: 5rem 0;
+  }
+}
+
 .learners__list {
   display: flex;
   list-style: none;
@@ -1638,6 +1644,7 @@ select,
 @media (max-width: 56.25em) {
   .learners__list {
     flex-direction: column;
+    gap: 5rem;
   }
 }
 
@@ -1964,7 +1971,7 @@ select,
 @media (max-width: 56.25em) {
   .home__graph-container {
     flex-direction: column;
-    max-width: 80rem;
+    max-width: 70rem;
     padding: 10rem 8rem 0 8rem;
   }
 }
@@ -1973,6 +1980,8 @@ select,
   .home__graph-container {
     margin: 0 auto;
     margin-top: 10rem;
+    max-width: 60rem;
+    padding: 10rem 5rem 0 5rem;
   }
 }
 
@@ -1980,7 +1989,7 @@ select,
   border: 2px solid var(--color-azul-oscuro);
   color: var(--color-azul-oscuro);
   min-height: 74rem;
-  flex-basis: 40%;
+  flex-basis: 35%;
   position: relative;
 }
 
