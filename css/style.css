@@ -2119,15 +2119,15 @@ video {
 
 #myBtn {
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  bottom: 14rem;
+  right: 3rem;
   z-index: 99;
   border: none;
   outline: none;
   background-color: var(--color-rojo);
   color: white;
   cursor: pointer;
-  padding: 15px;
+  padding: 2rem;
 }
 
 .input-lg {
