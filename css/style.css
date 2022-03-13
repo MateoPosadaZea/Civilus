@@ -162,6 +162,7 @@ a {
   font-size: 2rem;
   margin-top: 2rem;
   width: 30rem;
+  border-radius: 2px;
 }
 
 @media (max-width: 56.25em) {
@@ -446,7 +447,7 @@ select,
 
 .footer__elements {
   font-family: var(--parrafos-jura);
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-top: 2rem;
   cursor: pointer;
   display: block;
@@ -1301,6 +1302,10 @@ select,
   100% {
     transform: scale(1, 1);
   }
+}
+
+#message {
+  font-size: 1.7rem;
 }
 
 .navigation {
