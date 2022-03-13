@@ -2102,8 +2102,7 @@ video {
 
 @media (max-width: 37.5em) {
   #bg-video__portada {
-    width: 46rem;
-    padding-top: 0.5rem;
+    width: 45rem;
   }
 }
 
