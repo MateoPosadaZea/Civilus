@@ -2142,6 +2142,8 @@ video {
   color: white;
   cursor: pointer;
   padding: 2rem;
+  height: 6rem;
+  width: 6rem;
 }
 
 .arrow {
