@@ -103,7 +103,7 @@
 		color: #fff;
 		font-family: var(--titulos-orbitron);
 		padding: 4rem 0;
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		justify-content: space-around;
 		color: var(--color-azul-oscuro);
 		@include respond(tabletaV) {
@@ -117,6 +117,12 @@
 			margin-left: 0;
 			text-align: center;
 		}
+	}
+
+	&__creation {
+		font-size: 1.6rem;
+		margin-bottom: 1.5rem;
+		font-weight: 500;
 	}
 
 	&__components {
