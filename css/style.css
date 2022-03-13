@@ -927,6 +927,12 @@ select,
   z-index: 200;
 }
 
+@media (max-width: 37.5em) {
+  .modal {
+    width: 80%;
+  }
+}
+
 .modal__title {
   background-color: red;
   font-size: 3rem;
@@ -1082,6 +1088,7 @@ select,
   padding: 2rem;
   height: 9rem;
   margin-bottom: 3rem;
+  cursor: pointer;
 }
 
 .results__movil-row-2 {
@@ -1395,7 +1402,7 @@ select,
 
 .navigation__link:link,
 .navigation__link :visited {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 500;
   padding: 1rem 2rem;
   color: #fff;
@@ -1655,23 +1662,23 @@ select,
 
 .learners__item {
   color: #fff;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-family: var(--titulos-orbitron);
 }
 
 .learners__span {
   margin-left: 1.5rem;
   color: white !important;
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 .learners__span--margin {
-  margin-left: 5rem;
+  margin-left: 3.5rem;
 }
 
 .learners__span--1 {
   color: white !important;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 .counter-text {
