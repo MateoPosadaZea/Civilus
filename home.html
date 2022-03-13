@@ -13,6 +13,10 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link
 			href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
 			rel="stylesheet"
 		/>
@@ -487,6 +491,9 @@
 				<p class="footer__components footer__components--1">Privacy Policy</p>
 				<p class="footer__components footer__components--2">Terms of Service</p>
 			</div>
+			<button onclick="topFunction()" id="myBtn" title="Go to top">
+				<i class="fa-regular fa-arrow-up"></i>
+			</button>
 		</footer>
 		<!-- ! FONT AWESOME -->
 		<script
@@ -541,6 +548,32 @@
 			$(window).on('load', function () {
 				inviewExample();
 			});
+		</script>
+		<script>
+			//Get the button
+			var mybutton = document.getElementById('myBtn');
+
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function () {
+				scrollFunction();
+			};
+
+			function scrollFunction() {
+				if (
+					document.body.scrollTop > 1000 ||
+					document.documentElement.scrollTop > 1000
+				) {
+					mybutton.style.display = 'block';
+				} else {
+					mybutton.style.display = 'none';
+				}
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
 		</script>
 	</body>
 </html>
