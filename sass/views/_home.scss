@@ -334,7 +334,7 @@ video {
 #bg-video__portada {
 	width: 40rem;
 	@include respond(movil) {
-		width: 46rem;
+		width: 45rem;
 		margin-top: -7rem;
 	}
 }
