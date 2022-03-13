@@ -326,3 +326,10 @@ video {
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 }
+
+#bg-video__portada {
+	@include respond(movil) {
+		width: 46rem;
+		padding-top: 0.5rem;
+	}
+}

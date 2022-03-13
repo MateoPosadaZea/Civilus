@@ -2100,6 +2100,13 @@ video {
   -moz-backface-visibility: hidden;
 }
 
+@media (max-width: 37.5em) {
+  #bg-video__portada {
+    width: 46rem;
+    padding-top: 0.5rem;
+  }
+}
+
 .input-lg {
   height: 46px;
   padding: 10px 16px;
