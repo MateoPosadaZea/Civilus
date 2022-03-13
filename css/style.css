@@ -1953,6 +1953,13 @@ select,
   }
 }
 
+@media (max-width: 37.5em) {
+  .home__tittle {
+    text-align: center;
+    font-size: 4rem;
+  }
+}
+
 .home__text {
   font-size: 2rem;
   font-weight: 500;
@@ -2114,7 +2121,7 @@ video {
 @media (max-width: 37.5em) {
   #bg-video__portada {
     width: 46rem;
-    margin-top: -6rem;
+    margin-top: -7rem;
   }
 }
 

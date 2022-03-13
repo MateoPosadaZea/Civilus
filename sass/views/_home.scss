@@ -188,6 +188,10 @@
 		@include respond(tabletaV) {
 			text-align: center;
 		}
+		@include respond(movil) {
+			text-align: center;
+			font-size: 4rem;
+		}
 	}
 
 	&__text {
@@ -331,7 +335,7 @@ video {
 	width: 40rem;
 	@include respond(movil) {
 		width: 46rem;
-		margin-top: -6rem;
+		margin-top: -7rem;
 	}
 }
 
