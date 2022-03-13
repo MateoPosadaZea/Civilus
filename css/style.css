@@ -584,7 +584,7 @@ select,
 
 .key__tittle {
   color: #fff;
-  font-size: 5rem;
+  font-size: 4.5rem;
   padding-bottom: 7rem;
   font-family: var(--titulos-orbitron);
 }
@@ -2141,9 +2141,9 @@ video {
   background-color: var(--color-rojo);
   color: white;
   cursor: pointer;
-  padding: 2rem;
-  height: 6rem;
-  width: 6rem;
+  padding: 1rem;
+  height: 5rem;
+  width: 5rem;
 }
 
 .arrow {
@@ -2157,6 +2157,21 @@ video {
 
 .mattriz {
   color: var(--color-azul-oscuro);
+  display: none;
+}
+
+@media (max-width: 75em) {
+  .mattriz {
+    display: inline-block;
+    color: var(--color-azul-oscuro);
+  }
+}
+
+@media (max-width: 37.5em) {
+  .mattriz {
+    display: inline-block;
+    color: var(--color-azul-oscuro);
+  }
 }
 
 .input-lg {

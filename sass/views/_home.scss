@@ -349,9 +349,9 @@ video {
 	background-color: var(--color-rojo);
 	color: white;
 	cursor: pointer;
-	padding: 2rem;
-	height: 6rem;
-	width: 6rem;
+	padding: 1rem;
+	height: 5rem;
+	width: 5rem;
 }
 
 .arrow {
@@ -365,4 +365,13 @@ video {
 
 .mattriz {
 	color: var(--color-azul-oscuro);
+	display: none;
+	@include respond(tabletaH) {
+		display: inline-block;
+		color: var(--color-azul-oscuro);
+	}
+	@include respond(movil) {
+		display: inline-block;
+		color: var(--color-azul-oscuro);
+	}
 }
