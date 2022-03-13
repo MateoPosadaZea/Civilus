@@ -2113,7 +2113,8 @@ video {
 
 @media (max-width: 37.5em) {
   #bg-video__portada {
-    width: 45rem;
+    width: 46rem;
+    margin-top: -6rem;
   }
 }
 
