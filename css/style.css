@@ -1952,12 +1952,13 @@ select,
     align-items: center;
     left: 3.5rem;
     top: 20%;
+    overflow: hidden;
   }
 }
 
 @media (max-width: 37.5em) {
   .home__container {
-    left: 0rem;
+    left: 0;
     top: 20%;
     padding: 0 3rem 0 3rem;
     width: 100%;
@@ -1997,8 +1998,11 @@ select,
   }
 }
 
-.home__graph {
-  position: relative;
+@media (max-width: 25em) {
+  .home__text {
+    max-width: 80%;
+    margin-left: 4rem;
+  }
 }
 
 .home__graph-container {
@@ -2022,7 +2026,6 @@ select,
 @media (max-width: 37.5em) {
   .home__graph-container {
     margin: 0 auto;
-    margin-top: 0;
     max-width: 60rem;
     padding: 0 5rem 0 5rem;
   }
@@ -2145,9 +2148,9 @@ select,
   }
 }
 
-@media (max-width: 56.25em) {
+@media (max-width: 37.5em) {
   #bg-video__portada {
-    text-align: center;
+    height: 20rem;
   }
 }
 
@@ -2163,12 +2166,13 @@ html {
 }
 
 #graphs {
-  padding: 13rem 0 20rem 0;
+  padding: 12rem 0 20rem 0;
 }
 
 @media (max-width: 37.5em) {
   #graphs {
     margin-bottom: -10rem;
+    padding: 0 0 20rem 0;
   }
 }
 
@@ -2230,10 +2234,6 @@ video {
     display: inline-block;
     color: var(--color-azul-oscuro);
   }
-}
-
-#graphs {
-  position: relative;
 }
 
 .input-lg {

@@ -11,9 +11,6 @@
 .home {
 	min-height: 87vh;
 	position: relative;
-	@include respond(tabletaV) {
-		// height: 80vh;
-	}
 
 	&__nav {
 		display: flex;
@@ -164,10 +161,11 @@
 			align-items: center;
 			left: 3.5rem;
 			top: 20%;
+			overflow: hidden;
 		}
 
 		@include respond(movil) {
-			left: 0rem;
+			left: 0;
 			top: 20%;
 			padding: 0 3rem 0 3rem;
 			width: 100%;
@@ -197,15 +195,10 @@
 		@include respond(tabletaV) {
 			text-align: center;
 		}
-	}
-
-	&__graph {
-		position: relative;
-		// margin-top: 10rem;
-		// background-color: yellow;
-		// @include respond(movil) {
-		// 	margin-top: 0;
-		// }
+		@include respond(miniMovil) {
+			max-width: 80%;
+			margin-left: 4rem;
+		}
 	}
 
 	&__graph-container {
@@ -224,7 +217,7 @@
 
 		@include respond(movil) {
 			margin: 0 auto;
-			margin-top: 0;
+			// margin-top: -30rem;
 			max-width: 60rem;
 			padding: 0 5rem 0 5rem;
 		}
@@ -335,8 +328,8 @@
 	}
 }
 #bg-video__portada {
-	@include respond(tabletaV) {
-		text-align: center;
+	@include respond(movil) {
+		height: 20rem;
 	}
 }
 .navigation {
@@ -350,9 +343,11 @@ html {
 	scroll-behavior: smooth;
 }
 #graphs {
-	padding: 13rem 0 20rem 0;
+	padding: 12rem 0 20rem 0;
 	@include respond(movil) {
 		margin-bottom: -10rem;
+		// margin-top: 10rem;
+		padding: 0 0 20rem 0;
 	}
 }
 
@@ -406,6 +401,6 @@ video {
 		color: var(--color-azul-oscuro);
 	}
 }
-#graphs {
-	position: relative;
-}
+// #graphs {
+// 	position: relative;
+// }
