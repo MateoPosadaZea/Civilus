@@ -662,9 +662,17 @@ table {
 }
 
 .beam__results-info-1 {
-	display: none !important;
+	display: none;
+	max-width: 40rem;
 	@include respond(smallDesktop) {
-		display: block !important;
+		display: block;
+		text-align: center;
+	}
+}
+.table__center {
+	position: relative;
+	@include respond(smallDesktop) {
+		left: 20%;
 	}
 }
 

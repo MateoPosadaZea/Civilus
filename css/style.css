@@ -2918,12 +2918,24 @@ table {
 }
 
 .beam__results-info-1 {
-  display: none !important;
+  display: none;
+  max-width: 40rem;
 }
 
 @media (max-width: 66.87em) {
   .beam__results-info-1 {
-    display: block !important;
+    display: block;
+    text-align: center;
+  }
+}
+
+.table__center {
+  position: relative;
+}
+
+@media (max-width: 66.87em) {
+  .table__center {
+    left: 20%;
   }
 }
 
