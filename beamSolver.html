@@ -97,11 +97,11 @@
 					<li class="home__item">
 						<a href="./about.html" class="home__link">About us</a>
 					</li>
-					<li class="home__item activo">
-						<a href="./beamSolver.html" class="home__link">Beam Solver</a>
-					</li>
 					<li class="home__item">
 						<a href="./crossSection.html" class="home__link">Cross Section</a>
+					</li>
+					<li class="home__item activo">
+						<a href="./beamSolver.html" class="home__link">Beam Solver</a>
 					</li>
 					<li class="home__item">
 						<a href="./contact.html" class="home__link home__link--margin">Contact us</a>
@@ -475,6 +475,8 @@
 												class="input-group-addon section__label-beam"
 												id="XcoordP"
 												style="width: 100px"
+												min="1"
+												oninput="validity.valid||(value='');"
 												>x (m)</span
 											>
 											<input
@@ -539,7 +541,8 @@
 												class="form-control section__input"
 												style="width: 95px"
 												onkeypress="return isNumberKey(event)"
-												min="0"
+												min="1"
+												oninput="validity.valid||(value='');"
 											/>
 										</div>
 										<a class="btn  btn--calc btn__myWidt" id="addM" onclick="drawmoment()">
@@ -575,6 +578,8 @@
 												class="form-control section__input"
 												style="width: 94px"
 												onkeypress="return isNumberKey2(event)"
+												min="1"
+												oninput="validity.valid||(value='');"
 											/>
 										</div>
 										<div
@@ -594,6 +599,8 @@
 												class="form-control section__input"
 												style="width: 94px"
 												onkeypress="return isNumberKey(event)"
+												min="1"
+												oninput="validity.valid||(value='');"
 											/>
 										</div>
 										<div
@@ -613,6 +620,8 @@
 												class="form-control section__input"
 												style="width: 94px"
 												onkeypress="return isNumberKey2(event)"
+												min="1"
+												oninput="validity.valid||(value='');"
 											/>
 										</div>
 										<div
@@ -632,7 +641,8 @@
 												class="form-control section__input"
 												style="width: 94px"
 												onkeypress="return isNumberKey(event)"
-												min="0"
+												min="1"
+												oninput="validity.valid||(value='');"
 											/>
 										</div>
 										<a

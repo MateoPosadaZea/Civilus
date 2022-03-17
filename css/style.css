@@ -67,6 +67,12 @@ a {
   transition: all 0.2s;
 }
 
+@media (max-width: 37.5em) {
+  .btn__mrgin-side {
+    width: 80% !important;
+  }
+}
+
 .btn__invisible {
   display: inline-block;
   position: absolute;
@@ -797,12 +803,18 @@ select,
 .hero__arrow {
   color: #cf242d;
   font-weight: 900;
-  margin-left: 2rem;
   font-size: 3rem;
 }
 
 .hero__scroll {
   cursor: pointer;
+}
+
+.hero__myflexItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero__scroll > span {
@@ -1769,7 +1781,7 @@ select,
 }
 
 .home {
-  min-height: 87vh;
+  max-height: 87vh;
   position: relative;
 }
 
@@ -1813,7 +1825,7 @@ select,
 }
 
 .home__img {
-  background-image: url(../../assets/images/CivilusSVG.svg);
+  background-image: url(../../assets/images/CivilusSVG-01.svg);
   background-repeat: no-repeat;
   background-size: contain;
   width: 200%;
@@ -1929,7 +1941,7 @@ select,
 .home__container {
   position: absolute;
   top: 30%;
-  left: 20rem;
+  left: 10rem;
   color: #fff;
   font-family: var(--titulos-orbitron-regular);
   max-width: 100rem;
@@ -2006,7 +2018,6 @@ select,
 }
 
 .home__graph-container {
-  position: relative;
   max-width: 110rem;
   margin: 0 auto;
   display: flex;
@@ -2025,7 +2036,6 @@ select,
 
 @media (max-width: 37.5em) {
   .home__graph-container {
-    margin: 0 auto;
     max-width: 60rem;
     padding: 0 5rem 0 5rem;
   }
@@ -2234,6 +2244,19 @@ video {
     display: inline-block;
     color: var(--color-azul-oscuro);
   }
+}
+
+@media (max-width: 37.5em) {
+  .btn__container {
+    text-align: center;
+  }
+}
+
+.container__home {
+  position: relative;
+  min-height: 60rem;
+  max-width: 110rem;
+  margin: 0 auto;
 }
 
 .input-lg {

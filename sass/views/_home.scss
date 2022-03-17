@@ -9,7 +9,7 @@
 }
 
 .home {
-	min-height: 87vh;
+	max-height: 87vh;
 	position: relative;
 
 	&__nav {
@@ -40,7 +40,7 @@
 	}
 
 	&__img {
-		background-image: url(../../assets/images/CivilusSVG.svg);
+		background-image: url(../../assets/images/CivilusSVG-01.svg);
 		background-repeat: no-repeat;
 		background-size: contain;
 		width: 200%;
@@ -144,7 +144,7 @@
 	&__container {
 		position: absolute;
 		top: 30%;
-		left: 20rem;
+		left: 10rem;
 		color: #fff;
 		font-family: var(--titulos-orbitron-regular);
 		max-width: 100rem;
@@ -202,7 +202,7 @@
 	}
 
 	&__graph-container {
-		position: relative;
+		// position: relative;
 		max-width: 110rem;
 		margin: 0 auto;
 		display: flex;
@@ -216,8 +216,6 @@
 		}
 
 		@include respond(movil) {
-			margin: 0 auto;
-			// margin-top: -30rem;
 			max-width: 60rem;
 			padding: 0 5rem 0 5rem;
 		}
@@ -276,9 +274,7 @@
 	&__flex {
 		display: flex;
 		gap: 5rem;
-		// position: relative;
-		// top: -20rem;
-		// left: 25.5rem;
+
 		max-width: 100rem;
 		margin-top: -15rem;
 		margin-bottom: 10rem;
@@ -346,7 +342,6 @@ html {
 	padding: 12rem 0 20rem 0;
 	@include respond(movil) {
 		margin-bottom: -10rem;
-		// margin-top: 10rem;
 		padding: 0 0 20rem 0;
 	}
 }
@@ -401,6 +396,16 @@ video {
 		color: var(--color-azul-oscuro);
 	}
 }
-// #graphs {
-// 	position: relative;
-// }
+
+.btn__container {
+	@include respond(movil) {
+		text-align: center;
+	}
+}
+
+.container__home {
+	position: relative;
+	min-height: 60rem;
+	max-width: 110rem;
+	margin: 0 auto;
+}

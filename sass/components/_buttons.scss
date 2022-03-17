@@ -14,6 +14,12 @@
 		transition: all 0.2s;
 	}
 
+	&__mrgin-side {
+		@include respond(movil) {
+			width: 80% !important;
+		}
+	}
+
 	&__invisible {
 		display: inline-block;
 		position: absolute;
