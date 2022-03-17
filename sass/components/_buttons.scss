@@ -67,6 +67,12 @@
 		&:hover {
 			box-shadow: inset 18rem 0 0 0 var(--color-azul-oscuro) !important;
 		}
+
+		@include respond(tabletaV) {
+			&:hover {
+				box-shadow: none;
+			}
+		}
 	}
 
 	&__delete {
@@ -85,6 +91,12 @@
 		&:hover {
 			box-shadow: inset 18rem 0 0 0 var(--color-rojo) !important;
 		}
+
+		@include respond(tabletaV) {
+			&:hover {
+				box-shadow: none;
+			}
+		}
 	}
 
 	&__myWidth {
@@ -92,16 +104,21 @@
 	}
 
 	&__hover {
-		box-shadow: inset 0 0 0 0 var(--color-rojo);
+		box-shadow: inset 0 0 0 0 var(--color-azul-oscuro);
 		transition: ease-out 0.2s;
 
 		&:hover {
-			box-shadow: inset 30rem 0 0 0 var(--color-azul-oscuro);
+			box-shadow: inset 30rem 0 0 0 var(--color-rojo);
+		}
+		@include respond(tabletaV) {
+			&:hover {
+				box-shadow: none;
+			}
 		}
 	}
 
 	&__home {
-		background-color: var(--color-rojo);
+		background-color: var(--color-azul-oscuro);
 		color: #fff;
 		padding: 2rem;
 		font-size: 2rem;
@@ -130,6 +147,11 @@
 
 			&:hover {
 				box-shadow: inset 60rem 0 0 0 var(--color-rojo);
+			}
+			@include respond(tabletaV) {
+				&:hover {
+					box-shadow: none;
+				}
 			}
 			&:hover h6 {
 				transform: translateX(10px);

@@ -124,6 +124,12 @@ a {
   box-shadow: inset 18rem 0 0 0 var(--color-azul-oscuro) !important;
 }
 
+@media (max-width: 56.25em) {
+  .btn--calc:hover {
+    box-shadow: none;
+  }
+}
+
 .btn__delete {
   background-color: var(--color-azul-oscuro) !important;
   color: #fff !important;
@@ -142,21 +148,33 @@ a {
   box-shadow: inset 18rem 0 0 0 var(--color-rojo) !important;
 }
 
+@media (max-width: 56.25em) {
+  .btn__delete:hover {
+    box-shadow: none;
+  }
+}
+
 .btn__myWidth {
   width: 10rem;
 }
 
 .btn__hover {
-  box-shadow: inset 0 0 0 0 var(--color-rojo);
+  box-shadow: inset 0 0 0 0 var(--color-azul-oscuro);
   transition: ease-out 0.2s;
 }
 
 .btn__hover:hover {
-  box-shadow: inset 30rem 0 0 0 var(--color-azul-oscuro);
+  box-shadow: inset 30rem 0 0 0 var(--color-rojo);
+}
+
+@media (max-width: 56.25em) {
+  .btn__hover:hover {
+    box-shadow: none;
+  }
 }
 
 .btn__home {
-  background-color: var(--color-rojo);
+  background-color: var(--color-azul-oscuro);
   color: #fff;
   padding: 2rem;
   font-size: 2rem;
@@ -191,6 +209,12 @@ a {
 
 .btn__home--width:hover {
   box-shadow: inset 60rem 0 0 0 var(--color-rojo);
+}
+
+@media (max-width: 56.25em) {
+  .btn__home--width:hover {
+    box-shadow: none;
+  }
 }
 
 .btn__home--width:hover h6 {
@@ -1354,7 +1378,7 @@ select,
 }
 
 .navigation__line {
-  background-color: #fff900;
+  background-color: var(--color-rojo);
 }
 
 .navigation__buttom {
@@ -1983,6 +2007,12 @@ select,
   margin-top: 10rem;
 }
 
+@media (max-width: 37.5em) {
+  .home__graph {
+    margin-top: 0;
+  }
+}
+
 .home__graph-container {
   position: relative;
   max-width: 110rem;
@@ -2004,9 +2034,9 @@ select,
 @media (max-width: 37.5em) {
   .home__graph-container {
     margin: 0 auto;
-    margin-top: 10rem;
+    margin-top: 0;
     max-width: 60rem;
-    padding: 10rem 5rem 0 5rem;
+    padding: 0 5rem 0 5rem;
   }
 }
 
@@ -2036,14 +2066,13 @@ select,
 
 @media (max-width: 37.5em) {
   .home__graph-box {
-    margin-top: 3rem;
     min-height: 70rem;
   }
 }
 
 @media (max-width: 25em) {
   .home__graph-box:not(:last-child) {
-    margin-top: 15rem;
+    margin-top: 11rem;
     min-height: 70rem;
   }
 }
@@ -2172,6 +2201,10 @@ video {
     display: inline-block;
     color: var(--color-azul-oscuro);
   }
+}
+
+#graphs {
+  position: relative;
 }
 
 .input-lg {
@@ -2713,6 +2746,7 @@ fieldset[disabled] .btn-default.active {
     position: relative;
     margin: 0 auto;
     max-width: 50rem !important;
+    left: -20%;
   }
 }
 
@@ -2868,4 +2902,10 @@ table {
   .beam__results-info-2 {
     display: none !important;
   }
+}
+
+.input-group-addon {
+  border-top: none !important;
+  border-left: none !important;
+  border-bottom: none !important;
 }

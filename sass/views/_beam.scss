@@ -534,6 +534,7 @@ fieldset[disabled] .btn-default.active {
 		position: relative;
 		margin: 0 auto;
 		max-width: 50rem !important;
+		left: -20%;
 	}
 }
 
@@ -671,4 +672,9 @@ table {
 	@include respond(smallDesktop) {
 		display: none !important;
 	}
+}
+.input-group-addon {
+	border-top: none !important;
+	border-left: none !important;
+	border-bottom: none !important;
 }
