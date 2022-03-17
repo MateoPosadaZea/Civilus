@@ -9,9 +9,10 @@
 }
 
 .home {
-	height: 100vh;
+	min-height: 87vh;
+	position: relative;
 	@include respond(tabletaV) {
-		height: 80vh;
+		// height: 80vh;
 	}
 
 	&__nav {
@@ -173,11 +174,6 @@
 		}
 	}
 
-	&__order {
-		@include respond(tabletaV) {
-		}
-	}
-
 	&__tittle {
 		font-size: 5rem;
 		margin-bottom: 2rem;
@@ -205,10 +201,11 @@
 
 	&__graph {
 		position: relative;
-		margin-top: 10rem;
-		@include respond(movil) {
-			margin-top: 0;
-		}
+		// margin-top: 10rem;
+		// background-color: yellow;
+		// @include respond(movil) {
+		// 	margin-top: 0;
+		// }
 	}
 
 	&__graph-container {
@@ -309,8 +306,39 @@
 		margin-bottom: 5rem;
 		height: auto;
 	}
-}
 
+	&__order-video {
+		display: none;
+
+		@include respond(tabletaV) {
+			display: flex;
+			position: relative;
+			align-items: center;
+			justify-content: center;
+		}
+		@include respond(movil) {
+			padding-top: 8rem;
+		}
+	}
+
+	&__video {
+		@include respond(tabletaV) {
+			display: none;
+		}
+	}
+
+	&__movil {
+		display: none;
+		@include respond(tabletaV) {
+			display: block;
+		}
+	}
+}
+#bg-video__portada {
+	@include respond(tabletaV) {
+		text-align: center;
+	}
+}
 .navigation {
 	@include respond(tabletaV) {
 		display: block !important;
@@ -322,7 +350,7 @@ html {
 	scroll-behavior: smooth;
 }
 #graphs {
-	padding: 2rem 0 20rem 0;
+	padding: 13rem 0 20rem 0;
 	@include respond(movil) {
 		margin-bottom: -10rem;
 	}
