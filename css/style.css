@@ -785,7 +785,10 @@ select,
 .hero__text {
   font-size: 2rem;
   font-family: var(--parrafos-jura);
-  text-align: center;
+}
+
+.hero__text-size {
+  font-size: 2.5rem;
 }
 
 .hero__sub-text {
