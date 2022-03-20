@@ -1,6 +1,7 @@
 .form {
 	background-color: var(--color-verde);
 	padding: 10rem 0;
+	position: relative;
 	@include respond(tabletaV) {
 		padding-top: 10rem;
 	}

@@ -3,22 +3,54 @@ const enviar = document.querySelector('#enviar');
 const nombre = document.querySelector('#nombre');
 const email = document.querySelector('#email');
 const mensaje = document.querySelector('#message');
+const modal = document.querySelector('.modal');
+const modal__error = document.querySelector('.modal__error');
+const overlay = document.querySelector('.overlay');
+const btnCloseModal = document.querySelector('.close-modal');
+const modal__title_error = document.querySelector('.modal__title-error');
+const openModal = function (error, flag = 0) {
+	if (flag) {
+		modal__title_error.textContent = 'Thank you!';
+	}
+	modal__error.textContent = error;
+	modal.classList.remove('hidden');
+	overlay.classList.remove('hidden');
+};
+const closeModal = function () {
+	modal.classList.add('hidden');
+	overlay.classList.add('hidden');
+};
+const closeModalEscape = function () {
+	modal.classList.add('hidden');
+	overlay.classList.add('hidden');
+};
+
+btnCloseModal.addEventListener('click', closeModal);
+btnCloseModal.addEventListener('click', closeModal);
+overlay.addEventListener('click', () => {
+	modal.classList.add('hidden');
+	overlay.classList.add('hidden');
+});
+addEventListener('keydown', (e) => {
+	if (e.key === 'Escape') {
+		modal.classList.add('hidden');
+		overlay.classList.add('hidden');
+	}
+});
 enviar.addEventListener('click', (e) => {
 	e.preventDefault();
+	console.log('entra');
 
 	if (nombre.value === '' || email.value === '' || mensaje.value === '') {
-		swal({
-			title: 'Error',
-			text: 'Input fields are required...',
-			icon: 'error',
-		});
+		// swal({
+		// 	title: 'Error',
+		// 	text: 'Input fields are required...',
+		// 	icon: 'error',
+		// });
+		openModal('Input fields are required...');
 	} else {
 		sendMail(nombre.value, email.value, mensaje.value);
-		swal({
-			title: 'Thank you!',
-			text: 'Your email has been succesfully send!',
-			icon: 'success',
-		});
+		openModal('Your email has been succesfully send!', 1);
 
 		nombre.value = '';
 		email.value = '';
@@ -47,7 +79,6 @@ let onresize = function () {
 	}
 };
 window.addEventListener('resize', onresize);
-// console.log(window.screen.width);
 let width = document.body.clientWidth;
 if (width <= 900) {
 	video.classList.remove('hidden');
@@ -56,64 +87,3 @@ if (width <= 900) {
 	video.classList.add('hidden');
 	videoPhoto.classList.remove('hidden');
 }
-
-// const cont = () => {
-// 	console.log('entra');
-// 	const counters = document.querySelectorAll('.learners__span');
-
-// 	if (document.body.clientHeight)
-
-// 	for (let n of counters) {
-// 		const updateCount = () => {
-// 			const target = +n.getAttribute('data-target');
-// 			const count = +n.innerText;
-// 			const speed = 5000; // change animation speed here
-// 			const inc = target / speed;
-// 			if (count < target) {
-// 				n.innerText = Math.ceil(count + inc);
-// 				setTimeout(updateCount, 1);
-// 			} else {
-// 				n.innerText = target;
-// 			}
-// 		};
-// 		updateCount();
-// 	}
-// };
-
-// function reveal() {
-// 	var counters = document.querySelectorAll('.learners__span');
-// 	let bandera = false;
-// 	for (var i = 0; i < counters.length; i++) {
-// 		var windowHeight = window.innerHeight;
-// 		var elementTop = counters[i].getBoundingClientRect().top;
-// 		var elementVisible = 150;
-// 		// console.log(elementTop);
-// 		// console.log(windowHeight - elementVisible);
-
-// 		if (elementTop < windowHeight - elementVisible) {
-// 			bandera = true;
-// 			counters.forEach((count) => {
-// 				count.textContent = 0;
-// 			});
-// 			for (let n of counters) {
-// 				const updateCount = () => {
-// 					const target = +n.getAttribute('data-target');
-// 					const count = +n.innerText;
-// 					const speed = 5000; // change animation speed here
-// 					const inc = target / speed;
-// 					if (count < target) {
-// 						n.innerText = Math.ceil(count + inc);
-// 						setTimeout(updateCount, 1);
-// 					} else {
-// 						n.innerText = target;
-// 					}
-// 				};
-// 				updateCount();
-// 			}
-// 		}
-// 	}
-// }
-
-// window.addEventListener('scroll', reveal);
-
-// window.addEventListener('scroll', cont);

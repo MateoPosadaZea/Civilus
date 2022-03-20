@@ -223,7 +223,12 @@
 								placeholder="Write your message here"
 								required
 							></textarea>
-							<a href="#" class="btn btn--send new-alert" type="submit" id="">
+							<a
+								href="#"
+								class="btn btn--send new-alert"
+								type="submit"
+								id="enviar"
+							>
 								<p class="btn__visible">
 									<i class="far fa-paper-plane"></i>Send Message
 								</p>
@@ -232,6 +237,17 @@
 									<i class="far fa-paper-plane"></i>Send Message
 								</p>
 							</a>
+						</div>
+						<div class="overlay overlay-mail hidden"></div>
+						<div class="modal modal-mail hidden">
+							<div class="modal__background modal__background-mail">
+								<button class="close-modal">&times;</button>
+								<h1 class="modal__title-error">ERROR!</h1>
+							</div>
+
+							<p class="modal__error">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							</p>
 						</div>
 					</form>
 				</div>
