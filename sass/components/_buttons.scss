@@ -131,6 +131,10 @@
 		margin-top: 2rem;
 		width: 30rem;
 		border-radius: 2px;
+		&:hover h6 {
+			transform: translateX(10px);
+			transition: ease-out 0.3s;
+		}
 
 		@include respond(tabletaV) {
 			margin-left: 35%;

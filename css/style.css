@@ -189,6 +189,11 @@ a {
   border-radius: 2px;
 }
 
+.btn__home:hover h6 {
+  transform: translateX(10px);
+  transition: ease-out 0.3s;
+}
+
 @media (max-width: 56.25em) {
   .btn__home {
     margin-left: 35%;

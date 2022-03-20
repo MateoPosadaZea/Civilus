@@ -990,9 +990,11 @@ function calculate() {
 // * ========= MAIN ========= //
 const seccion = () => {
 	if (select.value === rectangular) {
+		console.log('entra');
 		section__img.src = './assets/images/Rectangular.svg';
 		section__title.textContent = 'Rectangular';
 		results__angle.forEach((angle) => {
+			console.log('entra');
 			angle.classList.add('hidden');
 		});
 		if (
@@ -1241,31 +1243,31 @@ const centimeters = '(cm)';
 const milimeters = '(mm)';
 const feet = '(ft)';
 const inches = '(in)';
+console.log(meters.replace(')', ''));
 const selectUnit = () => {
-	console.log(selectUnits.value);
 	if (selectUnits.value === meters) {
 		for (let i = 0; i < section__span.length; i++) {
-			section__span[i].textContent = meters;
+			section__span[i].textContent = meters.replace(')', '');
 		}
 		section__unit.textContent = 'meters (m)';
 	} else if (selectUnits.value === centimeters) {
 		for (let i = 0; i < section__span.length; i++) {
-			section__span[i].textContent = centimeters;
+			section__span[i].textContent = centimeters.replace(')', '');
 		}
 		section__unit.textContent = 'centimeters (cm)';
 	} else if (selectUnits.value === milimeters) {
 		for (let i = 0; i < section__span.length; i++) {
-			section__span[i].textContent = milimeters;
+			section__span[i].textContent = milimeters.replace(')', '');
 		}
 		section__unit.textContent = 'milimeters (mm)';
 	} else if (selectUnits.value === feet) {
 		for (let i = 0; i < section__span.length; i++) {
-			section__span[i].textContent = feet;
+			section__span[i].textContent = feet.replace(')', '');
 		}
 		section__unit.textContent = 'feet (ft)';
 	} else if (selectUnits.value === inches) {
 		for (let i = 0; i < section__span.length; i++) {
-			section__span[i].textContent = inches;
+			section__span[i].textContent = inches.replace(')', '');
 		}
 		section__unit.textContent = 'inches (in)';
 	}
