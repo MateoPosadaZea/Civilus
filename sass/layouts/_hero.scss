@@ -69,11 +69,11 @@
 	}
 
 	&__text {
-		font-size: 2.2rem;
+		font-size: 2rem;
 		font-family: var(--parrafos-jura);
 		text-align: center;
 		@include respond(movil) {
-			font-size: 2.5rem;
+			// font-size: 2.5rem;
 		}
 	}
 

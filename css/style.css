@@ -783,15 +783,9 @@ select,
 }
 
 .hero__text {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-family: var(--parrafos-jura);
   text-align: center;
-}
-
-@media (max-width: 37.5em) {
-  .hero__text {
-    font-size: 2.5rem;
-  }
 }
 
 .hero__sub-text {
