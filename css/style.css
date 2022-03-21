@@ -261,6 +261,7 @@ a {
 .btn__donations {
   background-color: var(--color-rojo) !important;
   transition: ease-out 0.3s;
+  margin-left: 0% !important;
 }
 
 .btn__donations:hover {

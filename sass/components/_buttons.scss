@@ -192,6 +192,7 @@
 	&__donations {
 		background-color: var(--color-rojo) !important;
 		transition: ease-out 0.3s;
+		margin-left: 0% !important;
 
 		&:hover {
 			box-shadow: inset 60rem 0 0 0 var(--color-azul-oscuro) !important;

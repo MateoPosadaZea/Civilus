@@ -50,7 +50,7 @@ enviar.addEventListener('click', (e) => {
 	} else {
 		if (validateEmail(email.value)) {
 			console.log('trueeee');
-			// sendMail(nombre.value, email.value, mensaje.value);
+			sendMail(nombre.value, email.value, mensaje.value);
 			openModal('Your email has been succesfully send!', 1);
 		} else {
 			openModal('Incorrect email!', 0);
