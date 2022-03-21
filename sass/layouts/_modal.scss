@@ -12,6 +12,7 @@
 	z-index: 20000;
 	&-mail {
 		top: 55%;
+		width: 35%;
 	}
 
 	@include respond(movil) {
@@ -23,6 +24,10 @@
 		font-size: 3rem;
 		padding: 3rem;
 		color: #fff;
+		&-mail {
+			font-family: var(--parrafos-jura);
+			font-size: 2rem;
+		}
 	}
 
 	&__title-error {
@@ -31,10 +36,22 @@
 		font-family: var(--titulos-orbitron);
 	}
 
+	&__box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 4rem;
+	}
+
 	&__error {
 		font-size: 2rem;
 		padding: 3rem;
 		font-family: var(--parrafos-jura);
+
+		&-mail {
+			font-size: 1.8rem;
+			font-family: var(--parrafos-jura);
+		}
 	}
 
 	&__background {
@@ -43,16 +60,40 @@
 		position: relative;
 		padding: 3rem 3rem 6rem 3rem;
 		display: flex;
+		&-mail {
+			background-color: blue;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 2rem;
+			height: 10rem;
+			position: relative;
+		}
+	}
+
+	&__circle {
+		margin-top: 3rem;
+		border: 2px solid black;
+		height: auto;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: var(--titulos-orbitron);
+		font-weight: 100;
+	}
+
+	&__btn {
+		border: 2px solid var(--color-rojo);
+		background-color: transparent;
+		color: var(--color-rojo);
+		padding: 1rem 2.5rem;
+		margin-bottom: 3rem;
+		cursor: pointer;
 	}
 }
 
 .overlay {
-	// position: absolute;
-	// top: 0;
-	// left: 0;
-	// width: 100%;
-	// overflow-y: hidden;
-	// height: 430%;
 	position: fixed;
 	top: 0;
 	left: 0;

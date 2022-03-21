@@ -189,6 +189,14 @@
 			margin-top: 5.3rem;
 		}
 	}
+	&__donations {
+		background-color: var(--color-rojo) !important;
+		transition: ease-out 0.3s;
+
+		&:hover {
+			box-shadow: inset 60rem 0 0 0 var(--color-azul-oscuro) !important;
+		}
+	}
 }
 
 .about__calculate {
@@ -208,6 +216,7 @@ h6 {
 	display: inline-block;
 	font-size: 2rem;
 }
+
 .btn__close {
 	background-color: white;
 	font-family: var(--titulos-orbitron);

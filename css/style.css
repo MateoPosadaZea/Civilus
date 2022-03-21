@@ -258,6 +258,15 @@ a {
   margin-top: 5.3rem;
 }
 
+.btn__donations {
+  background-color: var(--color-rojo) !important;
+  transition: ease-out 0.3s;
+}
+
+.btn__donations:hover {
+  box-shadow: inset 60rem 0 0 0 var(--color-azul-oscuro) !important;
+}
+
 .about__calculate {
   border: 2px solid var(--color-rojo);
   padding: 1.5rem 0;
@@ -572,31 +581,35 @@ select,
 .donations__box {
   margin: 0 auto;
   max-width: 110rem;
-  padding: 14rem 0;
+  padding: 10rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.donations__tittle {
+@media (max-width: 37.5em) {
+  .donations__box {
+    padding: 10rem 4rem;
+  }
+}
+
+.donations__title {
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: var(--titulos-orbitron);
   margin-bottom: 2rem;
 }
 
 @media (max-width: 37.5em) {
-  .donations__tittle {
-    padding: 5rem 5rem 0 5rem;
+  .donations__title {
+    text-align: start;
   }
 }
 
-.donations__btn {
-  text-align: center;
-  margin-left: 0 auto;
-  max-width: 40rem;
-  background-color: --color-rojo;
+.donations__text {
+  font-size: 2rem;
+  font-family: var(--parrafos-jura);
 }
 
 .key {
@@ -974,6 +987,7 @@ select,
 
 .modal-mail {
   top: 55%;
+  width: 35%;
 }
 
 @media (max-width: 37.5em) {
@@ -989,15 +1003,32 @@ select,
   color: #fff;
 }
 
+.modal__title-mail {
+  font-family: var(--parrafos-jura);
+  font-size: 2rem;
+}
+
 .modal__title-error {
   color: #fff;
   font-size: 2.5rem;
   font-family: var(--titulos-orbitron);
 }
 
+.modal__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
 .modal__error {
   font-size: 2rem;
   padding: 3rem;
+  font-family: var(--parrafos-jura);
+}
+
+.modal__error-mail {
+  font-size: 1.8rem;
   font-family: var(--parrafos-jura);
 }
 
@@ -1007,6 +1038,37 @@ select,
   position: relative;
   padding: 3rem 3rem 6rem 3rem;
   display: flex;
+}
+
+.modal__background-mail {
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  height: 10rem;
+  position: relative;
+}
+
+.modal__circle {
+  margin-top: 3rem;
+  border: 2px solid black;
+  height: auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--titulos-orbitron);
+  font-weight: 100;
+}
+
+.modal__btn {
+  border: 2px solid var(--color-rojo);
+  background-color: transparent;
+  color: var(--color-rojo);
+  padding: 1rem 2.5rem;
+  margin-bottom: 3rem;
+  cursor: pointer;
 }
 
 .overlay {

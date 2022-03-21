@@ -5,27 +5,28 @@
 	&__box {
 		margin: 0 auto;
 		max-width: 110rem;
-		padding: 14rem 0;
+		padding: 10rem 0;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-	}
-
-	&__tittle {
-		text-align: center;
-		font-size: 4rem;
-		font-family: var(--titulos-orbitron);
-		margin-bottom: 2rem;
 		@include respond(movil) {
-			padding: 5rem 5rem 0 5rem;
+			padding: 10rem 4rem;
 		}
 	}
 
-	&__btn {
+	&__title {
 		text-align: center;
-		margin-left: 0 auto;
-		max-width: 40rem;
-		background-color: --color-rojo;
+		font-size: 3rem;
+		font-family: var(--titulos-orbitron);
+		margin-bottom: 2rem;
+		@include respond(movil) {
+			text-align: start;
+		}
+	}
+
+	&__text {
+		font-size: 2rem;
+		font-family: var(--parrafos-jura);
 	}
 }

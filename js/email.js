@@ -4,13 +4,18 @@ const nombre = document.querySelector('#nombre');
 const email = document.querySelector('#email');
 const mensaje = document.querySelector('#message');
 const modal = document.querySelector('.modal');
-const modal__error = document.querySelector('.modal__error');
+const modal__error = document.querySelector('.modal__error-mail');
 const overlay = document.querySelector('.overlay');
-const btnCloseModal = document.querySelector('.close-modal');
-const modal__title_error = document.querySelector('.modal__title-error');
+const btnCloseModal = document.querySelector('.modal__btn');
+const modal__title_error = document.querySelector('.modal__title-mail');
+const modal__img = document.querySelector('.modal__img');
 const openModal = function (error, flag = 0) {
-	if (flag) {
-		modal__title_error.textContent = 'Thank you!';
+	if (flag === 0) {
+		modal__img.src = './assets/icons/times.svg';
+		modal__title_error.textContent = 'Error';
+	} else {
+		modal__img.src = './assets/icons/tick.svg';
+		modal__title_error.textContent = 'Thank you';
 	}
 	modal__error.textContent = error;
 	modal.classList.remove('hidden');
@@ -39,24 +44,31 @@ addEventListener('keydown', (e) => {
 });
 enviar.addEventListener('click', (e) => {
 	e.preventDefault();
-	console.log('entra');
 
 	if (nombre.value === '' || email.value === '' || mensaje.value === '') {
-		// swal({
-		// 	title: 'Error',
-		// 	text: 'Input fields are required...',
-		// 	icon: 'error',
-		// });
-		openModal('Input fields are required...');
+		openModal('Input fields are required...', 0);
 	} else {
-		sendMail(nombre.value, email.value, mensaje.value);
-		openModal('Your email has been succesfully send!', 1);
+		if (validateEmail(email.value)) {
+			console.log('trueeee');
+			// sendMail(nombre.value, email.value, mensaje.value);
+			openModal('Your email has been succesfully send!', 1);
+		} else {
+			openModal('Incorrect email!', 0);
+		}
 
 		nombre.value = '';
 		email.value = '';
 		mensaje.value = '';
 	}
 });
+
+function validateEmail(email) {
+	return String(email)
+		.toLowerCase()
+		.match(
+			/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+		);
+}
 
 function sendMail(nombre, email, mensaje) {
 	emailjs.send('civilus_email', 'template_e5vxurm', {
