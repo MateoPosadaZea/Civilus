@@ -967,5 +967,28 @@
 				emailjs.init('user_DcmX6yivpGACJApz9pbAq');
 			})();
 		</script>
+		<script>
+			const video = document.querySelector('.video');
+			const videoPhoto = document.querySelector('.video--photo');
+			let onresize = function () {
+				let width = document.body.clientWidth;
+				if (width <= 900) {
+					video.classList.remove('hidden');
+					videoPhoto.classList.add('hidden');
+				} else if (width > 900) {
+					video.classList.add('hidden');
+					videoPhoto.classList.remove('hidden');
+				}
+			};
+			window.addEventListener('resize', onresize);
+			let width = document.body.clientWidth;
+			if (width <= 900) {
+				video.classList.remove('hidden');
+				videoPhoto.classList.add('hidden');
+			} else if (width > 900) {
+				video.classList.add('hidden');
+				videoPhoto.classList.remove('hidden');
+			}
+		</script>
 	</body>
 </html>
