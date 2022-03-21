@@ -134,3 +134,19 @@
 		}
 	}
 }
+
+.civilus {
+	font-size: 2rem;
+	font-family: var(--parrafos-jura);
+	padding: 10rem;
+	padding-bottom: 2rem;
+	@include respond(movil) {
+		padding: 8rem;
+	}
+}
+
+.contactScroll {
+	font-weight: 700;
+	text-decoration: underline;
+	color: var(--color-azul-oscuro);
+}

@@ -597,8 +597,9 @@ select,
 
 .donations__title {
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: var(--titulos-orbitron);
+  font-weight: 500;
   margin-bottom: 2rem;
 }
 
@@ -636,6 +637,7 @@ select,
   font-size: 4.5rem;
   padding-bottom: 7rem;
   font-family: var(--titulos-orbitron);
+  font-weight: 500;
 }
 
 @media (max-width: 56.25em) {
@@ -706,6 +708,7 @@ select,
   font-size: 3rem;
   margin-bottom: 2rem;
   font-family: var(--titulos-orbitron);
+  font-weight: 500;
 }
 
 .key__text {
@@ -797,8 +800,9 @@ select,
 }
 
 .hero__text {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-family: var(--parrafos-jura);
+  text-align: center;
 }
 
 .hero__text-size {
@@ -1086,18 +1090,19 @@ select,
 
 .modal__btn {
   border: 2px solid var(--color-rojo);
-  background-color: transparent;
-  color: var(--color-rojo);
+  background-color: var(--color-rojo);
+  color: white;
   padding: 1rem 2.5rem;
   margin-bottom: 3rem;
   cursor: pointer;
-  font-family: vaR(--parrafos-jura);
+  font-family: var(--titulos-orbitron);
 }
 
 .modal__btn-donations {
   border: none;
   background-color: var(--color-azul-oscuro);
   color: #fff;
+  border-radius: 0.3rem;
   font-size: 1.8rem;
 }
 
@@ -1454,7 +1459,7 @@ select,
 }
 
 #message {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 .navigation {
@@ -1769,6 +1774,25 @@ select,
   .about__box {
     margin-right: 14rem;
   }
+}
+
+.civilus {
+  font-size: 2rem;
+  font-family: var(--parrafos-jura);
+  padding: 10rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 37.5em) {
+  .civilus {
+    padding: 8rem;
+  }
+}
+
+.contactScroll {
+  font-weight: 700;
+  text-decoration: underline;
+  color: var(--color-azul-oscuro);
 }
 
 .learners {
@@ -2144,7 +2168,7 @@ select,
 .home__graph-box {
   border: 2px solid var(--color-azul-oscuro);
   color: var(--color-azul-oscuro);
-  min-height: 74rem;
+  min-height: 64rem;
   flex-basis: 35%;
   position: relative;
 }
@@ -2180,7 +2204,8 @@ select,
 
 .home__graph-tittle {
   font-family: var(--titulos-orbitron);
-  font-size: 3.5rem;
+  font-weight: 600;
+  font-size: 3rem;
   margin: 2rem 0;
   padding: 0 2rem;
 }
@@ -2192,7 +2217,7 @@ select,
 .home__graph-text {
   font-family: var(--parrafos-jura);
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.8rem;
   padding: 0 2rem;
 }
 
@@ -2356,6 +2381,7 @@ video {
   position: relative;
   min-height: 60rem;
   max-width: 110rem;
+  padding-top: 90rem;
   margin: 0 auto;
 }
 

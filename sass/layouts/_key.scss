@@ -18,6 +18,7 @@
 		font-size: 4.5rem;
 		padding-bottom: 7rem;
 		font-family: var(--titulos-orbitron);
+		font-weight: 500;
 
 		@include respond(tabletaV) {
 			font-size: 4rem;
@@ -75,6 +76,7 @@
 		font-size: 3rem;
 		margin-bottom: 2rem;
 		font-family: var(--titulos-orbitron);
+		font-weight: 500;
 	}
 
 	&__text {

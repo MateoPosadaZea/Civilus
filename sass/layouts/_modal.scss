@@ -104,17 +104,18 @@
 
 	&__btn {
 		border: 2px solid var(--color-rojo);
-		background-color: transparent;
-		color: var(--color-rojo);
+		background-color: var(--color-rojo);
+		color: white;
 		padding: 1rem 2.5rem;
 		margin-bottom: 3rem;
 		cursor: pointer;
-		font-family: vaR(--parrafos-jura);
+		font-family: var(--titulos-orbitron);
 
 		&-donations {
 			border: none;
 			background-color: var(--color-azul-oscuro);
 			color: #fff;
+			border-radius: 0.3rem;
 			font-size: 1.8rem;
 		}
 	}
