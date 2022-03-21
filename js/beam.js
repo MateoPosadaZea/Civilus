@@ -39,7 +39,35 @@ function clearInputs() {
 		input[i].value = '';
 	}
 }
+const modal__calculate = document.querySelector('.modal__beam');
+const modal_mail = document.querySelector('.modal-mail');
+const overlay_mail = document.querySelector('.overlay-mail');
+const modal__btn_donations = document.querySelector('.modal__btn-donations');
+const openModalDonations = function () {
+	modal_mail.classList.remove('hidden');
+	overlay_mail.classList.remove('hidden');
+};
+const closeModalDonations = function () {
+	modal_mail.classList.add('hidden');
+	overlay_mail.classList.add('hidden');
+};
+const closeModalEscapeDonations = function () {
+	modal_mail.classList.add('hidden');
+	overlay_mail.classList.add('hidden');
+};
+let contador = 0;
+modal__calculate.addEventListener('click', function () {
+	if (contador === 5) {
+		contador = 0;
+		openModalDonations();
+	}
+});
 
+modal__btn_donations.addEventListener('click', closeModalDonations);
+overlay.addEventListener('click', () => {
+	modal_mail.classList.add('hidden');
+	overlay_mail.classList.add('hidden');
+});
 const openModal = function (error, flag = 0) {
 	if (window.screen.width < 700) {
 		if (flag) {
@@ -91,7 +119,6 @@ const navigation__background = document.querySelector(
 );
 const navigation__nav = document.querySelector('.navigation__nav');
 navigation__buttom.addEventListener('click', () => {
-	console.log('entra');
 	navigation__background.classList.toggle('none');
 	navigation__nav.classList.toggle('width');
 });
@@ -266,6 +293,7 @@ function drawbeam() {
 			var qL = 440;
 			var qxa = 440 * (xa / L);
 			var qxb = 440 * (xb / L);
+			contador += 1;
 			if (supportA == 'fixedA') {
 				if (document.getElementById('Axcoord').value == '') {
 					openModal(
@@ -314,6 +342,7 @@ function drawbeam() {
 						'x location of support B cannot be greater than beam length L.'
 					);
 				} else if (xb == 0) {
+					contador += 1;
 					erasecanvas();
 					var ctx = document.getElementById('diagram').getContext('2d');
 					ctx.beginPath();
@@ -328,6 +357,7 @@ function drawbeam() {
 					drawBDistance(qxa, qxb);
 					eraseLoadData();
 				} else {
+					contador += 1;
 					erasecanvas();
 					var ctx = document.getElementById('diagram').getContext('2d');
 					ctx.beginPath();
@@ -368,6 +398,7 @@ function drawbeam() {
 		} else if (supportA == 'NONE' && supportB == 'NONE') {
 			openModal('Please define beam supports.');
 		} else {
+			contador += 1;
 			enableAdd();
 			erasecanvas();
 			L1 = L;

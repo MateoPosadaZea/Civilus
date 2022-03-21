@@ -989,6 +989,16 @@ select,
 .modal-mail {
   top: 55%;
   width: 35%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  pointer-events: auto;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 20000;
 }
 
 @media (max-width: 37.5em) {
@@ -1022,6 +1032,12 @@ select,
   gap: 4rem;
 }
 
+.modal__box-donations {
+  align-items: flex-start;
+  padding: 2rem 4rem;
+  gap: 2rem;
+}
+
 .modal__error {
   font-size: 2rem;
   padding: 3rem;
@@ -1029,6 +1045,11 @@ select,
 }
 
 .modal__error-mail {
+  font-size: 1.8rem;
+  font-family: var(--parrafos-jura);
+}
+
+.modal__error-donations {
   font-size: 1.8rem;
   font-family: var(--parrafos-jura);
 }
@@ -1070,6 +1091,14 @@ select,
   padding: 1rem 2.5rem;
   margin-bottom: 3rem;
   cursor: pointer;
+  font-family: vaR(--parrafos-jura);
+}
+
+.modal__btn-donations {
+  border: none;
+  background-color: var(--color-azul-oscuro);
+  color: #fff;
+  font-size: 1.8rem;
 }
 
 .overlay {

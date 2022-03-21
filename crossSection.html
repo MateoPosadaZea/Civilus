@@ -115,6 +115,24 @@
 
 		<section class="cross">
 			<h2 class="cross__tittle">Cross Section Properties</h2>
+			<!-- * MODAL DONATIONS -->
+			<div class="modal-mail hidden">
+				<div class="modal__box modal__box-donations">
+					<img
+						src="/assets/icons/Icon awesome-hand-holding-heart.svg"
+						alt="successLogo"
+						width="50rem"
+						class="modal__img"
+					/>
+					<p class="modal__error-donations">
+						Support our project and help us to develop more tools for you. Your
+						donations will keep this site adds free.
+					</p>
+					<button class="modal__btn modal__btn-donations">Donate &rarr;</button>
+				</div>
+			</div>
+			<div class="overlay overlay-mail hidden"></div>
+			<!-- * MODAL ERROR -->
 			<div class="modal hidden">
 				<div class="modal__background">
 					<button class="close-modal">&times;</button>
@@ -365,7 +383,9 @@
 						</div>
 
 						<div class="section__calc">
-							<a class="btn btn--calc" onclick="calculate();">Calculate</a>
+							<a class="btn btn--calc modal__calculate" onclick="calculate();"
+								>Calculate</a
+							>
 							<select name="" class="selectUnits">
 								<option value="Units" disabled>Units</option>
 								<option value="(m)">m</option>
@@ -988,6 +1008,5 @@
 				emailjs.init('user_DcmX6yivpGACJApz9pbAq');
 			})();
 		</script>
-		<script src="./js/email.js"></script>
 	</body>
 </html>

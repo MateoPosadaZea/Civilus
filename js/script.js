@@ -36,6 +36,36 @@ results__movil_row.forEach((element, i) => {
 		arrowDown[i].classList.toggle('hidden');
 	});
 });
+
+const modal__calculate = document.querySelector('.modal__calculate');
+const modal_mail = document.querySelector('.modal-mail');
+const overlay_mail = document.querySelector('.overlay-mail');
+const modal__btn_donations = document.querySelector('.modal__btn-donations');
+const openModalDonations = function () {
+	modal_mail.classList.remove('hidden');
+	overlay_mail.classList.remove('hidden');
+};
+const closeModalDonations = function () {
+	modal_mail.classList.add('hidden');
+	overlay_mail.classList.add('hidden');
+};
+const closeModalEscapeDonations = function () {
+	modal_mail.classList.add('hidden');
+	overlay_mail.classList.add('hidden');
+};
+let contador = 0;
+modal__calculate.addEventListener('click', function () {
+	if (contador === 5) {
+		contador = 0;
+		openModalDonations();
+	}
+});
+
+modal__btn_donations.addEventListener('click', closeModalDonations);
+overlay.addEventListener('click', () => {
+	modal_mail.classList.add('hidden');
+	overlay_mail.classList.add('hidden');
+});
 // * ========= FUNCTIONS ========= //
 function drawcdg(yc, zc) {
 	var ctx1 = document.getElementById('diagram').getContext('2d');
@@ -214,7 +244,7 @@ function calculate() {
 			Zy = (b * h * h) / 4;
 			Zz = (h * b * b) / 4;
 			J = J;
-
+			contador += 1;
 			putresults();
 		}
 	} else if (select.value == circular) {
@@ -249,7 +279,7 @@ function calculate() {
 			Zy = (r * 2 * (r * 2) * (r * 2)) / 6;
 			Zz = (r * 2 * (r * 2) * (r * 2)) / 6;
 			J = Iy + Iz;
-
+			contador += 1;
 			putresults();
 		}
 	} else if (select.value == rectangularH) {
@@ -333,7 +363,7 @@ function calculate() {
 			J =
 				(2 * t ** 2 * (b - t) ** 2 * (h - t) ** 2) /
 				(b * t + h * t - 2 * t ** 2);
-
+			contador += 1;
 			putresults();
 		}
 	} else if (select.value == circularH) {
@@ -384,7 +414,7 @@ function calculate() {
 			Zy = (r * 2 * (r * 2) * (r * 2) - r1 * 2 * (r1 * 2) * (r1 * 2)) / 6;
 			Zz = (r * 2 * (r * 2) * (r * 2) - r1 * 2 * (r1 * 2) * (r1 * 2)) / 6;
 			J = Iy + Iz;
-
+			contador += 1;
 			putresults();
 		}
 	} else if (select.value == iSection) {
@@ -575,7 +605,7 @@ function calculate() {
 			J =
 				(bf1 * tf1 ** 3 + bf2 * tf2 ** 3 + (hw + (tf1 + tf2) / 2) * tw ** 3) /
 				3;
-
+			contador += 1;
 			putresults();
 		}
 	} else if (select.value == tSection) {
@@ -677,7 +707,7 @@ function calculate() {
 			}
 			Zz = (1 / 4) * (tf * bf ** 2 + (h - tf) * tw ** 2);
 			J = (1 / 3) * (bf * tf ** 3 + (h - tf / 2) * tw ** 3);
-
+			contador += 1;
 			putresults();
 		}
 	} else if (select.value == angle) {
@@ -803,7 +833,7 @@ function calculate() {
 			var v = Math.cos(Ba) * c;
 			var u = Math.sin(Ba) * c;
 			drawcdgangle(yc, 268 - zc - 58, v, u);
-
+			contador += 1;
 			putresults();
 		}
 	} else if (select.value == channel) {
@@ -901,7 +931,7 @@ function calculate() {
 					2 * (bf * tf * (bf / 2 + tw - z1));
 			}
 			J = (1 / 3) * (2 * (b - tw / 2) * tf ** 3 + hw * tw ** 3);
-
+			contador += 1;
 			putresults();
 		}
 	}
@@ -990,11 +1020,9 @@ function calculate() {
 // * ========= MAIN ========= //
 const seccion = () => {
 	if (select.value === rectangular) {
-		console.log('entra');
 		section__img.src = './assets/images/Rectangular.svg';
 		section__title.textContent = 'Rectangular';
 		results__angle.forEach((angle) => {
-			console.log('entra');
 			angle.classList.add('hidden');
 		});
 		if (
@@ -1003,7 +1031,6 @@ const seccion = () => {
 				.classList.contains('display') ||
 			document.querySelector('.section__units--2').classList.contains('display')
 		) {
-			console.log('sisas');
 			//  * REMOVE
 			document.querySelector('.section__units--1').classList.remove('display');
 			document.querySelector('.section__units--2').classList.remove('display');
@@ -1243,7 +1270,6 @@ const centimeters = '(cm)';
 const milimeters = '(mm)';
 const feet = '(ft)';
 const inches = '(in)';
-console.log(meters.replace(')', ''));
 const selectUnit = () => {
 	if (selectUnits.value === meters) {
 		for (let i = 0; i < section__span.length; i++) {
