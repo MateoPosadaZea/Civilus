@@ -486,6 +486,7 @@ select,
 .footer__tittle {
   font-family: var(--titulos-orbitron);
   margin-bottom: 3rem;
+  font-weight: 500;
   font-size: 2.2rem;
   color: #fff;
 }
@@ -1002,7 +1003,7 @@ select,
 .modal-mail {
   width: 35%;
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 50%;
   pointer-events: auto;
   transform: translate(-50%, -50%);
@@ -1517,7 +1518,11 @@ select,
 }
 
 .navigation__line {
-  background-color: var(--color-rojo);
+  background-color: var(--color-verde);
+}
+
+.navigation__line:hover {
+  background-color: var(--color-verde);
 }
 
 .navigation__buttom {
@@ -2090,7 +2095,6 @@ select,
   color: #fff;
   font-family: var(--titulos-orbitron-regular);
   max-width: 100rem;
-  color: #000;
   display: flex;
   gap: 10rem;
   color: var(--color-rojo);

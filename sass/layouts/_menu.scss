@@ -26,7 +26,11 @@
 	}
 
 	&__line {
-		background-color: var(--color-rojo);
+		background-color: var(--color-verde);
+	}
+
+	&__line:hover {
+		background-color: var(--color-verde);
 	}
 
 	&__buttom {
