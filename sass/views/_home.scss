@@ -224,9 +224,10 @@
 	&__graph-box {
 		border: 2px solid var(--color-azul-oscuro);
 		color: var(--color-azul-oscuro);
-		min-height: 64rem;
+		min-height: 66rem;
 		flex-basis: 35%;
 		position: relative;
+		min-width: 42rem;
 
 		@include respond(tabletaV) {
 			flex-direction: column;
@@ -243,7 +244,8 @@
 
 		@include respond(movil) {
 			// margin-top: 3rem;
-			min-height: 70rem;
+			min-height: 64rem;
+			min-width: 48rem;
 		}
 
 		&:not(:last-child) {
@@ -270,6 +272,9 @@
 		font-weight: 500;
 		font-size: 1.8rem;
 		padding: 0 2rem;
+		@include respond(movil) {
+			font-size: 2rem;
+		}
 	}
 
 	&__flex {
