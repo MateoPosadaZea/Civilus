@@ -11,10 +11,10 @@ const modal__title_error = document.querySelector('.modal__title-mail');
 const modal__img = document.querySelector('.modal__img');
 const openModal = function (error, flag = 0) {
 	if (flag === 0) {
-		modal__img.src = './assets/icons/times.svg';
+		modal__img.src = './assets/icons/closeIcon.svg';
 		modal__title_error.textContent = 'Error';
 	} else {
-		modal__img.src = './assets/icons/tick.svg';
+		modal__img.src = './assets/icons/checkIcon.svg';
 		modal__title_error.textContent = 'Thank you';
 	}
 	modal__error.textContent = error;
