@@ -2201,8 +2201,8 @@ select,
 
 @media (max-width: 37.5em) {
   .home__graph-box {
-    min-height: 64rem;
-    min-width: 48rem;
+    min-height: 67rem;
+    min-width: 40rem;
   }
 }
 
