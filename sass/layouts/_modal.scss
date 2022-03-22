@@ -37,6 +37,9 @@
 			font-family: var(--titulos-orbitron);
 			font-weight: 600;
 			font-size: 2.5rem;
+			color: var(--color-azul-oscuro);
+			margin-bottom: -2rem;
+			margin-top: -2rem;
 		}
 	}
 
@@ -71,6 +74,8 @@
 			font-size: 2rem;
 			font-family: var(--parrafos-jura);
 			font-weight: 600;
+			color: var(--color-azul-oscuro);
+			margin-bottom: -1rem;
 		}
 		&-donations {
 			font-size: 1.8rem;
@@ -98,8 +103,8 @@
 	&__circle {
 		margin-top: 3rem;
 		border: 2px solid #041129;
-		height: 8rem;
-		width: 8rem;
+		height: 6rem;
+		width: 6rem;
 		border-radius: 50%;
 		display: flex;
 		align-items: center;
@@ -156,6 +161,6 @@
 }
 
 .modal__img {
-	width: 3rem;
-	height: 3rem;
+	width: 2rem;
+	height: 2rem;
 }
