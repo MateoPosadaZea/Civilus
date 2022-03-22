@@ -1000,10 +1000,9 @@ select,
 }
 
 .modal-mail {
-  top: 55%;
   width: 35%;
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 50%;
   pointer-events: auto;
   transform: translate(-50%, -50%);
@@ -1152,8 +1151,8 @@ select,
 }
 
 .modal__img {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .header {
@@ -1889,7 +1888,7 @@ select,
   background-color: var(--color-rojo);
   display: inline-block;
   font-family: var(--titulos-orbitron);
-  font-weight: 500;
+  font-weight: 400;
   padding: 1rem 3rem;
   font-size: 2rem;
   margin-top: 3rem;
@@ -2943,7 +2942,7 @@ fieldset[disabled] .btn-default.active {
 .beam__box {
   margin-left: 10rem;
   position: sticky;
-  top: 5rem;
+  top: 1rem;
   margin-bottom: 10rem;
   left: 5%;
   max-height: 65rem;

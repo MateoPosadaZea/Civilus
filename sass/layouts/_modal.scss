@@ -10,10 +10,9 @@
 	box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
 	z-index: 20000;
 	&-mail {
-		top: 55%;
 		width: 35%;
 		position: absolute;
-		top: 20%;
+		top: 30%;
 		left: 50%;
 		pointer-events: auto;
 		transform: translate(-50%, -50%);
@@ -161,6 +160,6 @@
 }
 
 .modal__img {
-	width: 2rem;
-	height: 2rem;
+	width: 2.5rem;
+	height: 2.5rem;
 }
