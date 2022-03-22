@@ -234,7 +234,7 @@
 			flex-basis: 10%;
 			margin-bottom: 13rem;
 			margin-top: 5rem;
-			min-height: 80rem;
+			min-height: 70rem;
 		}
 		&:not(:first-child) {
 			@include respond(movil) {
@@ -272,6 +272,11 @@
 		font-weight: 500;
 		font-size: 1.8rem;
 		padding: 0 2rem;
+
+		@include respond(tabletaV) {
+			font-size: 2rem;
+		}
+
 		@include respond(movil) {
 			font-size: 2rem;
 		}
@@ -345,10 +350,14 @@ html {
 	scroll-behavior: smooth;
 }
 #graphs {
-	padding: 12rem 0 20rem 0;
+	padding: 12rem 0 18rem 0;
+
+	@include respond(tabletaV) {
+		padding: 0 0 8rem 0;
+	}
+
 	@include respond(movil) {
-		margin-bottom: -10rem;
-		padding: 0 0 20rem 0;
+		padding: 0 0 4rem 0;
 	}
 }
 

@@ -82,5 +82,9 @@
 	&__text {
 		font-size: 1.8rem;
 		font-family: var(--parrafos-jura);
+
+		@include respond(movil) {
+			font-size: 2rem;
+		}
 	}
 }

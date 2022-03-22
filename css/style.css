@@ -600,6 +600,7 @@ select,
   font-size: 4rem;
   font-family: var(--titulos-orbitron);
   font-weight: 500;
+  color: var(--color-azul-oscuro);
   margin-bottom: 2rem;
 }
 
@@ -612,6 +613,8 @@ select,
 .donations__text {
   font-size: 2rem;
   font-family: var(--parrafos-jura);
+  font-weight: 500;
+  color: var(--color-azul-oscuro);
 }
 
 .key {
@@ -714,6 +717,12 @@ select,
 .key__text {
   font-size: 1.8rem;
   font-family: var(--parrafos-jura);
+}
+
+@media (max-width: 37.5em) {
+  .key__text {
+    font-size: 2rem;
+  }
 }
 
 .hero__hero {
@@ -1468,7 +1477,7 @@ select,
 }
 
 #message {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .navigation {
@@ -2189,7 +2198,7 @@ select,
     flex-basis: 10%;
     margin-bottom: 13rem;
     margin-top: 5rem;
-    min-height: 80rem;
+    min-height: 70rem;
   }
 }
 
@@ -2230,6 +2239,12 @@ select,
   font-weight: 500;
   font-size: 1.8rem;
   padding: 0 2rem;
+}
+
+@media (max-width: 56.25em) {
+  .home__graph-text {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 37.5em) {
@@ -2318,13 +2333,18 @@ html {
 }
 
 #graphs {
-  padding: 12rem 0 20rem 0;
+  padding: 12rem 0 18rem 0;
+}
+
+@media (max-width: 56.25em) {
+  #graphs {
+    padding: 0 0 8rem 0;
+  }
 }
 
 @media (max-width: 37.5em) {
   #graphs {
-    margin-bottom: -10rem;
-    padding: 0 0 20rem 0;
+    padding: 0 0 4rem 0;
   }
 }
 
