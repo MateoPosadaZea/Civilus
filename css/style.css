@@ -1000,10 +1000,31 @@ select,
   z-index: 20000;
 }
 
+.modal-donations {
+  width: 35%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  pointer-events: auto;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 20000;
+}
+
+@media (max-width: 37.5em) {
+  .modal-donations {
+    top: 15%;
+    width: 60%;
+  }
+}
+
 .modal-mail {
   width: 35%;
   position: absolute;
-  top: 20%;
+  top: 50%;
   left: 50%;
   pointer-events: auto;
   transform: translate(-50%, -50%);

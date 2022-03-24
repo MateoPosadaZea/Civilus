@@ -40,7 +40,7 @@ function clearInputs() {
 	}
 }
 const modal__calculate = document.querySelector('.modal__beam');
-const modal_mail = document.querySelector('.modal-mail');
+const modal_mail = document.querySelector('.modal-donations');
 const overlay_mail = document.querySelector('.overlay-mail');
 const modal__btn_donations = document.querySelector('.modal__btn-donations');
 const openModalDonations = function () {
