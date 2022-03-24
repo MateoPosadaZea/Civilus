@@ -180,5 +180,11 @@
 }
 
 #message {
-	font-size: 1.6rem;
+	font-size: 1.2rem;
+	@include respond(tabletaV) {
+		font-size: 1.7rem;
+	}
+	@include respond(movil) {
+		font-size: 1.7rem;
+	}
 }
