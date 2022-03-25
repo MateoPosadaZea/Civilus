@@ -1249,7 +1249,7 @@ select,
 }
 
 .results__btn-movil {
-  display: hidden;
+  display: none;
 }
 
 @media (max-width: 56.25em) {
