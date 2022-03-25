@@ -28,10 +28,6 @@
 
 	&__box {
 		max-width: 35rem;
-		// @include respond(tabletaV) {
-		// 	background-color: red;
-		// 	margin: 0 auto;
-		// }
 
 		@include respond(tabletaV) {
 			margin: 0 auto;

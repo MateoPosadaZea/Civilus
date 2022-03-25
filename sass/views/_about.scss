@@ -104,10 +104,6 @@
 		max-width: 100%;
 		background-position: center;
 		background-size: cover;
-
-		@include respond(movil) {
-			// margin-right: 10rem;
-		}
 	}
 
 	&__me-tittle {

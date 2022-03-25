@@ -49,7 +49,6 @@ enviar.addEventListener('click', (e) => {
 		openModal('Input fields are required...', 0);
 	} else {
 		if (validateEmail(email.value)) {
-			console.log('trueeee');
 			sendMail(nombre.value, email.value, mensaje.value);
 			openModal('Your email has been succesfully send!', 1);
 		} else {

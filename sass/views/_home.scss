@@ -201,7 +201,6 @@
 	}
 
 	&__graph-container {
-		// position: relative;
 		max-width: 110rem;
 		margin: 0 auto;
 		display: flex;
@@ -242,7 +241,6 @@
 		}
 
 		@include respond(movil) {
-			// margin-top: 3rem;
 			min-height: 67rem;
 			min-width: 40rem;
 		}

@@ -42,7 +42,6 @@
 		right: 2.2rem;
 		border-radius: 50%;
 		z-index: 2000;
-		// box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
 		text-align: center;
 		cursor: pointer;
 		@include respond(movil) {
@@ -74,10 +73,6 @@
 	&__item {
 		margin: 1rem;
 	}
-
-	// &__text {
-	// 	width: 0%;
-	// }
 
 	&__link {
 		color: #fff;
@@ -115,7 +110,7 @@
 		width: 100%;
 	}
 
-	//======== ICON ==========
+	//* ======== ICON ==========
 
 	&__icon {
 		position: relative;
