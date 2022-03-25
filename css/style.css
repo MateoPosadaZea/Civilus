@@ -643,6 +643,7 @@ select,
 @media (max-width: 37.5em) {
   .donations__title {
     text-align: start;
+    font-size: 3.5rem;
   }
 }
 
@@ -1407,6 +1408,7 @@ select,
   font-family: var(--titulos-orbitron);
   font-size: 2.5rem;
   margin-bottom: 5rem;
+  color: #041129;
 }
 
 @media (max-width: 56.25em) {
@@ -1898,8 +1900,16 @@ select,
 .civilus {
   font-size: 2rem;
   font-family: var(--parrafos-jura);
-  padding: 10rem;
+  padding-top: 10rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
   padding-bottom: 2rem;
+}
+
+@media (max-width: 56.25em) {
+  .civilus {
+    padding: 8rem;
+  }
 }
 
 @media (max-width: 37.5em) {
@@ -2008,6 +2018,18 @@ select,
   .myCanva {
     width: 40rem;
   }
+}
+
+.section__diagram {
+  color: #041129;
+}
+
+.results__title {
+  color: #041129;
+}
+
+.results__arrow {
+  color: #041129;
 }
 
 .algo {
@@ -3043,6 +3065,7 @@ fieldset[disabled] .btn-default.active {
   margin-bottom: 10rem;
   left: 5%;
   max-height: 65rem;
+  color: #041129;
 }
 
 @media (max-width: 56.25em) {
@@ -3129,6 +3152,7 @@ span {
   flex-direction: column;
   display: flex;
   min-height: 100vh;
+  color: #041129;
 }
 
 @media (max-width: 75em) {

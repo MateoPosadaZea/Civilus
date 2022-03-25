@@ -522,6 +522,7 @@ fieldset[disabled] .btn-default.active {
 	margin-bottom: 10rem;
 	left: 5%;
 	max-height: 65rem;
+	color: #041129;
 
 	@include respond(tabletaV) {
 		margin-left: 5rem;
@@ -597,6 +598,7 @@ span {
 	flex-direction: column;
 	display: flex;
 	min-height: 100vh;
+	color: #041129;
 
 	@include respond(tabletaH) {
 		max-width: 50rem !important;

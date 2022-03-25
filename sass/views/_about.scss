@@ -134,8 +134,14 @@
 .civilus {
 	font-size: 2rem;
 	font-family: var(--parrafos-jura);
-	padding: 10rem;
+	padding-top: 10rem;
+	padding-left: 20rem;
+	padding-right: 20rem;
 	padding-bottom: 2rem;
+
+	@include respond(tabletaV) {
+		padding: 8rem;
+	}
 	@include respond(movil) {
 		padding: 8rem;
 	}
