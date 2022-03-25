@@ -2071,8 +2071,9 @@ select,
   background-image: url(../../assets/images/CivilusSVG-01.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  width: 200%;
-  height: 200%;
+  margin-top: 1rem;
+  width: 170%;
+  height: 170%;
 }
 
 @media (max-width: 75em) {
