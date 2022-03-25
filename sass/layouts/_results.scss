@@ -55,6 +55,9 @@
 		}
 	}
 	&__desktop {
+		position: relative;
+		padding-top: 10rem;
+		// background-color: red;
 		@include respond(movil) {
 			display: none;
 		}

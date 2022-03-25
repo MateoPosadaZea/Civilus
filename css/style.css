@@ -1291,6 +1291,11 @@ select,
   }
 }
 
+.results__desktop {
+  position: relative;
+  padding-top: 10rem;
+}
+
 @media (max-width: 37.5em) {
   .results__desktop {
     display: none;
