@@ -11,10 +11,22 @@
 		padding: 0 0rem 0;
 	}
 
+	&__btn-desktop {
+		@include respond(tabletaV) {
+			display: none;
+		}
+	}
+	&__btn-movil {
+		@include respond(tabletaV) {
+			display: block !important;
+		}
+	}
+
 	&__title {
 		font-size: 2.5rem;
 		text-align: center;
 		font-family: var(--titulos-orbitron);
+		color: #000;
 
 		@include respond(movilBig) {
 			margin-top: 8rem;
@@ -26,6 +38,7 @@
 		text-align: center;
 		font-family: var(--titulos-orbitron);
 		margin: 1rem 0 2rem 0;
+		color: #000;
 	}
 
 	&__box {
@@ -50,6 +63,7 @@
 
 	&__movil {
 		display: none;
+		padding-top: 11rem;
 		@include respond(movil) {
 			display: block;
 		}
