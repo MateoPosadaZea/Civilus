@@ -17,8 +17,9 @@
 		}
 	}
 	&__btn-movil {
+		display: hidden;
 		@include respond(tabletaV) {
-			display: block !important;
+			display: block;
 		}
 	}
 

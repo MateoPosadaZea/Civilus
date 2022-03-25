@@ -1248,9 +1248,13 @@ select,
   }
 }
 
+.results__btn-movil {
+  display: hidden;
+}
+
 @media (max-width: 56.25em) {
   .results__btn-movil {
-    display: block !important;
+    display: block;
   }
 }
 
