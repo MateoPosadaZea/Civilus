@@ -1904,6 +1904,7 @@ select,
   padding-left: 20rem;
   padding-right: 20rem;
   padding-bottom: 2rem;
+  color: #041129;
 }
 
 @media (max-width: 56.25em) {
