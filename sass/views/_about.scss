@@ -101,9 +101,12 @@
 	}
 
 	&__me-photo {
-		max-width: 100%;
+		width: 100%;
 		background-position: center;
 		background-size: cover;
+		@include respond(movil) {
+			width: 60rem;
+		}
 	}
 
 	&__me-tittle {
@@ -144,7 +147,8 @@
 		padding: 8rem;
 	}
 	@include respond(movil) {
-		padding: 8rem;
+		padding: 4rem;
+		padding-top: 7rem;
 	}
 }
 

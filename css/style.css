@@ -1867,9 +1867,15 @@ select,
 }
 
 .about__me-photo {
-  max-width: 100%;
+  width: 100%;
   background-position: center;
   background-size: cover;
+}
+
+@media (max-width: 37.5em) {
+  .about__me-photo {
+    width: 60rem;
+  }
 }
 
 .about__me-tittle {
@@ -1915,7 +1921,8 @@ select,
 
 @media (max-width: 37.5em) {
   .civilus {
-    padding: 8rem;
+    padding: 4rem;
+    padding-top: 7rem;
   }
 }
 
