@@ -105,7 +105,8 @@
 		background-position: center;
 		background-size: cover;
 		@include respond(movil) {
-			width: 60rem;
+			width: 40rem;
+			margin-left: 6rem;
 		}
 	}
 
@@ -148,7 +149,8 @@
 	}
 	@include respond(movil) {
 		padding: 4rem;
-		padding-top: 7rem;
+		padding-top: 9rem;
+		padding-bottom: 2rem;
 	}
 }
 

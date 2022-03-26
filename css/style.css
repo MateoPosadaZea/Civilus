@@ -1874,7 +1874,8 @@ select,
 
 @media (max-width: 37.5em) {
   .about__me-photo {
-    width: 60rem;
+    width: 40rem;
+    margin-left: 6rem;
   }
 }
 
@@ -1922,7 +1923,8 @@ select,
 @media (max-width: 37.5em) {
   .civilus {
     padding: 4rem;
-    padding-top: 7rem;
+    padding-top: 9rem;
+    padding-bottom: 2rem;
   }
 }
 
