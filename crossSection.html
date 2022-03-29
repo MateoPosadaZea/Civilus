@@ -208,6 +208,7 @@
 						</option>
 					</select>
 				</div>
+
 				<div class="section">
 					<div class="section__inputs">
 						<h2 class="section__title">Rectangular</h2>
@@ -224,12 +225,13 @@
 								>b <span class="section__span">(m</span>)</label
 							>
 							<input
-								type="number"
 								class="section__input"
 								placeholder="0"
 								id="base"
+								step="any"
 								min="1"
-								oninput="validity.valid||(value='');"
+								type="text"
+								onkeyup="value=value.replace(/[^0-9^\.]+/g,'').replace('.','$#$').replace(/\./g,'').replace('$#$','.').replace(/^0+/, '')"
 							/>
 						</div>
 						<!-- * H -->
@@ -238,12 +240,12 @@
 								>h <span class="section__span">(m</span>)</label
 							>
 							<input
-								type="number"
 								class="section__input"
 								placeholder="0"
 								id="height"
 								min="1"
-								oninput="validity.valid||(value='');"
+								type="text"
+								onkeyup="value=value.replace(/[^0-9^\.]+/g,'').replace('.','$#$').replace(/\./g,'').replace('$#$','.').replace(/^0+/, '')"
 							/>
 						</div>
 
@@ -253,12 +255,12 @@
 								>r <span class="section__span">(m</span>)</label
 							>
 							<input
-								type="number"
+								type="text"
 								class="section__input"
 								placeholder="0"
 								id="radius"
 								min="1"
-								oninput="validity.valid||(value='');"
+								onkeyup="value=value.replace(/[^0-9^\.]+/g,'').replace('.','$#$').replace(/\./g,'').replace('$#$','.').replace(/^0+/, '')"
 							/>
 						</div>
 
@@ -268,12 +270,12 @@
 								>t <span class="section__span">(m</span>)</label
 							>
 							<input
-								type="number"
+								type="text"
 								class="section__input"
 								placeholder="0"
 								id="thick"
 								min="1"
-								oninput="validity.valid||(value='');"
+								onkeyup="value=value.replace(/[^0-9^\.]+/g,'').replace('.','$#$').replace(/\./g,'').replace('$#$','.').replace(/^0+/, '')"
 							/>
 						</div>
 
@@ -283,12 +285,12 @@
 								>tw <span class="section__span">(m</span>)</label
 							>
 							<input
-								type="number"
+								type="text"
 								class="section__input"
 								placeholder="0"
 								id="thickw"
 								min="1"
-								oninput="validity.valid||(value='');"
+								onkeyup="value=value.replace(/[^0-9^\.]+/g,'').replace('.','$#$').replace(/\./g,'').replace('$#$','.').replace(/^0+/, '')"
 							/>
 						</div>
 
@@ -298,12 +300,12 @@
 								>tf <span class="section__span">(m</span>)</label
 							>
 							<input
-								type="number"
+								type="text"
 								class="section__input"
 								placeholder="0"
 								id="thickf"
 								min="1"
-								oninput="validity.valid||(value='');"
+								onkeyup="value=value.replace(/[^0-9^\.]+/g,'').replace('.','$#$').replace(/\./g,'').replace('$#$','.').replace(/^0+/, '')"
 							/>
 						</div>
 
@@ -313,12 +315,12 @@
 								>tf1 <span class="section__span">(m</span>)</label
 							>
 							<input
-								type="number"
+								type="text"
 								class="section__input"
 								placeholder="0"
 								id="thickf1"
 								min="1"
-								oninput="validity.valid||(value='');"
+								onkeyup="value=value.replace(/[^0-9^\.]+/g,'').replace('.','$#$').replace(/\./g,'').replace('$#$','.').replace(/^0+/, '')"
 							/>
 						</div>
 
@@ -328,12 +330,12 @@
 								>tf2 <span class="section__span">(m</span>)</label
 							>
 							<input
-								type="number"
+								type="text"
 								class="section__input"
 								placeholder="0"
 								id="thickf2"
 								min="1"
-								oninput="validity.valid||(value='');"
+								onkeyup="value=value.replace(/[^0-9^\.]+/g,'').replace('.','$#$').replace(/\./g,'').replace('$#$','.').replace(/^0+/, '')"
 							/>
 						</div>
 
@@ -343,12 +345,12 @@
 								>bf <span class="section__span">(m</span>)</label
 							>
 							<input
-								type="number"
+								type="text"
 								class="section__input"
 								placeholder="0"
 								id="basef"
 								min="1"
-								oninput="validity.valid||(value='');"
+								onkeyup="value=value.replace(/[^0-9^\.]+/g,'').replace('.','$#$').replace(/\./g,'').replace('$#$','.').replace(/^0+/, '')"
 							/>
 						</div>
 
@@ -358,12 +360,12 @@
 								>bf1 <span class="section__span">(m</span>)</label
 							>
 							<input
-								type="number"
+								type="text"
 								class="section__input"
 								placeholder="0"
 								id="basef1"
 								min="1"
-								oninput="validity.valid||(value='');"
+								onkeyup="value=value.replace(/[^0-9^\.]+/g,'').replace('.','$#$').replace(/\./g,'').replace('$#$','.').replace(/^0+/, '')"
 							/>
 						</div>
 
@@ -373,12 +375,12 @@
 								>bf2 <span class="section__span">(m</span>)</label
 							>
 							<input
-								type="number"
+								type="text"
 								class="section__input"
 								placeholder="0"
 								id="basef2"
 								min="1"
-								oninput="validity.valid||(value='');"
+								onkeyup="value=value.replace(/[^0-9^\.]+/g,'').replace('.','$#$').replace(/\./g,'').replace('$#$','.').replace(/^0+/, '')"
 							/>
 						</div>
 
