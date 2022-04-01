@@ -94,7 +94,7 @@ window.addEventListener('resize', onResize);
 let width = document.body.clientWidth;
 if (width <= 900) {
 	my__video.classList.remove('hidden');
-	videoPhoto.classList.add('hidden');
+	my__videoPhoto.classList.add('hidden');
 } else if (width > 900) {
 	my__video.classList.add('hidden');
 	my__videoPhoto.classList.remove('hidden');
