@@ -1,5 +1,3 @@
-'use strict';
-
 var L1 = 0;
 var xa1 = 0;
 var xb1 = 0;
@@ -732,6 +730,8 @@ function drawload() {
 
 function ReDrawLoads() {
 	var ctx = document.getElementById('diagram').getContext('2d');
+	var P = parseFloat(document.getElementById('pload').value);
+
 	for (let i = 0; i < Parray.length; i++) {
 		if (Parray[i] < 0) {
 			var qxp = 440 * (xParray[i] / L1);
