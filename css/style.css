@@ -2013,10 +2013,10 @@ select,
 
 .cross__tittle {
   color: #fff;
-  background-color: var(--color-rojo);
+  background-color: var(--color-azul-oscuro);
   display: inline-block;
   font-family: var(--titulos-orbitron);
-  font-weight: 400;
+  font-weight: 500;
   padding: 1rem 3rem;
   font-size: 2rem;
   margin-top: 3rem;
