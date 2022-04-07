@@ -419,6 +419,17 @@ select,
   margin-bottom: 2rem;
 }
 
+.footer__igm--mobile {
+  display: none;
+}
+
+@media (max-width: 37.5em) {
+  .footer__igm--mobile {
+    display: block;
+    margin-bottom: 4rem;
+  }
+}
+
 .footer__box {
   max-width: 35rem;
 }
