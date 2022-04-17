@@ -33,12 +33,15 @@
 		<script>
 			function cb(response) {
 				document.getElementById('visits').innerText = response.value;
+				document.getElementById('visits').Counter = response.value;
 			}
 			function cb2(response) {
 				document.getElementById('cross').innerText = response.value;
+				document.getElementById('cross').Counter = response.value;
 			}
 			function cb3(response) {
 				document.getElementById('beams').innerText = response.value;
+				document.getElementById('beams').Counter = response.value;
 			}
 			</script>
 			<script async src="https://api.countapi.xyz/hit/civilus.co/visits?callback=cb"></script>
