@@ -4,7 +4,7 @@
 	width: 4rem;
 	height: 4rem;
 	position: relative;
-	margin-right: 3rem;
+	margin-right: 2rem;
 	transform: rotate(45deg);
 	margin-top: 1rem;
 
@@ -41,4 +41,15 @@
 .far {
 	font-size: 1.5rem;
 	color: #fff;
+}
+
+.social-media-link-top {
+	border: 1.5px solid #fff;
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	position: relative;
+	margin-right: 0.1rem;
+	transform: rotate(45deg);
+	margin-top: 1rem;
 }
