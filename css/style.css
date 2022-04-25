@@ -130,6 +130,11 @@ a {
   box-shadow: inset 18rem 0 0 0 var(--color-azul-oscuro) !important;
 }
 
+.btn--calc:disabled {
+  background-color: #ccc !important;
+  box-shadow: inset 18rem 0 0 0 #ccc !important;
+}
+
 @media (max-width: 56.25em) {
   .btn--calc:hover {
     box-shadow: none;
@@ -152,6 +157,11 @@ a {
 
 .btn__delete:hover {
   box-shadow: inset 18rem 0 0 0 var(--color-rojo) !important;
+}
+
+.btn__delete:disabled {
+  background-color: #ccc !important;
+  box-shadow: inset 18rem 0 0 0 #ccc !important;
 }
 
 @media (max-width: 56.25em) {
@@ -2948,7 +2958,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .btn-default.disabled,
 .btn-default[disabled],
 fieldset[disabled] .btn-default,
-.btn-default.disabled:hover,
+.btn-default.disabled:hover:not([disabled]),
 .btn-default[disabled]:hover,
 fieldset[disabled] .btn-default:hover,
 .btn-default.disabled:focus,
@@ -3299,4 +3309,24 @@ table {
   border-top: none !important;
   border-left: none !important;
   border-bottom: none !important;
+}
+
+.VyM__text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: var(--parrafos-jura);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 56.25em) {
+  .VyM__text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 25em) {
+  .VyM__text {
+    max-width: 80%;
+    margin-left: 4rem;
+  }
 }

@@ -74,6 +74,11 @@
 			box-shadow: inset 18rem 0 0 0 var(--color-azul-oscuro) !important;
 		}
 
+		&:disabled {
+			background-color: #ccc !important;
+			box-shadow: inset 18rem 0 0 0 #ccc !important;
+		}
+
 		@include respond(tabletaV) {
 			&:hover {
 				box-shadow: none;
@@ -96,6 +101,11 @@
 
 		&:hover {
 			box-shadow: inset 18rem 0 0 0 var(--color-rojo) !important;
+		}
+
+		&:disabled {
+			background-color: #ccc !important;
+			box-shadow: inset 18rem 0 0 0 #ccc !important;
 		}
 
 		@include respond(tabletaV) {
