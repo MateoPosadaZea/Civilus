@@ -200,24 +200,78 @@
 		</header>
 
 		<section class="cross">
+			<h2 class="section__title" style="text-align: center; margin-bottom: 0%; display: none;" id="FounderTag" >
+			<span style="border-style: solid; border-color: #c21220; padding:0.5rem; margin:auto;">You are Founder!</span></h2>
+			
 			<h2 class="cross__tittle">Cross Section Properties</h2>
+			
 			<!-- * MODAL DONATIONS -->
 			<div class="modal-donations hidden">
 				<div class="modal__box modal__box-donations">
+				<div>
 					<img
-						src="/assets/icons/Icon awesome-hand-holding-heart.svg"
-						alt="successLogo"
+						src="/assets/images/civIcon.png"
 						width="40rem"
 						class="modal__img"
+						style="display: inline-block;"
 					/>
+				<button
+				type="button"
+				class="btn__close"
+				onclick="closeModalDonations();"
+				style="margin-left: 70px; border: none; height: 25px; display: inline-block; vertical-align: super;  margin-right: auto; margin-left: 65rem;"
+				>
+				x
+				</button>
+				</div>
 					<p class="modal__error-donations">
-						Support our project and help us to develop more tools for you. Your
-						donations will keep this site adds free.
+					Support us and receive a special gift, which will let you to introduce yourself to 
+					<strong>Parametric Engineering</strong>, one of the most demanded skills nowadays. In addition, you will 
+					become a <strong>Civilus Founder</strong> with future benefits, new tools and special content for you.
+					Give us a chance and believe in Civilus.
 					</p>
-					<button class="modal__btn modal__btn-donations">Donate &rarr;</button>
+					<iframe src="https://player.vimeo.com/video/726451142?h=c1a9990d70&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+				frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="width:60rem;height:30rem;display:block;margin:auto;" 
+				title="2spanBeam"></iframe>
+			
+				<script src="https://player.vimeo.com/api/player.js"></script>
+
+				<button class="modal__btn modal__btn-donations" href="https://buy.stripe.com/test_4gwbKq1lfg737gAaEE" style="margin-bottom:0%">
+					Be a Founder + Gift &rarr;</button>
+				<p class="modal__error-donations">
+				If you are already a founder, please enter your email to avoid this message:
+				</p>
+				<div>
+					<div class="form__flex">
+						<input
+							type="email"
+							placeholder="Email"
+							class="form__input"
+							id="email2"
+							style="width:40rem;"
+							required
+						/>
+						<a class="btn--calc" id="check" onclick="checkDB();">I'm a Founder</a>
+					</div>
+				</br>
+				<div>
+				<p class="modal__error-donations" id="feed" style="font-weight: bold; font-style: italic; display: inline-block;">
+					
+				</p>
+				<a class="modal__error-donations" 
+					id="UcanGo" 
+					style="font-style: italic; font-weight: bold; text-decoration: underline; 
+					visibility: hidden; display: inline-block; cursor: pointer;"
+					onclick="closeModalDonations();">
+					keep enjoying Civilus</a>
+				</div>
+				</div>
+				</br>
 				</div>
 			</div>
 			<div class="overlay overlay-mail hidden"></div>
+
+
 			<!-- * MODAL ERROR -->
 			<div class="modal hidden">
 				<div class="modal__background">
@@ -1051,7 +1105,8 @@
 					><p class="footer__creation">Created by Mattriz Digital Studio</p></a
 				> -->
 				<p class="footer__rights">&#169;2022 Civilus. All rights Reserved.</p>
-				<a class="footer__components footer__components--1" href="./PrivacyPolicy.html" style="color:black">Privacy Policy</a>
+				<span><a class="footer__components footer__components--1" href="./PrivacyPolicy.html" style="color:black; margin: auto;">Privacy Policy</a>
+				<a class="footer__components footer__components--1" href="./Terms.html" style="color:black; margin-left: 4rem;">Terms and Conditions</a></span>
 			</div>
 			<button onclick="topFunction()" id="myBtn" title="Go to top">
 				<i class="arrow up>"></i>

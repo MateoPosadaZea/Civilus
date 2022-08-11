@@ -39,6 +39,7 @@ function clearInputs() {
 	document.getElementById('tetha').value=90;
 }
 const modal__calculate = document.querySelector('.modal__beam');
+const modal__calculate2 = document.querySelector('#test');
 const modal_mail = document.querySelector('.modal-donations');
 const overlay_mail = document.querySelector('.overlay-mail');
 const modal__btn_donations = document.querySelector('.modal__btn-donations');
@@ -56,13 +57,30 @@ const closeModalEscapeDonations = function () {
 };
 let contador = 0;
 modal__calculate.addEventListener('click', function () {
-	if (contador === 5) {
+	if (contador === 3 && FounderBool == 0) {
 		contador = 0;
+		feedDisplay.innerHTML = "";
+		document.querySelector("#email2").value = "";
 		openModalDonations();
+		document.getElementById("UcanGo").style.visibility = "hidden";
 	}
 });
 
-modal__btn_donations.addEventListener('click', closeModalDonations);
+modal__calculate2.addEventListener('click', function () {
+	if (contador === 3 && FounderBool == 0) {
+		contador = 0;
+		feedDisplay.innerHTML = "";
+		document.querySelector("#email2").value = "";
+		openModalDonations();
+		document.getElementById("UcanGo").style.visibility = "hidden";
+	}
+});
+
+const GoToDonations = function () {
+	window.location.replace("https://buy.stripe.com/test_4gwbKq1lfg737gAaEE");
+};
+
+modal__btn_donations.addEventListener('click', GoToDonations);
 overlay.addEventListener('click', () => {
 	modal_mail.classList.add('hidden');
 	overlay_mail.classList.add('hidden');
@@ -2557,6 +2575,15 @@ function ShearDiagram() {
 
 	drawShear(XValues, ShearValuesT);
 	MomentDiagram(PXmatrix, XValues);
+	document.getElementById("MmaxLabel1").style.visibility = "visible";
+	var Vmax = Math.max.apply(Math,ShearValuesT);
+	var Vmin = Math.min.apply(Math,ShearValuesT);
+	var XVmax = XValues[ShearValuesT.indexOf(Vmax.toString())];
+	var XVmin = XValues[ShearValuesT.indexOf(Vmin.toString())];
+	document.getElementById("XvMax").innerHTML = XVmax;
+	document.getElementById("vMax").innerHTML = Vmax;
+	document.getElementById("XvMin").innerHTML = XVmin;
+	document.getElementById("vMin").innerHTML = Vmin;
 }
 
 function drawShear(XValues, ShearValuesT) {
@@ -2912,4 +2939,39 @@ function MomentDiagram(PXmatrix, XValues) {
 	}
 
 	drawMoment(XValues, MomentValuesT);
+	document.getElementById("MmaxLabel2").style.visibility = "visible";
+	var Mmax = Math.max.apply(Math, MomentValuesT);
+	var Mmin = Math.min.apply(Math, MomentValuesT);
+	var XMmax = XValues[MomentValuesT.indexOf(Mmax)];
+	var XMmin = XValues[MomentValuesT.indexOf(Mmin)];
+	document.getElementById("XmMax").innerHTML = XMmax;
+	document.getElementById("mMax").innerHTML = Mmax;
+	document.getElementById("XmMin").innerHTML = XMmin;
+	document.getElementById("mMin").innerHTML = Mmin;
+}
+
+const feedDisplay = document.querySelector("#feed");
+let FounderBool = 0;
+
+function checkDB(){
+var founders = []
+feedDisplay.innerHTML = "Checking our database...";
+document.getElementById("UcanGo").style.visibility = "hidden";
+fetch("http://localhost:5500/founders")
+.then(response => response.json())
+.then(data => {
+	data.values.forEach(values => {
+		founders.push(values);
+	})
+	founders = founders.map(String);
+	const email = document.querySelector("#email2").value;
+	if (founders.indexOf(email.toString()) >= 0){
+	feedDisplay.innerHTML = "Hello founder!, thanks for trusting us, ";
+	document.getElementById("UcanGo").style.visibility = "visible";
+	document.getElementById("FounderTag").style.display = "block";
+	FounderBool = 1;
+	} else{
+	feedDisplay.innerHTML = "Sorry, the email adress is not in our database, plase try again or become a founder";
+	}
+});
 }

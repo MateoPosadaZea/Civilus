@@ -1,0 +1,31 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "Online platform start-up for solving structural calculus",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MateoPosadaZea/Civilus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MateoPosadaZea/Civilus/issues"
+  },
+  "homepage": "https://github.com/MateoPosadaZea/Civilus#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "googleapis": "^105.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

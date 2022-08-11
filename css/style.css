@@ -3312,10 +3312,15 @@ table {
 }
 
 .VyM__text {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 500;
   font-family: var(--parrafos-jura);
   margin-bottom: 1rem;
+  border: #041129;
+  border-style: solid;
+  text-align: center;
+  border-width: 0.2rem;
+  margin-top: 0.2rem;
 }
 
 @media (max-width: 56.25em) {

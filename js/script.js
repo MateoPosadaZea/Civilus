@@ -55,17 +55,25 @@ const closeModalEscapeDonations = function () {
 };
 let contador = 0;
 modal__calculate.addEventListener('click', function () {
-	if (contador === 5) {
+	if (contador === 5 && FounderBool == 0) {
 		contador = 0;
+		feedDisplay.innerHTML = "";
+		document.querySelector("#email2").value = "";
 		openModalDonations();
+		document.getElementById("UcanGo").style.visibility = "hidden";
 	}
 });
 
-modal__btn_donations.addEventListener('click', closeModalDonations);
+const GoToDonations = function () {
+	window.location.replace("https://buy.stripe.com/test_4gwbKq1lfg737gAaEE");
+};
+
+modal__btn_donations.addEventListener('click', GoToDonations);
 overlay.addEventListener('click', () => {
 	modal_mail.classList.add('hidden');
 	overlay_mail.classList.add('hidden');
 });
+
 // * ========= FUNCTIONS ========= //
 function drawcdg(yc, zc) {
 	var ctx1 = document.getElementById('diagram').getContext('2d');
@@ -1299,3 +1307,30 @@ const selectUnit = () => {
 	}
 };
 selectUnits.addEventListener('change', selectUnit);
+
+const feedDisplay = document.querySelector("#feed");
+let FounderBool = 0;
+
+function checkDB(){
+var founders = []
+feedDisplay.innerHTML = "Checking our database...";
+document.getElementById("UcanGo").style.visibility = "hidden";
+fetch("http://localhost:5500/founders")
+.then(response => response.json())
+.then(data => {
+	data.values.forEach(values => {
+		founders.push(values);
+	})
+	founders = founders.map(String);
+	const email = document.querySelector("#email2").value;
+	if (founders.indexOf(email.toString()) >= 0){
+	feedDisplay.innerHTML = "Hello founder!, thanks for trusting us, ";
+	document.getElementById("UcanGo").style.visibility = "visible";
+	document.getElementById("FounderTag").style.display = "block";
+	FounderBool = 1;
+	} else{
+	feedDisplay.innerHTML = "Sorry, the email adress is not in our database, plase try again or become a founder";
+	}
+});
+}
+
