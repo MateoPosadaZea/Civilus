@@ -1315,7 +1315,7 @@ function checkDB(){
 var founders = []
 feedDisplay.innerHTML = "Checking our database...";
 document.getElementById("UcanGo").style.visibility = "hidden";
-fetch("http://localhost:5500/founders")
+fetch("https://civilusfounders.ew.r.appspot.com/founders")
 .then(response => response.json())
 .then(data => {
 	data.values.forEach(values => {

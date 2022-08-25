@@ -34,6 +34,7 @@ app.get("/founders", async (req, res) => {
   res.json(emails);
 });
 
-app.listen(5500, (req, res) => console.log("running on 5500"));
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, (req, res) => console.log("running on "+PORT));
 
 
