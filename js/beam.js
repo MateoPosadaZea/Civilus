@@ -2578,8 +2578,8 @@ function ShearDiagram() {
 	document.getElementById("MmaxLabel1").style.visibility = "visible";
 	var Vmax = Math.max.apply(Math,ShearValuesT);
 	var Vmin = Math.min.apply(Math,ShearValuesT);
-	var XVmax = XValues[ShearValuesT.indexOf(Vmax.toString())];
-	var XVmin = XValues[ShearValuesT.indexOf(Vmin.toString())];
+	var XVmax = XValues[ShearValuesT.indexOf(Vmax.toFixed(2).toString())];
+	var XVmin = XValues[ShearValuesT.indexOf(Vmin.toFixed(2).toString())];
 	document.getElementById("XvMax").innerHTML = XVmax;
 	document.getElementById("vMax").innerHTML = Vmax;
 	document.getElementById("XvMin").innerHTML = XVmin;
