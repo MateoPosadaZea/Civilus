@@ -1,18 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="221.161" height="213.437" viewBox="0 0 221.161 213.437">
-  <g id="Grupo_46" data-name="Grupo 46" transform="translate(-1745 -9604.407)">
+<svg xmlns="http://www.w3.org/2000/svg" width="224.161" height="219.437" viewBox="0 0 224.161 219.437">
+  <g id="Grupo_46" data-name="Grupo 46" transform="translate(-1742 -9604.407)">
     <line id="Línea_66" data-name="Línea 66" x2="177.854" transform="translate(1759.583 9783.428) rotate(-90)" fill="none" stroke="#041129" stroke-width="1"/>
     <path id="Icon_ionic-ios-arrow-back" data-name="Icon ionic-ios-arrow-back" d="M1.584,4.6,5.063,1.12a.657.657,0,0,0-.93-.928L.191,4.13a.656.656,0,0,0-.019.906L4.129,9a.657.657,0,0,0,.93-.928Z" transform="translate(1764 9604.516) rotate(90)" fill="#041129"/>
     <path id="Icon_ionic-ios-arrow-back-2" data-name="Icon ionic-ios-arrow-back" d="M1.626,4.6,5.194,1.12a.642.642,0,0,0,0-.928.69.69,0,0,0-.955,0L.2,4.13a.644.644,0,0,0-.02.906L4.237,9a.691.691,0,0,0,.955,0,.642.642,0,0,0,0-.928Z" transform="translate(1754.807 9784.172) rotate(-90)" fill="#041129"/>
-    <text id="h" transform="translate(1746 9684)" fill="#041129" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="13" font-family="Jura" font-weight="700"><tspan x="0" y="13">h</tspan></text>
+    <text id="h" transform="translate(1743 9684)" fill="#041129" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="16" font-family="Jura" font-weight="700"><tspan x="0" y="15">h</tspan></text>
     <path id="Trazado_436" data-name="Trazado 436" d="M2553.046,7473.407v24.156h112.262v155.608h26.633V7497.563h0v-24.156Z" transform="translate(4476.025 17257.578) rotate(180)" fill="#c21220"/>
     <path id="Icon_ionic-ios-arrow-back-3" data-name="Icon ionic-ios-arrow-back" d="M1.584,4.595,5.063,1.12a.657.657,0,1,0-.93-.928L.191,4.13a.656.656,0,0,0-.019.906L4.129,9a.657.657,0,0,0,.93-.928Z" transform="translate(1942.399 9784.398) rotate(90)" fill="#041129"/>
-    <text id="t" transform="translate(1946.161 9763.898)" fill="#041129" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="13" font-family="Jura" font-weight="700"><tspan x="0" y="13">t</tspan></text>
+    <text id="t" transform="translate(1946.161 9763.898)" fill="#041129" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="16" font-family="Jura" font-weight="700"><tspan x="0" y="15">t</tspan></text>
     <line id="Línea_68" data-name="Línea 68" y2="50.601" transform="translate(1937.623 9736.898)" fill="none" stroke="#041129" stroke-width="1"/>
     <path id="Icon_ionic-ios-arrow-back-4" data-name="Icon ionic-ios-arrow-back" d="M1.584,4.595,5.063,1.12a.657.657,0,1,0-.93-.928L.191,4.13a.656.656,0,0,0-.019.906L4.129,9a.657.657,0,0,0,.93-.928Z" transform="translate(1933.207 9760.898) rotate(-90)" fill="#041129"/>
     <line id="Línea_69" data-name="Línea 69" x1="22.941" transform="translate(1937.623 9808.84) rotate(-90)" fill="none" stroke="#041129" stroke-width="1"/>
     <line id="Línea_70" data-name="Línea 70" x2="137.005" transform="translate(1922.236 9799.761) rotate(180)" fill="none" stroke="#041129" stroke-width="1"/>
     <path id="Icon_ionic-ios-arrow-back-5" data-name="Icon ionic-ios-arrow-back" d="M1.584,4.6,5.063,1.12a.657.657,0,0,0-.93-.928L.191,4.13a.656.656,0,0,0-.019.906L4.129,9a.657.657,0,0,0,.93-.928Z" transform="translate(1784.172 9795.344)" fill="#041129"/>
     <path id="Icon_ionic-ios-arrow-back-6" data-name="Icon ionic-ios-arrow-back" d="M1.626,4.6,5.194,1.12a.642.642,0,0,0,0-.928.69.69,0,0,0-.955,0L.2,4.13a.644.644,0,0,0-.02.906L4.237,9a.691.691,0,0,0,.955,0,.642.642,0,0,0,0-.928Z" transform="translate(1922.979 9804.537) rotate(180)" fill="#041129"/>
-    <text id="b" transform="translate(1847.438 9800.844)" fill="#041129" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="13" font-family="Jura" font-weight="700"><tspan x="0" y="13">b</tspan></text>
+    <text id="b" transform="translate(1847.438 9804.844)" fill="#041129" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="16" font-family="Jura" font-weight="700"><tspan x="0" y="15">b</tspan></text>
   </g>
 </svg>

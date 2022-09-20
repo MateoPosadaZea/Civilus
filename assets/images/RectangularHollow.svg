@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200.441" height="217" viewBox="0 0 200.441 217">
-  <g id="Grupo_42" data-name="Grupo 42" transform="translate(-2075.559 -8634)">
+<svg xmlns="http://www.w3.org/2000/svg" width="200.441" height="219" viewBox="0 0 200.441 219">
+  <g id="Grupo_42" data-name="Grupo 42" transform="translate(-2075.559 -8632)">
     <g id="Rectángulo_92" data-name="Rectángulo 92" transform="translate(2100 8673)" fill="none" stroke="#c21220" stroke-width="14">
       <rect width="127" height="178" stroke="none"/>
       <rect x="7" y="7" width="113" height="164" fill="none"/>
@@ -10,10 +10,10 @@
     <line id="Línea_39" data-name="Línea 39" x2="176.701" transform="translate(2254.583 8850.275) rotate(-90)" fill="none" stroke="#041129" stroke-width="1"/>
     <path id="Icon_ionic-ios-arrow-back-3" data-name="Icon ionic-ios-arrow-back" d="M1.584,4.6,5.063,1.12a.657.657,0,0,0-.93-.928L.191,4.13a.656.656,0,0,0-.019.906L4.129,9a.657.657,0,0,0,.93-.928Z" transform="translate(2259 8672.516) rotate(90)" fill="#041129"/>
     <path id="Icon_ionic-ios-arrow-back-4" data-name="Icon ionic-ios-arrow-back" d="M1.584,4.6,5.063,1.12a.657.657,0,0,0-.93-.928L.191,4.13a.656.656,0,0,0-.019.906L4.129,9a.657.657,0,0,0,.93-.928Z" transform="translate(2249.807 8851) rotate(-90)" fill="#041129"/>
-    <text id="b" transform="translate(2159 8635)" fill="#041129" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="13" font-family="Jura" font-weight="700"><tspan x="0" y="13">b</tspan></text>
-    <text id="h" transform="translate(2263 8751)" fill="#041129" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="13" font-family="Jura" font-weight="700"><tspan x="0" y="13">h</tspan></text>
+    <text id="b" transform="translate(2159 8633)" fill="#041129" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="16" font-family="Jura" font-weight="700"><tspan x="0" y="15">b</tspan></text>
+    <text id="h" transform="translate(2263 8751)" fill="#041129" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="16" font-family="Jura" font-weight="700"><tspan x="0" y="15">h</tspan></text>
     <path id="Icon_ionic-ios-arrow-back-5" data-name="Icon ionic-ios-arrow-back" d="M1.584,4.595,5.063,1.12a.657.657,0,1,0-.93-.928L.191,4.13a.656.656,0,0,0-.019.906L4.129,9a.657.657,0,0,0,.93-.928Z" transform="translate(2100 8766.738) rotate(180)" fill="#041129"/>
-    <text id="t" transform="translate(2126 8741)" fill="#041129" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="13" font-family="Jura" font-weight="700"><tspan x="0" y="13">t</tspan></text>
+    <text id="t" transform="translate(2126 8740)" fill="#041129" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="16" font-family="Jura" font-weight="700"><tspan x="0" y="15">t</tspan></text>
     <line id="Línea_42" data-name="Línea 42" x1="22.941" transform="translate(2115.559 8761.962)" fill="none" stroke="#041129" stroke-width="1"/>
     <path id="Icon_ionic-ios-arrow-back-6" data-name="Icon ionic-ios-arrow-back" d="M1.584,4.595,5.063,1.12a.657.657,0,1,0-.93-.928L.191,4.13a.656.656,0,0,0-.019.906L4.129,9a.657.657,0,0,0,.93-.928Z" transform="translate(2114.5 8757.546)" fill="#041129"/>
     <line id="Línea_43" data-name="Línea 43" x1="22.941" transform="translate(2075.559 8761.962)" fill="none" stroke="#041129" stroke-width="1"/>
