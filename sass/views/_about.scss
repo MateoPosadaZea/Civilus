@@ -13,6 +13,11 @@
 		align-items: center;
 		justify-content: space-around;
 		box-shadow: 0px 1px 10px rgb(122, 122, 122);
+		@include respond(movil) {
+			height: 52rem;
+			padding-top: 2rem;
+			padding-bottom: 5rem;
+		}
 	}
 	&__tittle {
 		color: #cf242d;
