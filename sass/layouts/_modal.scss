@@ -10,20 +10,22 @@
 	box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
 	z-index: 20000;
 	&-donations {
-		width: 35%;
 		position: absolute;
 		top: 25%;
 		left: 50%;
 		pointer-events: auto;
 		transform: translate(-50%, -50%);
 		width: 50%;
+		@include respond(tabletaV) {
+			width: 80%;
+		}
 		background-color: white;
 		border-radius: 8px;
 		box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
 		z-index: 20000;
 		@include respond(movil) {
-			top: 15%;
-			width: 60%;
+			top: 18%;
+			width: 80%;
 		}
 	}
 	&-mail {

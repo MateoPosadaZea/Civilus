@@ -1069,7 +1069,6 @@ select,
 }
 
 .modal-donations {
-  width: 35%;
   position: absolute;
   top: 25%;
   left: 50%;
@@ -1082,10 +1081,16 @@ select,
   z-index: 20000;
 }
 
+@media (max-width: 56.25em) {
+  .modal-donations {
+    width: 80%;
+  }
+}
+
 @media (max-width: 37.5em) {
   .modal-donations {
-    top: 15%;
-    width: 60%;
+    top: 18%;
+    width: 80%;
   }
 }
 
