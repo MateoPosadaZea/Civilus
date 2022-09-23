@@ -1250,6 +1250,28 @@ select,
   height: 3rem;
 }
 
+.modal-donations .btn__close {
+  border: none;
+  height: 25px;
+  display: inline-block;
+  vertical-align: super;
+  margin-right: auto;
+  margin-left: 65rem;
+}
+
+@media (max-width: 37.5em) {
+  .modal-donations .btn__close {
+    margin-left: 35rem;
+  }
+}
+
+#player {
+  width: 60rem;
+  height: 30rem;
+  display: block;
+  margin: auto;
+}
+
 .header {
   position: relative;
 }

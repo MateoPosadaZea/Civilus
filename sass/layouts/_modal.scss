@@ -73,9 +73,6 @@
 		align-items: center;
 		gap: 4rem;
 
-		@include respond(movil) {
-		}
-
 		&-donations {
 			align-items: flex-start;
 			padding: 2rem 4rem 0.5rem;
@@ -181,4 +178,23 @@
 .modal__img {
 	width: 3rem;
 	height: 3rem;
+}
+
+.modal-donations .btn__close {
+	border: none;
+	height: 25px;
+	display: inline-block;
+	vertical-align: super;
+	margin-right: auto;
+	margin-left: 65rem;
+	@include respond(movil) {
+		margin-left: 35rem;
+	}
+}
+
+#player {
+	width: 60rem;
+	height: 30rem;
+	display: block;
+	margin: auto;
 }
