@@ -210,8 +210,9 @@
 				<div class="modal__box modal__box-donations">
 				<div>
 					<img
-						src="/assets/images/civIcon.png"
-						width="40rem"
+						src="/assets/images/CivilusImagotipo-15.svg"
+						width="80rem"
+						height="40rem"
 						class="modal__img"
 						style="display: inline-block;"
 					/>
@@ -222,21 +223,41 @@
 				x
 				</button>
 				</div>
-				<p class="modal__error-donations">
-					Support us and receive a special gift, a file and a video of 
-					<strong>Parametric Engineering</strong>, a highly demanded skill. In addition, you will 
-					become a <strong>Civilus Founder</strong> with future benefits, new tools and access to innovative content.
+					<h2 class="results__title">Get innovative content!</h2>
+					<p class="modal__error-donations">
+					Subscribe to our newsletter and <strong>receive a special gift</strong>, a video tutorial of
+					Parametric Design, a highly demanded skill. Get closer to
+					trending topics like <strong>BIM</strong>, <strong>Parametric Design</strong>, <strong>Digital Twins</strong> and more!.
 					</p>
 					<iframe src="https://player.vimeo.com/video/726451142?h=c1a9990d70&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
 				frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen 
 				title="2spanBeam"></iframe>
 			
 				<script src="https://player.vimeo.com/api/player.js"></script>
-
-				<button class="modal__btn modal__btn-donations" href="https://buy.stripe.com/test_4gwbKq1lfg737gAaEE" style="margin-bottom:0%">
-					Be a Founder + Gift &rarr;</button>
+				<div>
+					<br />
+					<div class="form__flex">
+						<input
+							type="text"
+							placeholder="Name"
+							class="form__input"
+							id="nombre"
+							required
+						/>
+						<input
+						type="email"
+						placeholder="Email"
+						class="form__input"
+						id="email2"
+						style="width:40rem;"
+						required
+						/>
+					</div>
+				</div>
+				<button class="btn--calc" href="https://buy.stripe.com/test_4gwbKq1lfg737gAaEE" style="margin-bottom:0%">
+					Subscribe + Gift &rarr;</button>
 				<p class="modal__error-donations">
-				If you are a founder, enter your email to avoid this message:
+				If you alredy subscribed, enter your email to avoid this message:
 				</p>
 				<div>
 					<div class="form__flex">
@@ -248,7 +269,7 @@
 							style="width:40rem;"
 							required
 						/>
-						<a class="btn--calc" id="check" onclick="checkDB();">I'm a Founder</a>
+						<a class="modal__btn modal__btn-donations" id="check" onclick="checkDB();">I'm Subscribed</a>
 					</div>
 				</br>
 				<div>
