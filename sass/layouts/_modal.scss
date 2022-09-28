@@ -19,6 +19,9 @@
 		@include respond(tabletaV) {
 			width: 80%;
 		}
+		@include respond(tabletaH) {
+			width: 70%;
+		}
 		background-color: white;
 		border-radius: 8px;
 		box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
@@ -192,9 +195,22 @@
 	}
 }
 
+#check {
+	margin-top: 4rem;
+	@include respond(movil) {
+		margin-top: 1rem;
+	}
+}
+
 #player {
 	width: 60rem;
 	height: 30rem;
 	display: block;
 	margin: auto;
+	@include respond(tabletaV) {
+		width: 20rem;
+	}
+	@include respond(tabletaH) {
+		width: 70%;
+	}
 }
