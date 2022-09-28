@@ -57,15 +57,15 @@ let contador = 0;
 modal__calculate.addEventListener('click', function () {
 	if (contador === 5 && FounderBool == 0) {
 		contador = 0;
-		feedDisplay.innerHTML = "";
-		document.querySelector("#email2").value = "";
+		feedDisplay.innerHTML = '';
+		document.querySelector('#email2').value = '';
 		openModalDonations();
-		document.getElementById("UcanGo").style.visibility = "hidden";
+		document.getElementById('UcanGo').style.visibility = 'hidden';
 	}
 });
 
 const GoToDonations = function () {
-	window.location.replace("https://buy.stripe.com/test_4gwbKq1lfg737gAaEE");
+	window.location.replace('https://buy.stripe.com/test_4gwbKq1lfg737gAaEE');
 };
 
 modal__btn_donations.addEventListener('click', GoToDonations);
@@ -1308,29 +1308,29 @@ const selectUnit = () => {
 };
 selectUnits.addEventListener('change', selectUnit);
 
-const feedDisplay = document.querySelector("#feed");
+const feedDisplay = document.querySelector('#feed');
 let FounderBool = 0;
 
-function checkDB(){
-var founders = []
-feedDisplay.innerHTML = "Checking our database...";
-document.getElementById("UcanGo").style.visibility = "hidden";
-fetch("https://civilusfounders.ew.r.appspot.com/founders")
-.then(response => response.json())
-.then(data => {
-	data.values.forEach(values => {
-		founders.push(values);
-	})
-	founders = founders.map(String);
-	const email = document.querySelector("#email2").value;
-	if (founders.indexOf(email.toString()) >= 0){
-	feedDisplay.innerHTML = "Hello founder!, thanks for trusting us, ";
-	document.getElementById("UcanGo").style.visibility = "visible";
-	document.getElementById("FounderTag").style.display = "block";
-	FounderBool = 1;
-	} else{
-	feedDisplay.innerHTML = "Sorry, the email adress is not in our database, plase try again or become a founder";
-	}
-});
+function checkDB() {
+	var founders = [];
+	feedDisplay.innerHTML = 'Checking our database...';
+	document.getElementById('UcanGo').style.visibility = 'hidden';
+	fetch('https://civilusfounders.ew.r.appspot.com/founders')
+		.then((response) => response.json())
+		.then((data) => {
+			data.values.forEach((values) => {
+				founders.push(values);
+			});
+			founders = founders.map(String);
+			const email = document.querySelector('#email2').value;
+			if (founders.indexOf(email.toString()) >= 0) {
+				feedDisplay.innerHTML = 'Hello founder!, thanks for trusting us, ';
+				document.getElementById('UcanGo').style.visibility = 'visible';
+				document.getElementById('FounderTag').style.display = 'block';
+				FounderBool = 1;
+			} else {
+				feedDisplay.innerHTML =
+					'Sorry, the email adress is not in our database, plase try again or become a founder';
+			}
+		});
 }
-
