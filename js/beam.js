@@ -30,7 +30,6 @@ var xMarrayT = [];
 const modal = document.querySelector('.modal');
 const modal__error = document.querySelector('.modal__error');
 const overlay = document.querySelector('.overlay');
-console.log(overlay);
 const btnCloseModal = document.querySelector('.close-modal');
 function clearInputs() {
 	const input = document.querySelectorAll('input');
@@ -45,13 +44,10 @@ const modal_mail = document.querySelector('.modal-donations');
 const overlay_mail = document.querySelector('.overlay-mail');
 const modal__btn_donations = document.querySelector('.modal__btn-donations');
 const openModalDonations = function () {
-	console.log('ENTRA MODAL DONACIONES');
 	modal_mail.classList.remove('hidden');
 	overlay_mail.classList.remove('hidden');
 };
 const closeModalDonations = function () {
-	console.log('CIERRA MODAL DONACIONES CON LA X');
-
 	modal_mail.classList.add('hidden');
 	overlay_mail.classList.add('hidden');
 };
@@ -61,7 +57,7 @@ const closeModalEscapeDonations = function () {
 };
 let contador = 0;
 modal__calculate.addEventListener('click', function () {
-	if (contador === 1 && FounderBool == 0) {
+	if (contador === 3 && FounderBool == 0) {
 		contador = 0;
 		feedDisplay.innerHTML = '';
 		document.querySelector('#email2').value = '';
@@ -85,62 +81,39 @@ const GoToDonations = function () {
 };
 
 modal__btn_donations.addEventListener('click', GoToDonations);
-overlay.addEventListener('click', () => {
-	console.log('entraaa acaaaaaa');
-	//modal_mail.classList.add('hidden');
-	//overlay_mail.classList.add('hidden');
-});
+
 const openModal = function (error, flag = 0) {
 	if (window.screen.width < 700) {
 		if (flag) {
-			console.log('first');
-
 			modal.style.top = '45%';
 			modal__error.textContent = error;
 			modal.classList.remove('hidden');
-			//overlay.classList.remove('hidden');
+			overlay.classList.remove('hidden');
 		} else {
 			modal.style.top = '20%';
-
 			modal__error.textContent = error;
 			modal.classList.remove('hidden');
-			//overlay.classList.remove('hidden');
+			overlay.classList.remove('hidden');
 		}
 	} else {
-		console.log('first');
 		modal.style.top = '20%';
 		modal__error.textContent = error;
 		modal.classList.remove('hidden');
-		console.log('ACA el modal del error');
 		overlay.classList.remove('hidden');
 	}
 };
 
 const closeModal = function () {
-	console.log('ENTRAAAAAAAA');
 	modal.classList.add('hidden');
 	overlay.classList.add('hidden');
 };
 const closeModalEscape = function () {
-	console.log('entraaa');
 	modal.classList.add('hidden');
 	overlay.classList.add('hidden');
 };
 
 btnCloseModal.addEventListener('click', closeModal);
 btnCloseModal.addEventListener('click', closeModal);
-overlay.addEventListener('click', () => {
-	console.log('entra acaaaaa');
-	//modal.classList.add('hidden');
-	//overlay.classList.add('hidden');
-});
-addEventListener('keydown', (e) => {
-	console.log('enteraaa');
-	if (e.key === 'Escape') {
-		modal.classList.add('hidden');
-		overlay.classList.add('hidden');
-	}
-});
 
 const navigation__buttom = document.querySelector('.navigation__buttom');
 const navigation__item = document.querySelectorAll('.navigation__item');
