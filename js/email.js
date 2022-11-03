@@ -33,16 +33,7 @@ const closeMyModalEscape = function () {
 
 btnCloseMyModal.addEventListener('click', closeMyModal);
 btnCloseMyModal.addEventListener('click', closeMyModal);
-overlay__mail.addEventListener('click', () => {
-	modal_my_mail.classList.add('hidden');
-	overlay__mail.classList.add('hidden');
-});
-addEventListener('keydown', (e) => {
-	if (e.key === 'Escape') {
-		modal_my_mail.classList.add('hidden');
-		overlay__mail.classList.add('hidden');
-	}
-});
+
 enviar.addEventListener('click', (e) => {
 	e.preventDefault();
 

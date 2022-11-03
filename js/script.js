@@ -47,7 +47,7 @@ const openModalDonations = function () {
 };
 const closeModalDonations = function () {
 	modal_mail.classList.add('hidden');
-	overlay_mail.classList.add('hidden');
+	overlay.classList.add('hidden');
 };
 const closeModalEscapeDonations = function () {
 	modal_mail.classList.add('hidden');
@@ -69,10 +69,6 @@ const GoToDonations = function () {
 };
 
 modal__btn_donations.addEventListener('click', GoToDonations);
-overlay.addEventListener('click', () => {
-	modal_mail.classList.add('hidden');
-	overlay_mail.classList.add('hidden');
-});
 
 // * ========= FUNCTIONS ========= //
 function drawcdg(yc, zc) {
@@ -143,23 +139,10 @@ const closeModal = function () {
 	modal.classList.add('hidden');
 	overlay.classList.add('hidden');
 };
-const closeModalEscape = function () {
-	modal.classList.add('hidden');
-	overlay.classList.add('hidden');
-};
 
 btnCloseModal.addEventListener('click', closeModal);
 btnCloseModal.addEventListener('click', closeModal);
-overlay.addEventListener('click', () => {
-	modal.classList.add('hidden');
-	overlay.classList.add('hidden');
-});
-addEventListener('keydown', (e) => {
-	if (e.key === 'Escape') {
-		modal.classList.add('hidden');
-		overlay.classList.add('hidden');
-	}
-});
+
 const error =
 	'All data have to be correctly typed to proceed to calculus. Please check input values.';
 function calculate() {
@@ -1033,27 +1016,22 @@ const seccion = () => {
 		results__angle.forEach((angle) => {
 			angle.classList.add('hidden');
 		});
-		if (
-			document
-				.querySelector('.section__units--1')
-				.classList.contains('display') ||
-			document.querySelector('.section__units--2').classList.contains('display')
-		) {
-			//  * REMOVE
-			document.querySelector('.section__units--1').classList.remove('display');
-			document.querySelector('.section__units--2').classList.remove('display');
 
-			// * ADD
-			document.querySelector('.section__units--3').classList.add('display');
-			document.querySelector('.section__units--4').classList.add('display');
-			document.querySelector('.section__units--5').classList.add('display');
-			document.querySelector('.section__units--6').classList.add('display');
-			document.querySelector('.section__units--7').classList.add('display');
-			document.querySelector('.section__units--8').classList.add('display');
-			document.querySelector('.section__units--9').classList.add('display');
-			document.querySelector('.section__units--10').classList.add('display');
-			document.querySelector('.section__units--11').classList.add('display');
-		}
+		//  * REMOVE
+		document.querySelector('.section__units--1').classList.remove('display');
+		document.querySelector('.section__units--2').classList.remove('display');
+
+		// * ADD
+		document.querySelector('.section__units--3').classList.add('display');
+		document.querySelector('.section__units--4').classList.add('display');
+		document.querySelector('.section__units--5').classList.add('display');
+		document.querySelector('.section__units--6').classList.add('display');
+		document.querySelector('.section__units--7').classList.add('display');
+		document.querySelector('.section__units--8').classList.add('display');
+		document.querySelector('.section__units--9').classList.add('display');
+		document.querySelector('.section__units--10').classList.add('display');
+		document.querySelector('.section__units--11').classList.add('display');
+
 		document.querySelector('.section__units--4').classList.add('display');
 	} else if (select.value === circular) {
 		section__img.src = './assets/images/circular.svg';
@@ -1061,78 +1039,60 @@ const seccion = () => {
 		results__angle.forEach((angle) => {
 			angle.classList.add('hidden');
 		});
-		if (
-			document.querySelector('.section__units--3').classList.contains('display')
-		) {
-			//  * REMOVE
-			document.querySelector('.section__units--3').classList.remove('display');
-			// * ADD
-			document.querySelector('.section__units--1').classList.add('display');
-			document.querySelector('.section__units--2').classList.add('display');
-			document.querySelector('.section__units--4').classList.add('display');
-			document.querySelector('.section__units--5').classList.add('display');
-			document.querySelector('.section__units--6').classList.add('display');
-			document.querySelector('.section__units--7').classList.add('display');
-			document.querySelector('.section__units--8').classList.add('display');
-			document.querySelector('.section__units--9').classList.add('display');
-			document.querySelector('.section__units--10').classList.add('display');
-			document.querySelector('.section__units--11').classList.add('display');
-		}
+
+		//  * REMOVE
+		document.querySelector('.section__units--3').classList.remove('display');
+		// * ADD
+		document.querySelector('.section__units--1').classList.add('display');
+		document.querySelector('.section__units--2').classList.add('display');
+		document.querySelector('.section__units--4').classList.add('display');
+		document.querySelector('.section__units--5').classList.add('display');
+		document.querySelector('.section__units--6').classList.add('display');
+		document.querySelector('.section__units--7').classList.add('display');
+		document.querySelector('.section__units--8').classList.add('display');
+		document.querySelector('.section__units--9').classList.add('display');
+		document.querySelector('.section__units--10').classList.add('display');
+		document.querySelector('.section__units--11').classList.add('display');
 	} else if (select.value === rectangularH) {
 		section__img.src = './assets/images/RectangularHollow.svg';
 		section__title.textContent = 'Rectangular Hollow';
 		results__angle.forEach((angle) => {
 			angle.classList.add('hidden');
 		});
-		if (
-			document
-				.querySelector('.section__units--1')
-				.classList.contains('display') ||
-			document
-				.querySelector('.section__units--2')
-				.classList.contains('display') ||
-			document.querySelector('.section__units--4').classList.contains('display')
-		) {
-			//  * REMOVE
-			document.querySelector('.section__units--1').classList.remove('display');
-			document.querySelector('.section__units--2').classList.remove('display');
-			document.querySelector('.section__units--4').classList.remove('display');
-			// * ADD
-			document.querySelector('.section__units--3').classList.add('display');
-			document.querySelector('.section__units--5').classList.add('display');
-			document.querySelector('.section__units--6').classList.add('display');
-			document.querySelector('.section__units--7').classList.add('display');
-			document.querySelector('.section__units--8').classList.add('display');
-			document.querySelector('.section__units--9').classList.add('display');
-			document.querySelector('.section__units--10').classList.add('display');
-			document.querySelector('.section__units--11').classList.add('display');
-		}
+
+		//  * REMOVE
+		document.querySelector('.section__units--1').classList.remove('display');
+		document.querySelector('.section__units--2').classList.remove('display');
+		document.querySelector('.section__units--4').classList.remove('display');
+		// * ADD
+		document.querySelector('.section__units--3').classList.add('display');
+		document.querySelector('.section__units--5').classList.add('display');
+		document.querySelector('.section__units--6').classList.add('display');
+		document.querySelector('.section__units--7').classList.add('display');
+		document.querySelector('.section__units--8').classList.add('display');
+		document.querySelector('.section__units--9').classList.add('display');
+		document.querySelector('.section__units--10').classList.add('display');
+		document.querySelector('.section__units--11').classList.add('display');
 	} else if (select.value === circularH) {
 		section__img.src = './assets/images/CircularHollow.svg';
 		section__title.textContent = 'Circular Hollow';
 		results__angle.forEach((angle) => {
 			angle.classList.add('hidden');
 		});
-		if (
-			document
-				.querySelector('.section__units--3')
-				.classList.contains('display') ||
-			document.querySelector('.section__units--4').classList.contains('display')
-		) {
-			//  * REMOVE
-			document.querySelector('.section__units--3').classList.remove('display');
-			document.querySelector('.section__units--4').classList.remove('display');
-			// * ADD
-			document.querySelector('.section__units--1').classList.add('display');
-			document.querySelector('.section__units--2').classList.add('display');
-			document.querySelector('.section__units--5').classList.add('display');
-			document.querySelector('.section__units--6').classList.add('display');
-			document.querySelector('.section__units--7').classList.add('display');
-			document.querySelector('.section__units--8').classList.add('display');
-			document.querySelector('.section__units--9').classList.add('display');
-			document.querySelector('.section__units--10').classList.add('display');
-			document.querySelector('.section__units--11').classList.add('display');
-		}
+
+		//  * REMOVE
+		document.querySelector('.section__units--3').classList.remove('display');
+		document.querySelector('.section__units--4').classList.remove('display');
+		// * ADD
+		document.querySelector('.section__units--1').classList.add('display');
+		document.querySelector('.section__units--2').classList.add('display');
+		document.querySelector('.section__units--5').classList.add('display');
+		document.querySelector('.section__units--6').classList.add('display');
+		document.querySelector('.section__units--7').classList.add('display');
+		document.querySelector('.section__units--8').classList.add('display');
+		document.querySelector('.section__units--9').classList.add('display');
+		document.querySelector('.section__units--10').classList.add('display');
+		document.querySelector('.section__units--11').classList.add('display');
 	} else if (select.value === channel) {
 		section__img.src = './assets/images/Channel.svg';
 		section__title.textContent = 'Channel';
@@ -1140,31 +1100,18 @@ const seccion = () => {
 			angle.classList.add('hidden');
 		});
 
-		if (
-			document
-				.querySelector('.section__units--2')
-				.classList.contains('display') ||
-			document
-				.querySelector('.section__units--5')
-				.classList.contains('display') ||
-			document
-				.querySelector('.section__units--9')
-				.classList.contains('display') ||
-			document.querySelector('.section__units--6').classList.contains('display')
-		) {
-			//  * REMOVE
-			document.querySelector('.section__units--2').classList.remove('display');
-			document.querySelector('.section__units--5').classList.remove('display');
-			document.querySelector('.section__units--9').classList.remove('display');
-			document.querySelector('.section__units--6').classList.remove('display');
-			// * ADD
-			document.querySelector('.section__units--1').classList.add('display');
-			document.querySelector('.section__units--4').classList.add('display');
-			document.querySelector('.section__units--7').classList.add('display');
-			document.querySelector('.section__units--8').classList.add('display');
-			document.querySelector('.section__units--10').classList.add('display');
-			document.querySelector('.section__units--11').classList.add('display');
-		}
+		//  * REMOVE
+		document.querySelector('.section__units--2').classList.remove('display');
+		document.querySelector('.section__units--5').classList.remove('display');
+		document.querySelector('.section__units--9').classList.remove('display');
+		document.querySelector('.section__units--6').classList.remove('display');
+		// * ADD
+		document.querySelector('.section__units--1').classList.add('display');
+		document.querySelector('.section__units--4').classList.add('display');
+		document.querySelector('.section__units--7').classList.add('display');
+		document.querySelector('.section__units--8').classList.add('display');
+		document.querySelector('.section__units--10').classList.add('display');
+		document.querySelector('.section__units--11').classList.add('display');
 	} else if (select.value === iSection) {
 		section__img.src = './assets/images/ISection.svg';
 		section__title.textContent = 'I - Section';
@@ -1172,40 +1119,19 @@ const seccion = () => {
 			angle.classList.add('hidden');
 		});
 
-		if (
-			document
-				.querySelector('.section__units--2')
-				.classList.contains('display') ||
-			document
-				.querySelector('.section__units--5')
-				.classList.contains('display') ||
-			document
-				.querySelector('.section__units--7')
-				.classList.contains('display') ||
-			document
-				.querySelector('.section__units--8')
-				.classList.contains('display') ||
-			document
-				.querySelector('.section__units--10')
-				.classList.contains('display') ||
-			document
-				.querySelector('.section__units--11')
-				.classList.contains('display')
-		) {
-			//  * REMOVE
-			document.querySelector('.section__units--2').classList.remove('display');
-			document.querySelector('.section__units--5').classList.remove('display');
-			document.querySelector('.section__units--7').classList.remove('display');
-			document.querySelector('.section__units--8').classList.remove('display');
-			document.querySelector('.section__units--10').classList.remove('display');
-			document.querySelector('.section__units--11').classList.remove('display');
-			// * ADD
-			document.querySelector('.section__units--1').classList.add('display');
-			document.querySelector('.section__units--3').classList.add('display');
-			document.querySelector('.section__units--6').classList.add('display');
-			document.querySelector('.section__units--4').classList.add('display');
-			document.querySelector('.section__units--9').classList.add('display');
-		}
+		//  * REMOVE
+		document.querySelector('.section__units--2').classList.remove('display');
+		document.querySelector('.section__units--5').classList.remove('display');
+		document.querySelector('.section__units--7').classList.remove('display');
+		document.querySelector('.section__units--8').classList.remove('display');
+		document.querySelector('.section__units--10').classList.remove('display');
+		document.querySelector('.section__units--11').classList.remove('display');
+		// * ADD
+		document.querySelector('.section__units--1').classList.add('display');
+		document.querySelector('.section__units--3').classList.add('display');
+		document.querySelector('.section__units--6').classList.add('display');
+		document.querySelector('.section__units--4').classList.add('display');
+		document.querySelector('.section__units--9').classList.add('display');
 	} else if (select.value === tSection) {
 		section__img.src = './assets/images/TSection.svg';
 		section__title.textContent = 'T - Section';
@@ -1213,31 +1139,18 @@ const seccion = () => {
 			angle.classList.add('hidden');
 		});
 
-		if (
-			document
-				.querySelector('.section__units--2')
-				.classList.contains('display') ||
-			document
-				.querySelector('.section__units--5')
-				.classList.contains('display') ||
-			document
-				.querySelector('.section__units--9')
-				.classList.contains('display') ||
-			document.querySelector('.section__units--6').classList.contains('display')
-		) {
-			//  * REMOVE
-			document.querySelector('.section__units--2').classList.remove('display');
-			document.querySelector('.section__units--5').classList.remove('display');
-			document.querySelector('.section__units--9').classList.remove('display');
-			document.querySelector('.section__units--6').classList.remove('display');
-			// * ADD
-			document.querySelector('.section__units--1').classList.add('display');
-			document.querySelector('.section__units--4').classList.add('display');
-			document.querySelector('.section__units--7').classList.add('display');
-			document.querySelector('.section__units--8').classList.add('display');
-			document.querySelector('.section__units--10').classList.add('display');
-			document.querySelector('.section__units--11').classList.add('display');
-		}
+		//  * REMOVE
+		document.querySelector('.section__units--2').classList.remove('display');
+		document.querySelector('.section__units--5').classList.remove('display');
+		document.querySelector('.section__units--9').classList.remove('display');
+		document.querySelector('.section__units--6').classList.remove('display');
+		// * ADD
+		document.querySelector('.section__units--1').classList.add('display');
+		document.querySelector('.section__units--4').classList.add('display');
+		document.querySelector('.section__units--7').classList.add('display');
+		document.querySelector('.section__units--8').classList.add('display');
+		document.querySelector('.section__units--10').classList.add('display');
+		document.querySelector('.section__units--11').classList.add('display');
 	} else if (select.value === angle) {
 		section__img.src = './assets/images/Angle.svg';
 		section__title.textContent = 'Angle';
@@ -1245,29 +1158,19 @@ const seccion = () => {
 			angle.classList.remove('hidden');
 		});
 
-		if (
-			document
-				.querySelector('.section__units--1')
-				.classList.contains('display') ||
-			document
-				.querySelector('.section__units--2')
-				.classList.contains('display') ||
-			document.querySelector('.section__units--4').classList.contains('display')
-		) {
-			//  * REMOVE
-			document.querySelector('.section__units--1').classList.remove('display');
-			document.querySelector('.section__units--2').classList.remove('display');
-			document.querySelector('.section__units--4').classList.remove('display');
-			// * ADD
-			document.querySelector('.section__units--3').classList.add('display');
-			document.querySelector('.section__units--5').classList.add('display');
-			document.querySelector('.section__units--6').classList.add('display');
-			document.querySelector('.section__units--7').classList.add('display');
-			document.querySelector('.section__units--8').classList.add('display');
-			document.querySelector('.section__units--9').classList.add('display');
-			document.querySelector('.section__units--10').classList.add('display');
-			document.querySelector('.section__units--11').classList.add('display');
-		}
+		//  * REMOVE
+		document.querySelector('.section__units--1').classList.remove('display');
+		document.querySelector('.section__units--2').classList.remove('display');
+		document.querySelector('.section__units--4').classList.remove('display');
+		// * ADD
+		document.querySelector('.section__units--3').classList.add('display');
+		document.querySelector('.section__units--5').classList.add('display');
+		document.querySelector('.section__units--6').classList.add('display');
+		document.querySelector('.section__units--7').classList.add('display');
+		document.querySelector('.section__units--8').classList.add('display');
+		document.querySelector('.section__units--9').classList.add('display');
+		document.querySelector('.section__units--10').classList.add('display');
+		document.querySelector('.section__units--11').classList.add('display');
 	}
 };
 

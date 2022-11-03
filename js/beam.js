@@ -30,13 +30,14 @@ var xMarrayT = [];
 const modal = document.querySelector('.modal');
 const modal__error = document.querySelector('.modal__error');
 const overlay = document.querySelector('.overlay');
+console.log(overlay);
 const btnCloseModal = document.querySelector('.close-modal');
 function clearInputs() {
 	const input = document.querySelectorAll('input');
 	for (let i = 0; i < input.length; i++) {
 		input[i].value = '';
 	}
-	document.getElementById('tetha').value=90;
+	document.getElementById('tetha').value = 90;
 }
 const modal__calculate = document.querySelector('.modal__beam');
 const modal__calculate2 = document.querySelector('#test');
@@ -44,10 +45,13 @@ const modal_mail = document.querySelector('.modal-donations');
 const overlay_mail = document.querySelector('.overlay-mail');
 const modal__btn_donations = document.querySelector('.modal__btn-donations');
 const openModalDonations = function () {
+	console.log('ENTRA MODAL DONACIONES');
 	modal_mail.classList.remove('hidden');
 	overlay_mail.classList.remove('hidden');
 };
 const closeModalDonations = function () {
+	console.log('CIERRA MODAL DONACIONES CON LA X');
+
 	modal_mail.classList.add('hidden');
 	overlay_mail.classList.add('hidden');
 };
@@ -57,61 +61,68 @@ const closeModalEscapeDonations = function () {
 };
 let contador = 0;
 modal__calculate.addEventListener('click', function () {
-	if (contador === 3 && FounderBool == 0) {
+	if (contador === 1 && FounderBool == 0) {
 		contador = 0;
-		feedDisplay.innerHTML = "";
-		document.querySelector("#email2").value = "";
+		feedDisplay.innerHTML = '';
+		document.querySelector('#email2').value = '';
 		openModalDonations();
-		document.getElementById("UcanGo").style.visibility = "hidden";
+		document.getElementById('UcanGo').style.visibility = 'hidden';
 	}
 });
 
 modal__calculate2.addEventListener('click', function () {
 	if (contador === 3 && FounderBool == 0) {
 		contador = 0;
-		feedDisplay.innerHTML = "";
-		document.querySelector("#email2").value = "";
+		feedDisplay.innerHTML = '';
+		document.querySelector('#email2').value = '';
 		openModalDonations();
-		document.getElementById("UcanGo").style.visibility = "hidden";
+		document.getElementById('UcanGo').style.visibility = 'hidden';
 	}
 });
 
 const GoToDonations = function () {
-	window.location.replace("https://buy.stripe.com/test_4gwbKq1lfg737gAaEE");
+	window.location.replace('https://buy.stripe.com/test_4gwbKq1lfg737gAaEE');
 };
 
 modal__btn_donations.addEventListener('click', GoToDonations);
 overlay.addEventListener('click', () => {
-	modal_mail.classList.add('hidden');
-	overlay_mail.classList.add('hidden');
+	console.log('entraaa acaaaaaa');
+	//modal_mail.classList.add('hidden');
+	//overlay_mail.classList.add('hidden');
 });
 const openModal = function (error, flag = 0) {
 	if (window.screen.width < 700) {
 		if (flag) {
+			console.log('first');
+
 			modal.style.top = '45%';
 			modal__error.textContent = error;
 			modal.classList.remove('hidden');
-			overlay.classList.remove('hidden');
+			//overlay.classList.remove('hidden');
 		} else {
 			modal.style.top = '20%';
 
 			modal__error.textContent = error;
 			modal.classList.remove('hidden');
-			overlay.classList.remove('hidden');
+			//overlay.classList.remove('hidden');
 		}
 	} else {
+		console.log('first');
 		modal.style.top = '20%';
 		modal__error.textContent = error;
 		modal.classList.remove('hidden');
+		console.log('ACA el modal del error');
 		overlay.classList.remove('hidden');
 	}
 };
 
 const closeModal = function () {
+	console.log('ENTRAAAAAAAA');
 	modal.classList.add('hidden');
 	overlay.classList.add('hidden');
 };
 const closeModalEscape = function () {
+	console.log('entraaa');
 	modal.classList.add('hidden');
 	overlay.classList.add('hidden');
 };
@@ -119,10 +130,12 @@ const closeModalEscape = function () {
 btnCloseModal.addEventListener('click', closeModal);
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', () => {
-	modal.classList.add('hidden');
-	overlay.classList.add('hidden');
+	console.log('entra acaaaaa');
+	//modal.classList.add('hidden');
+	//overlay.classList.add('hidden');
 });
 addEventListener('keydown', (e) => {
+	console.log('enteraaa');
 	if (e.key === 'Escape') {
 		modal.classList.add('hidden');
 		overlay.classList.add('hidden');
@@ -633,7 +646,7 @@ function drawmoment() {
 		ctx.fillText(math.abs(M) + 'kN-m', 110 + qxm, 150 - 15);
 		ctx.stroke();
 		addLhide();
-		Marray.push(M*-1);
+		Marray.push(M * -1);
 		xMarray.push(xm);
 		buildTableM(M, xm);
 		distanceLDistance();
@@ -660,7 +673,7 @@ function drawmoment() {
 		ctx.fillText(Math.abs(M) + 'kN-m', 123 + qxm, 150 - 15);
 		ctx.stroke();
 		addLhide();
-		Marray.push(M*-1);
+		Marray.push(M * -1);
 		xMarray.push(xm);
 		buildTableM(M, xm);
 		distanceLDistance();
@@ -2575,15 +2588,15 @@ function ShearDiagram() {
 
 	drawShear(XValues, ShearValuesT);
 	MomentDiagram(PXmatrix, XValues);
-	document.getElementById("MmaxLabel1").style.visibility = "visible";
-	var Vmax = Math.max.apply(Math,ShearValuesT);
-	var Vmin = Math.min.apply(Math,ShearValuesT);
+	document.getElementById('MmaxLabel1').style.visibility = 'visible';
+	var Vmax = Math.max.apply(Math, ShearValuesT);
+	var Vmin = Math.min.apply(Math, ShearValuesT);
 	var XVmax = XValues[ShearValuesT.indexOf(Vmax.toFixed(2).toString())];
 	var XVmin = XValues[ShearValuesT.indexOf(Vmin.toFixed(2).toString())];
-	document.getElementById("XvMax").innerHTML = XVmax;
-	document.getElementById("vMax").innerHTML = Vmax;
-	document.getElementById("XvMin").innerHTML = XVmin;
-	document.getElementById("vMin").innerHTML = Vmin;
+	document.getElementById('XvMax').innerHTML = XVmax;
+	document.getElementById('vMax').innerHTML = Vmax;
+	document.getElementById('XvMin').innerHTML = XVmin;
+	document.getElementById('vMin').innerHTML = Vmin;
 }
 
 function drawShear(XValues, ShearValuesT) {
@@ -2939,39 +2952,40 @@ function MomentDiagram(PXmatrix, XValues) {
 	}
 
 	drawMoment(XValues, MomentValuesT);
-	document.getElementById("MmaxLabel2").style.visibility = "visible";
+	document.getElementById('MmaxLabel2').style.visibility = 'visible';
 	var Mmax = Math.max.apply(Math, MomentValuesT);
 	var Mmin = Math.min.apply(Math, MomentValuesT);
 	var XMmax = XValues[MomentValuesT.indexOf(Mmax)];
 	var XMmin = XValues[MomentValuesT.indexOf(Mmin)];
-	document.getElementById("XmMax").innerHTML = XMmax;
-	document.getElementById("mMax").innerHTML = Mmax;
-	document.getElementById("XmMin").innerHTML = XMmin;
-	document.getElementById("mMin").innerHTML = Mmin;
+	document.getElementById('XmMax').innerHTML = XMmax;
+	document.getElementById('mMax').innerHTML = Mmax;
+	document.getElementById('XmMin').innerHTML = XMmin;
+	document.getElementById('mMin').innerHTML = Mmin;
 }
 
-const feedDisplay = document.querySelector("#feed");
+const feedDisplay = document.querySelector('#feed');
 let FounderBool = 0;
 
-function checkDB(){
-var founders = []
-feedDisplay.innerHTML = "Checking our database...";
-document.getElementById("UcanGo").style.visibility = "hidden";
-fetch("https://civilusfounders.ew.r.appspot.com/founders")
-.then(response => response.json())
-.then(data => {
-	data.values.forEach(values => {
-		founders.push(values);
-	})
-	founders = founders.map(String);
-	const email = document.querySelector("#email2").value;
-	if (founders.indexOf(email.toString()) >= 0){
-	feedDisplay.innerHTML = "Hello founder!, thanks for trusting us, ";
-	document.getElementById("UcanGo").style.visibility = "visible";
-	document.getElementById("FounderTag").style.display = "block";
-	FounderBool = 1;
-	} else{
-	feedDisplay.innerHTML = "Sorry, the email adress is not in our database, plase try again or become a founder";
-	}
-});
+function checkDB() {
+	var founders = [];
+	feedDisplay.innerHTML = 'Checking our database...';
+	document.getElementById('UcanGo').style.visibility = 'hidden';
+	fetch('https://civilusfounders.ew.r.appspot.com/founders')
+		.then((response) => response.json())
+		.then((data) => {
+			data.values.forEach((values) => {
+				founders.push(values);
+			});
+			founders = founders.map(String);
+			const email = document.querySelector('#email2').value;
+			if (founders.indexOf(email.toString()) >= 0) {
+				feedDisplay.innerHTML = 'Hello founder!, thanks for trusting us, ';
+				document.getElementById('UcanGo').style.visibility = 'visible';
+				document.getElementById('FounderTag').style.display = 'block';
+				FounderBool = 1;
+			} else {
+				feedDisplay.innerHTML =
+					'Sorry, the email adress is not in our database, plase try again or become a founder';
+			}
+		});
 }
